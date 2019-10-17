@@ -3,7 +3,7 @@ date: "2017-06-26T18:27:58+01:00"
 title: "OP_SECURETHEBAG"
 ---
 
-With **OP_SECURETHEBAG**, Bitcoin users can:
+With `OP_SECURETHEBAG`, Bitcoin users can:
 
 
 {{% ticks %}}

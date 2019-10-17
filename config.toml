@@ -6,6 +6,9 @@ theme = "cupper-hugo-theme"
 googleAnalytics = "UA-123456789-1"
 disqusShortname = "yourdiscussshortname"
 enableGitInfo = true
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "monokai"
 
 [taxonomies]
   tag = "tags"
@@ -33,12 +36,16 @@ enableGitInfo = true
   [[menu.nav]]
     name = "Implementations"
     url = "/Implementations/"
-    weight = 2
+    weight = 4
   [[menu.nav]]
     name = "Alternatives"
     url = "/Alternatives/"
-    weight = 3
+    weight = 5
   [[menu.nav]]
-    name = "Industrial Analysis"
+    name = "Impact Analysis"
     url = "/analysis/"
     weight = 3
+  [[menu.nav]]
+    name = "BIP"
+    url = "https://github.com/JeremyRubin/bips/blob/op-secure-the-bag/bip-secure-the-bag.mediawiki"
+    weight = 2
