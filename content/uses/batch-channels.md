@@ -2,6 +2,10 @@
 title: "Batch Channels"
 date: 2019-10-18T10:46:27-07:00
 ---
+
+
+![](/images/uses/balllightning.svg)
+
 Using OP_CHECKTEMPLATEVERIFY for Channel Factories is similar to the use for Congestion
 Control, except the leaf nodes should be set up as a channels instead of plain
 payments. The channel can be between the sender and recipient or a target of

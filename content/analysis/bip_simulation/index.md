@@ -1,5 +1,5 @@
 ---
-title: "BIP Simulation"
+title: "Congestion Simulation"
 date: 2019-10-11T15:48:24-07:00
 ---
 The below simulation results show that OP_CHECKTEMPLATEVERIFY is an effective too to
@@ -7,9 +7,12 @@ reduce network strain in Bitcoin. This is based on the same simulation used in t
 
 ![](simulation.png)
 
-The chart shows how the Bitcoin Mempool will respond during two periods of intense transaction demand. During the first period, rates go back to zero. In the second period, rates remain at the max transactions per second threshold.
+The chart shows how the Bitcoin Mempool will respond during two periods of intense transaction
+demand. During the first period, rates go back to zero. In the second period, rates remain at the
+max transactions per second threshold.
 
-The last chart shows that the Mempool is much less congested when using OP_CHECKTEMPLATEVERIFY than without it.
+The last chart shows that the Mempool is much less congested when using OP_CHECKTEMPLATEVERIFY than
+without it.
 
 
 ## Walkthrough
@@ -57,12 +60,14 @@ def generate_rates(phase):
         return 1.25**(phase-5)*TXNS_PER_SEC
     else:
         return TXNS_PER_SEC
-rates = [generate_rates(phase) for phase in range(PHASES/2)] + [generate_rates(phase)*2 for phase in range(PHASES/2)]
+rates = [generate_rates(phase) for phase in range(PHASES/2)] + 
+        [generate_rates(phase)*2 for phase in range(PHASES/2)]
 def get_rate(phase):
     return rates[phase]
 
 plt.subplot(3,1,1)
-plt.title("Transaction Compression Performance with %d%% Adoption During 2 Spikes"%(100*COMPRESSABLE))
+p = 100*COMPRESSABLE
+plt.title("Transaction Compression Performance with %d%% Adoption During 2 Spikes"%p)
 plt.ylabel("Txn/s")
 
 p_full_block, = plt.plot([DAYS[0], DAYS[-1]],
@@ -109,7 +114,8 @@ def compressed(compressable = COMPRESSABLE):
                 backlog = 0
 			# record results in terms of transactions
             results_unconfirmed[sample_idx] = float(backlog)/AVG_TX
-            results_yet_to_spend[sample_idx] = postponed_backlog/EXTRA_WORK_MULTIPLIER/AVG_TX
+            results_yet_to_spend[sample_idx] =
+                        postponed_backlog/EXTRA_WORK_MULTIPLIER/AVG_TX
 
     return results_unconfirmed, results_yet_to_spend, np.cumsum(total_time)/(60*60*24.0)
 compressed_txs, unspendable, blocktimes_c = compressed()
@@ -158,7 +164,11 @@ behavior. Miners always fill blocks as much as possible. In actuality, miners
 often mine blocks which aren't full even when there is a backlog of
 transactions.
 
-This simulation does not make any attempt at estimating the fees savings. Fees may be non-linearly correlated with the mempool length, or they may be wholly unaffected depending on consumer behavior, which can be measured empirically, but does not necessarily predict future behavior. A good example of why past data may not be predictive is that people may care to have transactions confirmed much more in response to political news.
+This simulation does not make any attempt at estimating the fees savings. Fees may be non-linearly
+correlated with the mempool length, or they may be wholly unaffected depending on consumer behavior,
+which can be measured empirically, but does not necessarily predict future behavior. A good example
+of why past data may not be predictive is that people may care to have transactions confirmed much
+more in response to political news.
 
 This simulation also does not address Jevons Paradox -- whereby by making a
 system more efficient to use, net consumption is increased, rather than

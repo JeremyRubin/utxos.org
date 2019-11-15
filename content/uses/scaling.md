@@ -1,7 +1,9 @@
 ---
 title: "Scaling"
-date: 2019-10-18T10:45:58-07:00
+date: 2019-10-10T10:45:58-07:00
+weight: 1
 ---
+![](/images/uses/scalepay.svg)
 
 When there is a high demand for blockspace it becomes very expensive to make
 transactions. By using OP_CHECKTEMPLATEVERIFY, a large volume payment processor may

@@ -11,6 +11,10 @@ There are a couple different implementations and deployment strategies for OP_CH
 
 This page serves to mark the differences between these versions.
 
+OP_CHECKTEMPLATEVERIFY is in some places (e.g., archives) referred to as OP_SECURETHEBAG or
+OP_CHECKOUTPUTSHASHVERIFY as working names for the technique while under development while under
+development.
+
 ## OP_NOP4 Softfork
 
 This is currently the favored implementation and deployment of `OP_CHECKTEMPLATEVERIFY`.
@@ -33,7 +37,7 @@ The implementation suggests to begin signaling for the soft-fork on versionbit 2
 ## Taproot Tapscript Extension
 
 This version of `OP_CHECKTEMPLATEVERIFY` builds on Tapscript's proposed `OP_SUCCESS{X}` script upgrade
-mechanism. Therefore `OP_CHECKTEMPLATEVERIFY` is only available withing Tapscript.
+mechanism. Therefore `OP_CHECKTEMPLATEVERIFY` is only available within Tapscript.
 
 Deployment would only be possible after or with Taproot's deployment.
 

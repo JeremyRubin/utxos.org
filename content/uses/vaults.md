@@ -3,6 +3,7 @@ title: "Vaults"
 date: 2019-10-18T10:45:51-07:00
 ---
 
+![](/images/uses/vaults.svg)
 When greater security is required for cold storage solutions, there can be
 default Tapscript paths that move funds from one target to another target.
 

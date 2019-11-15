@@ -137,6 +137,7 @@ more.
 
 ## SIGHASH_NOINPUT / ANYPREVOUT
 
+### Method 1
 With `SIGHASH_NOINPUT`, it should be theoretically possible for a bare script
 (non-segwit) to be specified as follows to emulate `OP_CHECKTEMPLATEVERIFY`:
 
@@ -153,18 +154,49 @@ In a segwit type transaction, this is not possible (without additional
 modifications) because the scriptPubkey always commits to the entire pubkey,
 preventing pubkey recovery techniques.
 
+
 `SIGHASH_NOINPUT` is furthermore insufficient to emulate `OP_CHECKTEMPLATEVERIFY`
 as the TXID can be malleated by modifying the scriptSig(s) in the transaction,
 which makes it unsuitable for use in Lightning Channel construction or CPFP
 transactions.
 
+### Method 2
 
+Using `SIGHASH_ANYPREVOUTANYSCRIPT`, it would be possible to have a segwit script:
+
+```forth
+scriptPubkey: <sig || SIGHASH_ANYPREVOUTANYSCRIPT> <pk> CHECKSIG 
+```
+
+This way neither the `pk` nor the txid are a part of the signature hash.
+
+This method is close to how `OP_CHECKTEMPLATEVERIFY` should work. If the key
+is a well known specific one, and deterministic nonces are used for the
+signature, then it also preserves some of the ability to prune interior nodes
+data for storage as they can be recomputed.
+
+However, this method has drawbacks in terms of verification time as the
+signatures must either be verified or recomputed, and without sophisticated
+pruning layers, use more network and storage bandwidth.
+
+This method also fundamentally does not have the extensibility that
+`OP_CHECKTEMPLATEVERIFY` permits with new template version hash programs that
+could be made available in future soft-forks.
+
+Furthermore, `SIGHASH_ANYPREVOUTANYSCRIPT` has the potential for enabling
+certain types of recursive covenants.
+
+Lastly, `SIGHASH_ANYPREVOUTANYSCRIPT` can be used with `SIGHASH` flags other
+than `SIGHASH_ALL` signing the whole transaction. This can lead to surprising
+behaviors, such as with `SIGHASH_SINGLE` (which would only enforce a covenant on
+one of the coins in an output, not all). 
 
 
 ### Acknowledgements
 
 Thanks to Olaolu Osuntokun and Bob McElrath whose talks helped to inform this
-survey.
+survey, and to Jonas Nick who made me aware of Method 2 for
+`SIGHASH_ANYPREVOUTANYSCRIPT`.
 
 * https://diyhpl.us/wiki/transcripts/bitcoin-core-dev-tech/2019-06-06-noinput-etc/
 * https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/

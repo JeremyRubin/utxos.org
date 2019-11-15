@@ -1,7 +1,9 @@
 ---
-title: "Hashed Time Locked Contracts (HTLCS)"
+title: "Increasing Max Hashed Time Locked Contracts (HTLCS)"
 date: 2019-10-18T10:30:40-07:00
 ---
+
+![](/images/uses/htlcs.png)
 
 In the Lightning Network protocol, Hashed Time Locked Contracts (HTLCS) are used
 in the construction of channels. A new HTLC is required per route that the
