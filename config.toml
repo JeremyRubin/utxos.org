@@ -1,10 +1,10 @@
-baseURL = "https://example.com"
+baseURL = "https://utxos.org"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Secure The Bag"
+title = "utxos.org -- Bitcoin for Everyone"
 theme = "cupper-hugo-theme"
-googleAnalytics = "UA-123456789-1"
-disqusShortname = "yourdiscussshortname"
+googleAnalytics = "UA-152627278-1"
+disqusShortname = "utxos-org"
 enableGitInfo = true
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
@@ -36,14 +36,19 @@ pygmentsStyle = "monokai"
   [[menu.nav]]
     name = "Implementations"
     url = "/Implementations/"
-    weight = 4
+    weight = 5
   [[menu.nav]]
     name = "Alternatives"
     url = "/Alternatives/"
-    weight = 5
+    weight = 6
   [[menu.nav]]
     name = "Impact Analysis"
     url = "/analysis/"
+    weight = 4
+
+  [[menu.nav]]
+    name = "Use Cases"
+    url = "/uses/"
     weight = 3
   [[menu.nav]]
     name = "BIP"
