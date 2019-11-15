@@ -2,8 +2,7 @@ baseURL = "https://utxos.org"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "utxos.org -- Bitcoin for Everyone"
-theme = "cupper-hugo-theme"
-googleAnalytics = "UA-152627278-1"
+theme = "hugo-serif-theme"
 disqusShortname = "utxos-org"
 enableGitInfo = true
 pygmentsCodefences = true
@@ -20,37 +19,52 @@ pygmentsStyle = "monokai"
   quality = 99
 
 [params]
-  description = "An extension to Bitcoin for unbounded payment capacity"
+  google_analytics_id = "UA-152627278-1"
   homeMetaContent = "An extension to Bitcoin for unbounded payment capacity"
   footer = "Copyright Jeremy Rubin"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "Jan 2, 2006"
   codePenUser = "someUser"
   katex = true
+  [params.logo]
+    mobile = "images/logo-mobile.svg"
+    standard  = "images/logo.svg"
+    alt = "utxos.org"
+
+  [params.homepage_meta_tags]
+    meta_description = "An extension to Bitcoin for unbounded payment capacity"
+    meta_og_title = "utxos.org"
+    meta_og_type = "website"
+    meta_og_url = "https://utxos.org"
+    meta_og_image = "https://utxos.org/static/images/og/main.png"
+    meta_og_description = "utxos.org brings you the latest information about bitcoin payment scalability solutions."
+    meta_twitter_card = "summary"
+    meta_twitter_site = "@JeremyRubin"
+    meta_twitter_creator = "@JeremyRubin"
 
 [menu]
-  [[menu.nav]]
+  [[menu.main]]
     name = "Home"
     url = "/"
-    weight = 1
-  [[menu.nav]]
+        weight = 1
+  [[menu.main]]
     name = "Implementations"
     url = "/Implementations/"
-    weight = 5
-  [[menu.nav]]
+        weight = 5
+  [[menu.main]]
     name = "Alternatives"
     url = "/Alternatives/"
-    weight = 6
-  [[menu.nav]]
+        weight = 6
+  [[menu.main]]
     name = "Impact Analysis"
     url = "/analysis/"
-    weight = 4
+        weight = 4
 
-  [[menu.nav]]
+  [[menu.main]]
     name = "Use Cases"
     url = "/uses/"
-    weight = 3
-  [[menu.nav]]
+        weight = 3
+  [[menu.main]]
     name = "BIP"
     url = "https://github.com/JeremyRubin/bips/blob/op-secure-the-bag/bip-secure-the-bag.mediawiki"
-    weight = 2
+        weight = 2

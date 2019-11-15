@@ -62,13 +62,15 @@ However, there are a few drawbacks:
 5 OP_PUSHTXDATA 2 OP_EQUALVERIFY
 6 OP_PUSHTXDATA 0 OP_EQUALVERIFY
 0 11 OP_PUSHTXDATA 0 OP_EQUALVERIFY
-0 15 OP_PUSHTXDATA <value vout 0> OP_EQUALVERIFY <scriptPubkey vout 0> OP_EQUALVERIFY
-1 15 OP_PUSHTXDATA <value vout 1> OP_EQUALVERIFY <scriptPubkey vout 1> OP_EQUALVERIFY 
+0 15 OP_PUSHTXDATA <value vout 0> OP_EQUALVERIFY
+                   <scriptPubkey vout 0> OP_EQUALVERIFY
+1 15 OP_PUSHTXDATA <value vout 1> OP_EQUALVERIFY
+                   <scriptPubkey vout 1> OP_EQUALVERIFY 
 ```
 v.s.
 
 ```forth
-OP_CHECKTEMPLATEVERIFY <BagHash> 
+<Template Hash> OP_CHECKTEMPLATEVERIFY 
 ```
 `OP_PUSHTXDATA` could ameliorate this by adding an data type to push the Bag
 Hash from `OP_CHECKTEMPLATEVERIFY`.

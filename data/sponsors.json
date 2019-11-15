@@ -1,0 +1,26 @@
+{
+    "msg" : "Thanks to the following institutions and individuals for their financial contributions:",
+    "list" :[
+        {
+            "name": "Binance X Fellowship",
+            "image":"/images/sponsors/binance.jpeg"
+        },
+        {
+            "name": "Digital Contract Design",
+            "image":"/images/sponsors/dcd.png"
+        },
+        {
+            "name" : "Cipher Technologies",
+            "image":"/images/sponsors/cipher.svg"
+        },
+        {
+            "name" : "Corey Haddad",
+            "image":"/images/sponsors/corey.jpeg"
+        },
+        {
+            "name": "Scaling Bitcoin Grant",
+            "image":"/images/sponsors/scaling.svg"
+        }
+    ],
+    "msg2" : "If you are interested in becoming a supporter, please contact me at <a href=\"mailto:j@rubin.io?subject=Supporting OP_CHECKTEMPLATEVERIFY\">j@rubin.io</a>."
+}

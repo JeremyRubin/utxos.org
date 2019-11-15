@@ -1,0 +1,17 @@
+[
+    {
+        "title" : "Spend Less on Fees",
+        "description" : "Confirm payments to as many recipients as you like in an efficient batch and only pay the fees when block space is cheap.",
+        "image" : ""
+    },
+    {
+        "title" : "Lightning Network, Supercharged",
+        "description" : "Channels without counterparty signing. As many as you like. Routing as many HTLCS as you want.",
+        "image" : ""
+    },
+    {
+        "title" : "Next-Gen Smart Contracts",
+        "description" : "Build new systems with advanced capabilities, like automatic wallet vaults.",
+        "image" : ""
+    }
+]

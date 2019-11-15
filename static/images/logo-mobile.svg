@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="44.571342mm"
-   height="9.6012001mm"
-   viewBox="0 0 44.571342 9.6012003"
+   width="28.542938mm"
+   height="28.542938mm"
+   viewBox="0 0 28.542938 28.542939"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="logo-mobile.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568543"
-     inkscape:cx="80.533455"
-     inkscape:cy="-15.765544"
+     inkscape:zoom="4"
+     inkscape:cx="85.942932"
+     inkscape:cy="-85.759492"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,7 +35,7 @@
      inkscape:guide-bbox="true"
      inkscape:window-width="1912"
      inkscape:window-height="2067"
-     inkscape:window-x="1920"
+     inkscape:window-x="0"
      inkscape:window-y="40"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -43,12 +43,12 @@
      fit-margin-right="0"
      fit-margin-bottom="0">
     <sodipodi:guide
-       position="31.640227,38.510409"
+       position="35.271026,52.150458"
        orientation="1,0"
        id="guide862"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="30.779407,-32.964973"
+       position="34.410206,-19.324926"
        orientation="1,0"
        id="guide896"
        inkscape:locked="false" />
@@ -69,21 +69,36 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-68.919933,-84.230733)">
+     transform="translate(-65.289135,-78.929043)">
+    <rect
+       style="opacity:0.94100001;fill:none;fill-opacity:1;stroke:#2e86f8;stroke-width:2.6044085;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect912"
+       width="25.93853"
+       height="25.93853"
+       x="66.591339"
+       y="80.231247"
+       rx="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:15.45431232px;word-spacing:0px;fill:#2e86f8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="68.538933"
-       y="92.485733"
-       id="text1323"><tspan
+       x="82.33947"
+       y="98.012352"
+       id="text910"><tspan
          sodipodi:role="line"
-         id="tspan1321"
-         x="68.538933"
-         y="92.485733"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'IBM Plex Serif';-inkscape-font-specification:'IBM Plex Serif';letter-spacing:0px;fill:#2e86f8;fill-opacity:1;stroke-width:0.26458332"><tspan
-           style="font-size:12.69999981px"
-           id="tspan1327">utxos</tspan><tspan
-           style="font-size:6.3499999px;fill:#000000"
-           id="tspan1325">.org</tspan></tspan></text>
+         x="82.33947"
+         y="98.012352"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:0;font-family:'IBM Plex Serif';-inkscape-font-specification:'IBM Plex Serif';letter-spacing:0px;writing-mode:lr-tb;text-orientation:upright;fill:#000000;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan908">.org</tspan></text>
+    <text
+       id="text929"
+       y="95.047203"
+       x="70.762909"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:15.45431232px;word-spacing:0px;fill:#2e86f8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         id="tspan927"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:0;font-family:'IBM Plex Serif';-inkscape-font-specification:'IBM Plex Serif';letter-spacing:0px;writing-mode:lr-tb;text-orientation:upright;fill:#2e86f8;fill-opacity:1;stroke-width:0.26458332"
+         y="95.047203"
+         x="70.762909"
+         sodipodi:role="line">utxos</tspan></text>
   </g>
 </svg>
