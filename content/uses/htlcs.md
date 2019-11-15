@@ -17,7 +17,7 @@ This is because accepting a larger number of HTLCS makes it more difficult for
 transactions to confirm during congested periods as they must pay hire fees.
 
 Therefore, similarly to how congestion control is handled for normal
-transaction, lightning channel updates can be done across an `OP_SECURETHEBAG`
+transaction, lightning channel updates can be done across an `OP_CHECKTEMPLATEVERIFY`
 tree, allowing nodes to safely use many more HTLCS.
 
 Because each HTLC can have its own relative time lock in the tree, this also

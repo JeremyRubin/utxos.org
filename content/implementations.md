@@ -3,7 +3,7 @@ title: "Implementations"
 date: 2019-09-27T21:56:54-07:00
 ---
 
-There are a couple different implementations and deployment strategies for OP_SECURETHEBAG:
+There are a couple different implementations and deployment strategies for OP_CHECKTEMPLATEVERIFY:
 
 * `OP_NOP4` Softfork
 * Taproot Tapscript Extension 
@@ -13,13 +13,13 @@ This page serves to mark the differences between these versions.
 
 ## OP_NOP4 Softfork
 
-This is currently the favored implementation and deployment of `OP_SECURETHEBAG`.
+This is currently the favored implementation and deployment of `OP_CHECKTEMPLATEVERIFY`.
 
-In this version, `OP_SECURETHEBAG` is implemented as a soft-fork upgrade to `OP_NOP` much like
-`OP_CHECKLOCKTIMEVERIFY`. This would make `OP_SECURETHEBAG` available for both SegWit and plain
+In this version, `OP_CHECKTEMPLATEVERIFY` is implemented as a soft-fork upgrade to `OP_NOP` much like
+`OP_CHECKLOCKTIMEVERIFY`. This would make `OP_CHECKTEMPLATEVERIFY` available for both SegWit and plain
 script outputs.
 
-<i>Note: P2SH is not compatible with `OP_SECURETHEBAG` inehrently because of the hash cycle caused
+<i>Note: P2SH is not compatible with `OP_CHECKTEMPLATEVERIFY` inehrently because of the hash cycle caused
 by putting the redeemScript on the scriptSig, which changes the TXID.</i>
 
 The implementation suggests to begin signaling for the soft-fork on versionbit 25 on January 1st,
@@ -32,8 +32,8 @@ The implementation suggests to begin signaling for the soft-fork on versionbit 2
 
 ## Taproot Tapscript Extension
 
-This version of `OP_SECURETHEBAG` builds on Tapscript's proposed `OP_SUCCESS{X}` script upgrade
-mechanism. Therefore `OP_SECURETHEBAG` is only available withing Tapscript.
+This version of `OP_CHECKTEMPLATEVERIFY` builds on Tapscript's proposed `OP_SUCCESS{X}` script upgrade
+mechanism. Therefore `OP_CHECKTEMPLATEVERIFY` is only available withing Tapscript.
 
 Deployment would only be possible after or with Taproot's deployment.
 
@@ -46,9 +46,9 @@ drafted.
 
 ## Templated Tapscript Extension
 
-Because of the structure of Taproot, an `OP_SECURETHEBAG` script has an
+Because of the structure of Taproot, an `OP_CHECKTEMPLATEVERIFY` script has an
 additional 32 byte overhead compared to a bare `OP_NOP4` style upgrade. By
-templating the Tapscripts to support a special case `OP_SECURETHEBAG`, this
+templating the Tapscripts to support a special case `OP_CHECKTEMPLATEVERIFY`, this
 overhead can be eliminated.
 
 This technique is notable because it could be added to Taproot after the

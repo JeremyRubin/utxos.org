@@ -4,12 +4,12 @@ date: 2019-10-18T10:45:58-07:00
 ---
 
 When there is a high demand for blockspace it becomes very expensive to make
-transactions. By using OP_SECURETHEBAG, a large volume payment processor may
+transactions. By using OP_CHECKTEMPLATEVERIFY, a large volume payment processor may
 aggregate all their payments into a single O(1) transaction for purposes of
 confirmation. Then, some time later, the payments can be expanded out of that
 UTXO when the demand for blockspace is decreased.
 
-Without OP_SECURETHEBAG, this is still possible to do with Schnorr signatures
+Without OP_CHECKTEMPLATEVERIFY, this is still possible to do with Schnorr signatures
 (even with ECDSA given multiparty schemes). However, it is not possible to do
 non-interactively, which fundamentally limits the viability of the approach as
 interacting to collect signatures from all recipients may be difficult or slow.
@@ -22,11 +22,11 @@ output to N. Even this simple use case is highly useful because the expansion
 can wait till cheap block space is available.
 
 As the number of recipients grows, a sender can commit to a tree of outputs
-using OP_SECURETHEBAG. The tree permits them to confirm as many payments as they
+using OP_CHECKTEMPLATEVERIFY. The tree permits them to confirm as many payments as they
 like (i.e., even more than can fit into a block). Such a technique starts to
 make sense when:
 
-`N*size_of(Output) > log(N)*size_of(OP_SECURETHEBAG Txn) + size_of(Output)`
+`N*size_of(Output) > log(N)*size_of(OP_CHECKTEMPLATEVERIFY Txn) + size_of(Output)`
 
 Assuming straightforward transaction sizes, this is around 10
 recipients.

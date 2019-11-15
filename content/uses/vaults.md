@@ -12,7 +12,7 @@ pre-set amounts) into a lukewarm wallet operated by an isolated support desk.
 The support desk can then issue some funds to a hot wallet, and send the
 remainder back to cold storage with a similar withdrawal mechanism in place.
 
-This is all possible without OP_SECURETHEBAG, but OP_SECURETHEBAG
+This is all possible without OP_CHECKTEMPLATEVERIFY, but OP_CHECKTEMPLATEVERIFY
 eliminates the need for coordination and online signers, as well as reducing the
 ability for a support desk to improperly move funds.
 

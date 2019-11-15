@@ -2,14 +2,14 @@
 title: "BIP Simulation"
 date: 2019-10-11T15:48:24-07:00
 ---
-The below simulation results show that OP_SECURETHEBAG is an effective too to
+The below simulation results show that OP_CHECKTEMPLATEVERIFY is an effective too to
 reduce network strain in Bitcoin. This is based on the same simulation used in the BIP.
 
 ![](simulation.png)
 
 The chart shows how the Bitcoin Mempool will respond during two periods of intense transaction demand. During the first period, rates go back to zero. In the second period, rates remain at the max transactions per second threshold.
 
-The last chart shows that the Mempool is much less congested when using OP_SECURETHEBAG than without it.
+The last chart shows that the Mempool is much less congested when using OP_CHECKTEMPLATEVERIFY than without it.
 
 
 ## Walkthrough
@@ -20,7 +20,7 @@ This section walks through the code to show how the simulation was generated.
 
 These are some basic parameters. They can be modified to change the behavior of
 the simulation. The most important parameters to consider are `COMPRESSABLE`,
-which informs us what percent of demand can go into OP_SECURETHEBAG.
+which informs us what percent of demand can go into OP_CHECKTEMPLATEVERIFY.
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -72,7 +72,7 @@ T = np.array(range(0, SAMPLES, PHASE_LENGTH))/144.0
 p5, = plt.plot(T, rates, "k-", label="Transactions Per Second")
 show_legend([p5, p_full_block])
 ```
-`compressed()` simulates a network running where a portion of users use OP_SECURETHEBAG.
+`compressed()` simulates a network running where a portion of users use OP_CHECKTEMPLATEVERIFY.
 
 ```python
 def compressed(compressable = COMPRESSABLE):
@@ -115,7 +115,7 @@ def compressed(compressable = COMPRESSABLE):
 compressed_txs, unspendable, blocktimes_c = compressed()
 ```
 
-`normal()` simulates a network running where no users use OP_SECURETHEBAG.
+`normal()` simulates a network running where no users use OP_CHECKTEMPLATEVERIFY.
 ```python
 def normal():
     a,_,b = compressed(0)
@@ -166,11 +166,11 @@ decreased. Such market questions are beyond the scope of the simulation.
 
 Fortunately, for many of the mismatches between expectation and reality this
 simulation is somewhat robust as a comparative measure. Unless miners are
-specifically discriminating against `OP_SECURETHEBAG` transactions, what the
-results demonstrate is that `OP_SECURETHEBAG` will perform better than the
-corresponding behavior that would be seen without `OP_SECURETHEBAG`.
+specifically discriminating against `OP_CHECKTEMPLATEVERIFY` transactions, what the
+results demonstrate is that `OP_CHECKTEMPLATEVERIFY` will perform better than the
+corresponding behavior that would be seen without `OP_CHECKTEMPLATEVERIFY`.
 
-Thus, we can show that `OP_SECURETHEBAG` conveys a benefit across a wide variety of
+Thus, we can show that `OP_CHECKTEMPLATEVERIFY` conveys a benefit across a wide variety of
 scenarios. For example, replacing `get_rate()` with
 
 ```python
@@ -188,7 +188,7 @@ yields:
 
 The simulation framework can also show smaller adoption cases, e.g.
 `COMPRESSABLE = 0.04`.  In this scenario we see the global mempool does not
-benefit as much, but the 4% of users who adopt `OP_SECURETHEBAG` benefit
+benefit as much, but the 4% of users who adopt `OP_CHECKTEMPLATEVERIFY` benefit
 greatly by not having to compete with the mempool.
 
 ![](random2.png)

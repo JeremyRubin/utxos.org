@@ -10,7 +10,7 @@ date: 2019-10-10T17:31:05-07:00
   [here](https://bitcoinops.org/en/newsletters/2019/05/29/). OpTech's content is
   offered under the [MIT License](https://opensource.org/licenses/MIT).*
 
-The [proposed](https://github.com/JeremyRubin/bips/blob/op-secure-the-bag-master/bip-secure-the-bag.mediawiki) opcode `OP_SECURETHEBAG` allows an address to commit to one or more branches that require the
+The [proposed](https://github.com/JeremyRubin/bips/blob/op-secure-the-bag-master/bip-secure-the-bag.mediawiki) opcode `OP_CHECKTEMPLATEVERIFY` allows an address to commit to one or more branches that require the
 transaction spending them to include a certain set of outputs, a
 technique that contract protocol researchers call a *covenant*.
 The primary described benefit of this proposed opcode is allowing a
@@ -78,8 +78,8 @@ payment batching and 90% over sending separate payments.  Note that the
 savings could be even larger during periods of greater fee
 stratification or with more than ten receivers.
 
-### OP_SECURETHEBAG
-The proposed soft fork would add a new opcode, `OP_SECURETHEBAG` (abbreviated by
+### OP_CHECKTEMPLATEVERIFY
+The proposed soft fork would add a new opcode, `OP_CHECKTEMPLATEVERIFY` (abbreviated by
 its author as `OP_STB`).  This opcode and a hash digest could be included in
 tapleaf scripts, allowing it to be one of the conditions in a Taproot address.
 When that address was spent, if OP_STB was executed, the spending transaction
