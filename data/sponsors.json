@@ -3,23 +3,28 @@
     "list" :[
         {
             "name": "Binance X Fellowship",
-            "image":"/images/sponsors/binance.jpeg"
+            "image":"/images/sponsors/binance.jpeg",
+            "link" : "https://binancex.dev/fellowship_details.html?project=033_fellowship_op_securethebag"
         },
         {
             "name": "Digital Contract Design",
-            "image":"/images/sponsors/dcd.png"
+            "image":"/images/sponsors/dcd.png",
+            "link":"https://contract.design/"
         },
         {
             "name" : "Cipher Technologies",
-            "image":"/images/sponsors/cipher.svg"
+            "image":"/images/sponsors/cipher.svg",
+            "link":"https://cipher.tech"
         },
         {
             "name" : "Corey Haddad",
-            "image":"/images/sponsors/corey.jpeg"
+            "image":"/images/sponsors/corey.jpeg",
+            "link":"https://twitter.com/cubicearth"
         },
         {
             "name": "Scaling Bitcoin Grant",
-            "image":"/images/sponsors/scaling.svg"
+            "image":"/images/sponsors/scaling.svg",
+            "link":"https://scalingbitcoin.org/"
         }
     ],
     "msg2" : "If you are interested in becoming a supporter, please contact me at <a href=\"mailto:j@rubin.io?subject=Supporting OP_CHECKTEMPLATEVERIFY\">j@rubin.io</a>."

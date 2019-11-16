@@ -4523,6 +4523,13 @@ ol {
     .intro-image-hide-mobile {
       display: block; } }
 
+a.sponsorlink {
+  text-decoration: none; }
+  a.sponsorlink h2 {
+    text-decoration: none;
+    text-align: center;
+    color: #2f2f41; }
+
 .strip {
   background: white;
   background-repeat: no-repeat; }

@@ -80,10 +80,12 @@
       {{ range .Site.Data.sponsors.list }}
       <div class="col-12 col-md-6 col-lg-4 mb-2">
         <div class="sponsor">
+        <a href={{.link}} class="sponsorlink">
           {{ if .image }}
           <div class="sponsor-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}"/></div>
           {{ end }}
           <h2 class="sponsor-title">{{ .name }}</h2>
+        </a>
         </div>
       </div>
       {{end}}
