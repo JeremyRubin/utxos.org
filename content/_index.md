@@ -1,6 +1,6 @@
 ---
 date: "2017-06-26T18:27:58+01:00"
-title: "OP_CHECKTEMPLATEVERIFY"
+title: "The Wait is Over"
 intro_video: https://www.youtube.com/embed/YxsjdIl0034?start=2454&rel=0
 ---
 

@@ -49,11 +49,11 @@ pygmentsStyle = "monokai"
         weight = 1
   [[menu.main]]
     name = "Implementations"
-    url = "/Implementations/"
+    url = "/implementations/"
         weight = 5
   [[menu.main]]
     name = "Alternatives"
-    url = "/Alternatives/"
+    url = "/alternatives/"
         weight = 6
   [[menu.main]]
     name = "Impact Analysis"
@@ -68,3 +68,7 @@ pygmentsStyle = "monokai"
     name = "BIP"
     url = "https://github.com/JeremyRubin/bips/blob/op-secure-the-bag/bip-secure-the-bag.mediawiki"
         weight = 2
+   [[menu.main]]
+    name = "Workshops"
+    url = "/workshops/"
+    weight=7
