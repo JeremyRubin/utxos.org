@@ -66,7 +66,7 @@ pygmentsStyle = "monokai"
         weight = 3
   [[menu.main]]
     name = "BIP"
-    url = "https://github.com/JeremyRubin/bips/blob/op-secure-the-bag/bip-secure-the-bag.mediawiki"
+    url = "https://github.com/JeremyRubin/bips/blob/ctv/bip-ctv.mediawiki"
         weight = 2
    [[menu.main]]
     name = "Workshops"
