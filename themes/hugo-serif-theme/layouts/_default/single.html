@@ -8,6 +8,9 @@
     <div class="offset-1 col-10 col-md-10">
       <div class="service service-single">
           <h1 class="title">{{.Title}}</h1>
+          {{if $.Params.author }}
+          <h2 class="byline">by {{safeHTML $.Params.author}}</h2>
+          {{end}}
         <div class="content">{{.Content}}</div>
       </div>
     </div>

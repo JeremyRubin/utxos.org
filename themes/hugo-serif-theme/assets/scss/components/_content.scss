@@ -3,12 +3,17 @@
   ol {
     margin-top: 10px;
     margin-bottom: 20px;
-    list-style: disc;
     li {
       margin-bottom: 5px;
       margin-left: 20px;
       color: $steel;
     }
+  }
+  ul {
+      list-style: disc;
+  }
+  ol {
+      list-style: decimal;
   }
   a {
     text-decoration: underline;

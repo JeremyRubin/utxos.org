@@ -4392,13 +4392,18 @@ ol {
 .content ul,
 .content ol {
   margin-top: 10px;
-  margin-bottom: 20px;
-  list-style: disc; }
+  margin-bottom: 20px; }
   .content ul li,
   .content ol li {
     margin-bottom: 5px;
     margin-left: 20px;
     color: #5c5a5a; }
+
+.content ul {
+  list-style: disc; }
+
+.content ol {
+  list-style: decimal; }
 
 .content a {
   text-decoration: underline; }
@@ -4674,5 +4679,8 @@ body:after {
   @media (min-width: 1300px) {
     body:after {
       content: "xl - min-width: 1300px"; } }
+
+em {
+  font-style: italic; }
 
 /*# sourceMappingURL=style.css.map */
