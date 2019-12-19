@@ -1,5 +1,4 @@
 {
-    "msg" : "Thanks to the following institutions and individuals for their financial contributions:",
     "list" :[
         {
             "name": "Binance X Fellowship",
@@ -17,6 +16,11 @@
             "link":"https://cipher.tech"
         },
         {
+            "name" : "Jim Calvin",
+            "image":"/images/sponsors/jim_calvin.jpg",
+            "link":"https://twitter.com/Jim_Calvin"
+        },
+        {
             "name" : "Corey Haddad",
             "image":"/images/sponsors/corey.jpeg",
             "link":"https://twitter.com/cubicearth"
@@ -27,5 +31,6 @@
             "link":"https://scalingbitcoin.org/"
         }
     ],
+    "msg" : "With thanks to the above institutions and individuals. Without their financial contributions and gifts of support, this work would not be possible.",
     "msg2" : "If you are interested in becoming a supporter, please contact me at <a href=\"mailto:j@rubin.io?subject=Supporting OP_CHECKTEMPLATEVERIFY\">j@rubin.io</a>."
 }
