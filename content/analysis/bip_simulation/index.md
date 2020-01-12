@@ -2,6 +2,10 @@
 title: "Congestion Simulation"
 date: 2019-10-11T15:48:24-07:00
 ---
+
+*An earlier version of this document used the poission distribution of the average block interval rahter than the exponential, which led to innacurate results. A discussion of this error can be found [here](https://twitter.com/JeremyRubin/status/121361540300123750). The error in the code has been corrected in the following article, but the diagrams still need to be re-generated.*
+
+
 The below simulation results show that OP_CHECKTEMPLATEVERIFY is an effective too to
 reduce network strain in Bitcoin. This is based on the same simulation used in the BIP.
 
@@ -91,7 +95,7 @@ def compressed(compressable = COMPRESSABLE):
     for phase in range(PHASES):
         for sample_idx in range(PHASE_LENGTH*phase, PHASE_LENGTH*(1+phase)):
 			# Sample how much time until the next block
-            total_time[sample_idx] = np.random.poisson(AVG_INTERVAL)
+            total_time[sample_idx] = np.random.exponential(AVG_INTERVAL)
 			# Random sample a number of transactions that occur in this block time period
             # Equivalent to the sum of one poisson per block time
             # I.E., \sum_1_n Pois(a) = Pois(a*n)
