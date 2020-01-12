@@ -1,6 +1,7 @@
 ---
 title: "Trustless Coordination-Free Mining Pools"
 date: 2019-10-18T10:45:58-07:00
+author: <a href="https://twitter.com/JeremyRubin">Jeremy Rubin</a>
 ---
 ![](/images/uses/bagpool.svg)
 

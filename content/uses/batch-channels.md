@@ -1,6 +1,7 @@
 ---
 title: "Batch Channels"
 date: 2019-10-18T10:46:27-07:00
+author: <a href="https://twitter.com/JeremyRubin">Jeremy Rubin</a>
 ---
 
 

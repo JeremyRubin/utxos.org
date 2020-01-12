@@ -2,6 +2,7 @@
 title: "Scaling"
 date: 2019-10-10T10:45:58-07:00
 weight: 1
+author: <a href="https://twitter.com/JeremyRubin">Jeremy Rubin</a>
 ---
 ![](/images/uses/scalepay.svg)
 

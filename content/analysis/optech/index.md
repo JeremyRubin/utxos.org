@@ -1,6 +1,7 @@
 ---
 title: "Bitcoin Optech Newsletter #48"
 date: 2019-10-10T17:31:05-07:00
+author: <a href="https://bitcoinops.org">Bitcoin OpTech</a>
 ---
 
 

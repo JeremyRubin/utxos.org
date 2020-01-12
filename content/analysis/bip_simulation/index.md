@@ -1,6 +1,7 @@
 ---
 title: "Congestion Simulation"
 date: 2019-10-11T15:48:24-07:00
+author: <a href="https://twitter.com/JeremyRubin">Jeremy Rubin</a>
 ---
 
 *An earlier version of this document used the poission distribution of the average block interval rahter than the exponential, which led to innacurate results. A discussion of this error can be found [here](https://twitter.com/JeremyRubin/status/121361540300123750). The error in the code has been corrected in the following article, but the diagrams still need to be re-generated.*

@@ -1,6 +1,7 @@
 ---
 title: "Increasing Max Hashed Time Locked Contracts (HTLCS)"
 date: 2019-10-18T10:30:40-07:00
+author: <a href="https://twitter.com/JeremyRubin">Jeremy Rubin</a>
 ---
 
 ![](/images/uses/htlcs.png)
