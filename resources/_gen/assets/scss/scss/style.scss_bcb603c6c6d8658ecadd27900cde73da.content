@@ -4528,9 +4528,9 @@ ol {
     .intro-image-hide-mobile {
       display: block; } }
 
-a.sponsorlink {
+a.supporter-link {
   text-decoration: none; }
-  a.sponsorlink h2 {
+  a.supporter-link h2 {
     text-decoration: none;
     text-align: center;
     color: #2f2f41; }

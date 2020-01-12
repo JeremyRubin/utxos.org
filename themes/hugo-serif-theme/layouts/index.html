@@ -98,12 +98,12 @@ waiting for confirmations for users.
     <div class="row justify-content-center">
       {{ range .Site.Data.sponsors.list }}
       <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="sponsor">
-        <a href={{.link}} class="sponsorlink">
+        <div class="supporter">
+        <a href={{.link}} class="supporter-link">
           {{ if .image }}
-          <div class="sponsor-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}"/></div>
+          <div class="supporter-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}"/></div>
           {{ end }}
-          <h2 class="sponsor-title">{{ .name }}</h2>
+          <h2 class="supporter-title">{{ .name }}</h2>
         </a>
         </div>
       </div>
