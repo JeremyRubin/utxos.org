@@ -3,7 +3,7 @@ title: "Alternatives"
 date: 2019-09-28T17:48:34-07:00
 ---
 
-`OP_CHECKTEMPLATEVERIFY` has a multitude of benefits for the Bitcoin ecosystem. Are
+BIP-0119 `OP_CHECKTEMPLATEVERIFY` has a multitude of benefits for the Bitcoin ecosystem. Are
 there other paths to these improvements? In short, yes. This page has a survey
 of the other methods for enabling `OP_CHECKTEMPLATEVERIFY` like functionality and why
 such techniques are not suitable substitutes.

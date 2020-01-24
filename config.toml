@@ -17,6 +17,8 @@ pygmentsStyle = "monokai"
 
 [imaging]
   quality = 99
+[markup.goldmark.renderer]
+  unsafe= true
 
 [params]
   google_analytics_id = "UA-152627278-1"
@@ -65,8 +67,8 @@ pygmentsStyle = "monokai"
     url = "/uses/"
         weight = 3
   [[menu.main]]
-    name = "BIP"
-    url = "https://github.com/JeremyRubin/bips/blob/ctv/bip-ctv.mediawiki"
+    name = "BIP 119"
+    url = "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki"
         weight = 2
    [[menu.main]]
     name = "Workshops"

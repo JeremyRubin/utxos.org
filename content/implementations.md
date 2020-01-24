@@ -15,7 +15,7 @@ OP_CHECKTEMPLATEVERIFY is in some places (e.g., archives) referred to as OP_SECU
 OP_CHECKOUTPUTSHASHVERIFY as working names for the technique while under development while under
 development.
 
-## OP_NOP4 Softfork
+## BIP 119 OP_NOP4 Softfork
 
 This is currently the favored implementation and deployment of `OP_CHECKTEMPLATEVERIFY`.
 

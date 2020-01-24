@@ -8,7 +8,7 @@ advancing OP_CHECKTEMPLATEVERIFY. THe exact location will be shared with attende
 The workshop will be from 10am-5pm. The basic schedule of events are at the bottom of this page.
 
 If you would like to attend, please fill out the form https://forms.gle/ex2WLYS319HFdpJYA . We
-should have capacity for everyone who wants to come, but we will need to know by January 15th if you
+should have capacity for everyone who wants to come, but we will need to know by January 25th if you
 plan to attend. The primary audience for the event is Bitcoin developers, ecosystem engineers (i.e.,
 mining pools, wallets, exchanges, etc), and researchers.
 
@@ -29,7 +29,7 @@ also available for general discussion about OP_CTV.
 
 |Time  | Topic |
 |------|------|
-| 10:00 AM - 10:30 AM | coffee & registration |
+| 10:00 AM - 10:30 AM | Coffee & Registration |
 BIP SESSION
 10:30 AM - 11:00 AM| CTV BIP Design Walkthrough & Basic Motivation
 11:00 AM - 11:30 AM| Small Group Discussion & BIP Reading
@@ -54,5 +54,5 @@ DEMO SESSION & APPLICATION TALKS
 WRAP UP
 4:50 PM - 5:00 PM
 DINNER:
-5:00 PM - 7:00 PM | Dinner & Drinks
+5:00 PM - 7:00 PM | Pub Drinks
 
