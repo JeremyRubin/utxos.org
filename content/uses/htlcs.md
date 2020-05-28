@@ -17,7 +17,7 @@ safe size to prevent the transaction from being too large to be valid. In common
 software implementations such as LND, this limit is set much lower to [12
 HTLCS](https://github.com/lightningnetwork/lnd/blob/21a40daf5840a856240866fff49e8c07dac7283c/lnrpc/rpc.proto#L963).
 This is because accepting a larger number of HTLCS makes it more difficult for
-transactions to confirm during congested periods as they must pay hire fees.
+transactions to confirm during congested periods as they must pay higher fees.
 
 Therefore, similarly to how congestion control is handled for normal
 transaction, lightning channel updates can be done across an `OP_CHECKTEMPLATEVERIFY`
