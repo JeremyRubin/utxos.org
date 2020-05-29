@@ -3,14 +3,14 @@
 		{{ $currentPage := . }}
 		{{ range .Site.Menus.main }}
 			{{ if .HasChildren }}
-				<li class="dropdown show {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" >
+				<li class="dropdown show " >
 					<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							{{ .Pre }}
 							<span>{{ .Name }}</span>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 						{{ range .Children }}
-						<div class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }} dropdown-item">
+						<div class="dropdown-item">
 							<a href="{{ .URL }}">{{ .Name }}</a>
 						</div>
 						{{ end }}

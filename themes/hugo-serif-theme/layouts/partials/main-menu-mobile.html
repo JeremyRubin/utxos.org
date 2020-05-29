@@ -2,11 +2,29 @@
   <ul>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
-      <a href="{{ .URL }}">
-        <span>{{ .Name }}</span>
-      </a>
-    </li>
+
+			{{ if .HasChildren }}
+				<li class="menu-item-{{ .Name | lower }} dropdown show">
+					<a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							{{ .Pre }}
+							<span>{{ .Name }}</span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						{{ range .Children }}
+						<div class="dropdown-item">
+							<a href="{{ .URL }}" style="color: black">{{ .Name }}</a>
+						</div>
+						{{ end }}
+					</div>
+				</li>
+			{{ else }}
+				<li class="menu-item-{{ .Name | lower }}{{ if $currentPage.HasMenuCurrent "main" . }} {{ end }}">
+					<a href="{{.URL}}">
+						{{ .Pre }}
+						<span>{{ .Name }}</span>
+					</a>
+				</li>
+			{{end}}
     {{end}}
   </ul>
 </div>
