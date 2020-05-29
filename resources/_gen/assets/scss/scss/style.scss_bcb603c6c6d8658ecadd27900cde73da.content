@@ -31,7 +31,6 @@ html {
   @media (min-width: 1300px) {
     .container {
       max-width: 1140px; } }
-
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -53,12 +52,12 @@ html {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
-.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
-.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
-.col-xl-auto {
+.col-xl,
+.col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg,
+.col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
+.col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
+.col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col,
+.col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -3985,7 +3984,6 @@ h1 {
     h1 {
       font-size: 32px;
       line-height: 1.2; } }
-
 h2 {
   font-size: 22px;
   font-family: "IBM Plex Sans Condensed", sans-serif;
@@ -3995,7 +3993,6 @@ h2 {
     h2 {
       font-size: 26px;
       line-height: 1.4; } }
-
 h3 {
   font-size: 16px;
   line-height: 1.4; }
@@ -4003,7 +4000,6 @@ h3 {
     h3 {
       font-size: 20px;
       line-height: 1.4; } }
-
 ul,
 ol {
   margin: 0;
@@ -4104,7 +4100,6 @@ ol {
             display: inline-block;
             height: 40px;
             padding: 10px 8px 10px 8px; } }
-
 .sub-footer {
   background: #1a1a23;
   padding-top: 20px;
@@ -4380,7 +4375,6 @@ ol {
       .call svg {
         width: 120px;
         height: 120px; } }
-
 .title {
   color: #2f2f41;
   font-size: 48px;
@@ -4388,7 +4382,6 @@ ol {
   @media (min-width: 992px) {
     .title {
       font-size: 50px; } }
-
 .content ul,
 .content ol {
   margin-top: 10px;
@@ -4420,7 +4413,6 @@ ol {
     .content h1 {
       line-height: 1.2;
       font-weight: 400; } }
-
 .content h2 {
   font-family: "IBM Plex Sans Condensed", sans-serif;
   font-size: 24px;
@@ -4428,7 +4420,6 @@ ol {
   @media (min-width: 768px) {
     .content h2 {
       line-height: 1.4; } }
-
 .content h3 {
   color: #106be0;
   line-height: 1.4;
@@ -4439,7 +4430,6 @@ ol {
       line-height: 1.4;
       letter-spacing: 1.8px;
       font-weight: 400; } }
-
 .content table {
   width: 100%; }
   .content table th,
@@ -4521,13 +4511,11 @@ ol {
       bottom: -100px;
       left: -70px;
       width: 850px; } }
-
 .intro-image-hide-mobile {
   display: none; }
   @media (min-width: 768px) {
     .intro-image-hide-mobile {
       display: block; } }
-
 a.supporter-link {
   text-decoration: none; }
   a.supporter-link h2 {
@@ -4652,7 +4640,6 @@ body {
     body {
       font-size: 17px;
       line-height: 1.2; } }
-
 body:after {
   color: #000000;
   font-size: 12px;
@@ -4679,7 +4666,6 @@ body:after {
   @media (min-width: 1300px) {
     body:after {
       content: "xl - min-width: 1300px"; } }
-
 em {
   font-style: italic; }
 

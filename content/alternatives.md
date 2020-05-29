@@ -1,5 +1,5 @@
 ---
-title: "Alternatives"
+title: "Alternative Designs"
 date: 2019-09-28T17:48:34-07:00
 ---
 

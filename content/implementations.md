@@ -1,6 +1,7 @@
 ---
-title: "Implementations"
+title: "Deployment Options"
 date: 2019-09-27T21:56:54-07:00
+aliases: [/implementations/, /deployment/]
 ---
 
 There are a couple different implementations and deployment strategies for OP_CHECKTEMPLATEVERIFY:
