@@ -49,35 +49,42 @@ pygmentsStyle = "monokai"
     name = "Home"
     url = "/"
     weight = 1
-  [[menu.main]]
-    name = "Impact Analysis"
-    url = "/analysis/"
-    weight = 4
 
   [[menu.main]]
 	identifier="bip"
-    name = "BIP 119 Materials"
+    name = "BIP-119 Materials"
     weight = 2
-  [[menu.main]]
-    name = "Use Cases"
-    url = "/uses/"
-    weight = 3
-  [[menu.main]]
-	parent="bip"
-    name = "Specification"
-    url = "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki"
-    weight = 2
-  [[menu.main]]
-	parent="bip"
-    name = "Deployment Options"
-    url = "/deployment/"
-    weight = 5
-  [[menu.main]]
-	parent="bip"
-    name = "Alternative Designs"
-    url = "/alternatives/"
-    weight = 6
+      [[menu.main]]
+        parent="bip"
+        name = "Specification"
+        url = "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki"
+        weight = 2
+      [[menu.main]]
+        parent="bip"
+        name = "Deployment Options"
+        url = "/deployment/"
+        weight = 5
+      [[menu.main]]
+        parent="bip"
+        name = "Alternative Designs"
+        url = "/alternatives/"
+        weight = 6
    [[menu.main]]
     name = "Workshops"
     url = "/workshops/"
     weight=7
+
+  [[menu.main]]
+	identifier="Applications"
+    name = "Applications"
+    weight = 3
+  [[menu.main]]
+    parent="Applications"
+    name = "Use Cases"
+    url = "/uses/"
+    weight = 3
+  [[menu.main]]
+    parent="Applications"
+    name = "Ecosystem Impact"
+    url = "/analysis/"
+    weight = 4
