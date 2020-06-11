@@ -1,5 +1,5 @@
 ---
-title: CHECKTEMPLATEVERIFY Workshops
+title: BIP-119 Workshops
 ---
 
 ## VR Workshop
