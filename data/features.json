@@ -1,17 +1,17 @@
 [
     {
+        "title" : "Protect Your Stack",
+        "description" : "Smarter custody solutions with automatic wallet vaults protect your hard earned coin from would-be hackers.",
+        "image" : ""
+    },
+    {
         "title" : "Spend Less on Fees",
-        "description" : "Confirm payments to as many recipients as you like in an efficient batch and only pay the fees when block space is cheap.",
+        "description" : "Confirm payments to as many recipients as you need efficiently and pay less in fees.",
         "image" : ""
     },
     {
-        "title" : "Lightning Network, Supercharged",
-        "description" : "Channels without counterparty signing. As many as you like. Routing as many HTLCS as you want.",
-        "image" : ""
-    },
-    {
-        "title" : "Next-Gen Smart Contracts",
-        "description" : "Build new systems with advanced capabilities, like automatic wallet vaults.",
+        "title" : "Supercharge Lightning",
+        "description" : "Channels without interactive setups. As many as you like. Routing as many HTLCS as you want.",
         "image" : ""
     }
 ]
