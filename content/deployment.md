@@ -4,6 +4,17 @@ date: 2019-09-27T21:56:54-07:00
 aliases: [/implementations/, /deployment/]
 ---
 
+# Deployment Schedule & Technique
+
+There is no presently defined deployment schedule for BIP-119.
+
+There has been discussion on the [mailing
+list](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html) about soft
+fork activation techniques as an extension to existing methods, but it is still undecided how new
+upgrades should be proposed, rolled out, and activated or rejected.
+
+
+# OP_CHECKTEMPLATEVERIFY Deployment Options
 There are a couple different implementations and deployment strategies for OP_CHECKTEMPLATEVERIFY:
 
 * `OP_NOP4` Softfork
@@ -38,11 +49,12 @@ The implementation suggests to begin signaling for the soft-fork on versionbit 2
 ## Taproot Tapscript Extension
 
 This version of `OP_CHECKTEMPLATEVERIFY` builds on Tapscript's proposed `OP_SUCCESS{X}` script upgrade
-mechanism. Therefore `OP_CHECKTEMPLATEVERIFY` is only available within Tapscript.
+mechanism. Therefore `OP_CHECKTEMPLATEVERIFY` is only available within Tapscript. There are use
+cases where bare scripts may be desirable.
 
-Deployment would only be possible after or with Taproot's deployment.
+Deployment would only be possible after or with Taproot's deployment, which is presently uncertain.
 
-Given the uncertainty with Taproot's deployment, the `OP_NOP4` deployment strategy has been
+For these reasons, the `OP_NOP4` deployment strategy has been
 drafted.
 
 ### Links
