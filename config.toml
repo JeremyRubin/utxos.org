@@ -69,22 +69,35 @@ pygmentsStyle = "monokai"
         name = "Alternative Designs"
         url = "/alternatives/"
         weight = 6
-   [[menu.main]]
-    name = "Workshops"
-    url = "/workshops/"
-    weight=7
+      [[menu.main]]
+       parent="bip"
+       name = "Workshops"
+       url = "/workshops/"
+       weight=7
 
   [[menu.main]]
-	identifier="Applications"
+	identifier="apps"
     name = "Applications"
     weight = 3
+      [[menu.main]]
+        parent="apps"
+        name = "Use Cases"
+        url = "/uses/"
+        weight = 3
+      [[menu.main]]
+        parent="apps"
+        name = "Ecosystem Impact"
+        url = "/analysis/"
+        weight = 4
   [[menu.main]]
-    parent="Applications"
-    name = "Use Cases"
-    url = "/uses/"
-    weight = 3
+    name="More Resources"
+    url ="/resources/"
+    weight=5
+
   [[menu.main]]
-    parent="Applications"
-    name = "Ecosystem Impact"
-    url = "/analysis/"
-    weight = 4
+    name="Sponsors"
+    url ="/sponsors/"
+    weight=6
+  [[menu.main]]
+    name="Telegram"
+    url ="https://t.me/op_ctv_chat"
