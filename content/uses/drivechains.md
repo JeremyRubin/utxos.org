@@ -25,4 +25,4 @@ IF output.address == DCScript(address_arg, i+1) || output.address == DCScript(ad
 FAIL
 ```
 
-Note that, due to the restrictions inherent to OP_CTV, the set of possible addresses available to use as `our_address` must be finite and picked in the initial setup phase. Furthermore, as each possible state requires some computation, the length of the paths that a transaction can take to redemption is limited in depth.
+Note that, due to the restrictions inherent to OP_CTV, the set of possible addresses available to use as `our_address` must be finite and picked in the initial setup phase. Furthermore, as each possible state requires some computation, the length of the paths that a transaction can take to redemption is limited in depth and the size of any withdrawal must be within a set.
