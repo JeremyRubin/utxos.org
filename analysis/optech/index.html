@@ -1,0 +1,120 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Bitcoin Optech Newsletter #48 - utxos.org -- Bitcoin for Everyone</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon-32x32.png><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous><link rel=stylesheet href=/css/style.min.76dcb25f7e73f2a1f28c4630f0310a8615183dfb1dad298cee7be940ac5f0ec1.css></head><body class="page page-default-single"><div id=main-menu-mobile class=main-menu-mobile><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="menu-item-bip-119 materials dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki style=color:#000>Specification</a></div><div class=dropdown-item><a href=/deployment/ style=color:#000>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/ style=color:#000>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/ style=color:#000>Workshops</a></div></div></li><li class="menu-item-applications dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/ style=color:#000>Use Cases</a></div><div class=dropdown-item><a href=/analysis/ style=color:#000>Ecosystem Impact</a></div></div></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><div class=wrapper><div class=header><div class=container><div class=logo><a href=https://utxos.org><img alt=utxos.org src=/images/logo.svg></a></div><div class=logo-mobile><a href=https://utxos.org><img alt=utxos.org src=/images/logo-mobile.svg></a></div><div id=main-menu class=main-menu><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki>Specification</a></div><div class=dropdown-item><a href=/deployment/>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/>Workshops</a></div></div></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/>Use Cases</a></div><div class=dropdown-item><a href=/analysis/>Ecosystem Impact</a></div></div></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button aria-label="Mobile Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button></div></div><div class="container pb-6 pt-6 pt-md-10 pb-md-10"><div class="row justify-content-start"><div class="offset-1 col-10 col-md-10"><div class="service service-single"><h1 class=title>Bitcoin Optech Newsletter #48</h1><h2 class=byline>by <a href=https://bitcoinops.org>Bitcoin OpTech</a></h2><div class=content><blockquote><p><em>This article was orignally featured in Bitcoin Optech Newsletter #48, and has been
+excerpted, abbridged, and updated slightly for accuracy with the most recent iteration of
+the BIP for this page. The original OpTech content may be found
+<a href=https://bitcoinops.org/en/newsletters/2019/05/29/>here</a>. OpTech&rsquo;s content is
+offered under the <a href=https://opensource.org/licenses/MIT>MIT License</a>.</em></p></blockquote><p>The <a href=https://github.com/JeremyRubin/bips/blob/op-secure-the-bag-master/bip-secure-the-bag.mediawiki>proposed</a> opcode <code>OP_CHECKTEMPLATEVERIFY</code> allows an address to commit to one or more branches that require the
+transaction spending them to include a certain set of outputs, a
+technique that contract protocol researchers call a <em>covenant</em>.
+The primary described benefit of this proposed opcode is allowing a
+small transaction to be confirmed now (when fees might be high) and have that transaction
+trustlessly guarantee that a set of people will receive their actual
+payments later when fees might be lower. This can make it much more
+economical for organizations that already implement techniques such as
+<a href=https://github.com/bitcoinops/scaling-book/blob/master/x.payment_batching/payment_batching.md>payment batching</a> to handle sudden fee spikes.</p><p>Before we look at the new opcode itself, let&rsquo;s take a moment to look at
+how you might accomplish something similar using current Bitcoin
+transaction features.</p><p>Alice wants to pay a set of ten people but transaction fees are
+currently high so that she doesn&rsquo;t want to send ten separate
+transactions or even use payment batching to send one transaction
+that includes an output for each of the receivers. Instead, she wants
+to trustlessly commit to paying them in the future without having to pay
+onchain fees for ten outputs now. So Alice asks each of the receivers
+for one of their public keys and creates an unsigned and unbroadcast <em>setup</em> transaction
+that pays those keys using a 10-of-10 multisig script. Then she creates
+a child transaction that spends from the multisig output to the
+10 outputs she originally wanted to create. We&rsquo;ll call this child
+transaction the <em>distribution</em> transaction. She asks all the receivers
+to sign this distribution transaction and she ensures each person
+receives everyone else&rsquo;s signatures, then she signs and broadcasts the
+setup transaction.</p><p><img src=2019-05-tx-tree-1.png alt="A setup transaction paying a pre-signed distribution transaction"></p><p>When the setup transaction receives a reasonable number of
+confirmations, there&rsquo;s no way for Alice to take back her payment to the
+10 receivers. As long as each of the receivers has a copy of the
+distribution transaction and all the others' signatures, there&rsquo;s also no
+way for any receivers to cheat any other receiver out of a payment. So
+even though the distribution transaction that actually pays the
+receivers hasn&rsquo;t been broadcast or confirmed, the payments are
+secured by the confirmed setup transaction. At any time, any
+of the receivers who wants to spend their money can broadcast
+the distribution transaction and wait for it to confirm.</p><p>This technique allows spenders and receivers to lock in a set of
+payments during high fees and then only distribute the actual payments when
+fees are lower. According to Bitcoin Core fee estimates at the time of
+writing, anyone patient enough to wait a week for a transaction to
+confirm (like the distribution transaction above) can save significantly on fees.
+Let&rsquo;s look at the example above in that context. To make later
+comparisons to Taproot more fair, we&rsquo;ll assume some form of key and
+signature aggregation is being used, such as [MuSig][] or (in theory)
+multiparty ECDSA (see [Newsletter #18][]).</p><table><thead><tr><th></th><th>Individual Payments</th><th>Batched Payment</th><th>Commit now, distribute later</th></tr></thead><tbody><tr><td>Immediate (high fee) transactions</td><td>10x<abbr title="A transaction spending one P2WPKH input to two P2WPKH outputs">141 vbytes</abbr></td><td>1x<abbr title="A transaction spending one P2WPKH input to eleven P2WPKH outputs, or 9*(8+1+22) more bytes than the two-output P2WPKH transaction">420 vbytes</abbr></td><td>1x<abbr title="A transaction spending one P2WPKH input to two P2WPKH outputs">141 vbytes</abbr></td></tr><tr><td>Cost at 0.00142112 BTC/KvB</td><td>0.00204641</td><td>0.00059687</td><td>0.00020037</td></tr><tr><td>Delayed (low fee) transactions</td><td>&mdash;</td><td>&mdash;</td><td>1x<abbr title="A transaction spending one P2WPKH input to ten P2WPKH outputs, or 8*(8+1+22) more bytes than the two-output P2WPKH transaction">389 vbytes</abbr></td></tr><tr><td>Cost at 0.00001014 BTC/KvB</td><td>&mdash;</td><td>&mdash;</td><td>0.00000394</td></tr><tr><td>Total vbytes</td><td>1,410</td><td>420</td><td>530</td></tr><tr><td>Total cost</td><td>0.00204641</td><td>0.00059687</td><td>0.00020431</td></tr><tr><td><strong>Savings compared to previous column</strong></td><td>&mdash;</td><td><strong>71%</strong></td><td><strong>66%</strong></td></tr></tbody></table><p>We see that this type of trustlessly delayed payment can save 66% over
+payment batching and 90% over sending separate payments. Note that the
+savings could be even larger during periods of greater fee
+stratification or with more than ten receivers.</p><h3 id=op_checktemplateverify>OP_CHECKTEMPLATEVERIFY</h3><p>The proposed soft fork would add a new opcode, <code>OP_CHECKTEMPLATEVERIFY</code> (abbreviated by
+its author as <code>OP_STB</code>). This opcode and a hash digest could be included in
+tapleaf scripts, allowing it to be one of the conditions in a Taproot address.
+When that address was spent, if OP_STB was executed, the spending transaction
+would only be valid if the hash digest of its outputs matched the hash digest
+read from the script by OP_STB.</p><p>Comparing this to our example above, Alice would again ask each of the
+participants for a public key (such as a Taproot
+address[^taproot-pubkeys]). Similar to before, she&rsquo;d create 10 outputs
+which each paid one of the receivers&mdash;but she wouldn&rsquo;t need to form
+this into a specific distribution transaction. Instead, she&rsquo;d just hash
+the ten outputs together and use the resultant digest to create a
+tapleaf script containing OP_STB. That would be the only tapleaf in this
+Taproot commitment. Alice could also use the participants' public keys
+to form the taproot internal key to allow them to cooperatively spend
+the money without revealing the Taproot script path.</p><p><img src=2019-05-tx-tree-2.png alt="A setup transaction paying a OP_STB output that expands into a distribution transaction"></p><p>Alice would then give each of the receivers a copy of all ten outputs to
+allow each of them to verify that Alice&rsquo;s setup transaction,
+when suitably confirmed, guaranteed them payment. When they later
+wanted to spend that payment, any of them could then create a distribution
+transaction containing the committed outputs. Unlike the example from
+the previous subsection, they don&rsquo;t need to pre-sign anything so they would never need to interact with each
+other. Even better, the information Alice needs to send them in order
+to allow them to verify the setup transaction and ultimately spend their
+money could be sent through existing asynchronous communication methods
+such as email or a cloud drive. That means the receivers wouldn&rsquo;t need
+to be online at the time Alice created and sent her setup transaction.</p><p>This elimination of the need to interact is a particular highlight of
+the proposal. If we imagine the example above with Alice being an
+exchange, the interactive form of the protocol would require her to keep
+the ten participants online and connected to her service from the moment
+each of them submitted their withdrawal request until the interaction
+was done&mdash;and they&rsquo;d all need to use wallets compatible with such a
+child transaction signing protocol. The non-interactive form with OP_STB
+would only require them to submit a Bitcoin address and an email address
+(or some other protocol address for delivery of the committed outputs).</p><h3 id=feedback-and-activation>Feedback and activation</h3><p>The proposal received over 30 replies on the Bitcoin-Dev mailing list as
+of this writing. The concerns raised included:</p><ul><li><p><strong>Not flexible enough:</strong> Matt Corallo
+<a href=https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-May/016936.html>says</a>,
+&ldquo;we need to
+have a flexible solution that provides more features than just this, or we
+risk adding it only to go through all the effort again when people ask for a
+better solution.&rdquo;</p></li><li><p><strong>Not generic enough:</strong> Russell O&rsquo;Connor suggests both OP_STB and
+<code>SIGHASH_ANYPREVOUT</code> (described in <a href=https://bitcoinops.org/en/newsletters/2019/05/21/>last week&rsquo;s newsletter</a>) could be replaced using an <code>OP_CAT</code> opcode and an <code>OP_CHECKSIGFROMSTACK</code>
+opcode. Both opcodes are currently implemented in
+ElementsProject.org sidechains such as <a href=blockstream.com/liquid>Liquid</a>
+. The <code>OP_CAT</code> opcode <a href=https://en.wiktionary.org/wiki/catenate>catenates</a> two strings into one string
+and the <code>OP_CHECKSIGFROMSTACK</code> opcode compares a signature on the
+stack to other data on the stack rather than to the transaction that
+contains the signature. Catenation allows a script to include various
+parts of a message that are combined with witness elements at spend
+time in order to form a complete message that can be verified using
+<code>OP_CHECKSIGFROMSTACK</code>.</p><p>Because the message that gets verified can be a Bitcoin
+transaction&mdash;including a partial copy of the transaction the
+spender is attempting to send&mdash;these operations allow a script to
+evaluate transaction data without having to directly read the
+transaction being evaluated. Compare this to OP_STB which looks at
+the hash of the outputs and anyprevout which looks at all the other
+signatures in the transaction.</p><p>A potentially major downside of the cat/checksigfromstack approach
+is that it requires larger witnesses to hold the larger script and
+all of its witness elements. O&rsquo;Connor noted that he doesn&rsquo;t mind
+switching to more concise implementations (like OP_STB and
+anyprevout) once it&rsquo;s clear a significant number of users are making
+use of those functions via generic templates.</p></li><li><p><strong>Not safe enough:</strong> Johnson Lau pointed out that OP_STB allows
+signature replay similar to <a href=https://github.com/bitcoin/bips/blob/master/bip-0118.mediawiki>BIP118</a> noinput, a perceived risk that
+<a href=https://github.com/ajtowns/bips/blob/bip-anyprevout/bip-anyprevout.mediawiki>BIP AnyPrevout</a> takes pains to eliminate.</p></li></ul><p>Rubin and others provided at least preliminary responses to each of
+these concerns. We expect discussion will be ongoing, so we&rsquo;ll report
+back with any significant developments in future weeks.</p><p>The [proposed BIP for OP_STB][bip-coshv] suggests it could be activated
+along with bip-taproot (if users desire it). As bip-taproot is itself
+still under discussion, we don&rsquo;t recommend anyone come to expect dual
+activation. Future discussion and implementation testing will reveal
+whether each proposal is mature enough, desirable enough, and enough
+supported by users to warrant being added to Bitcoin.</p><p>Overall, OP_STB appears to provide a simple (but clever) method for
+allowing outputs to commit to where their funds can ultimately be sent.
+In next week&rsquo;s newsletter, we&rsquo;ll look at some other ways OP_STB could be
+used to improve efficiency, privacy, or both.</p></div></div></div></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//utxos-org.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><div class=footer><div class=container><div class=row><div class=col-12><div class=footer-inner><h3 class=footer-title>utxos.org -- Bitcoin for Everyone</h3><ul></ul></div></div></div></div></div><script type=text/javascript src=/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152627278-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-152627278-1')</script><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i&display=swap" rel=stylesheet><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js integrity=sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js integrity=sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM crossorigin=anonymous></script></body></html>

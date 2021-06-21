@@ -1,0 +1,63 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Non Interactive Channels - utxos.org -- Bitcoin for Everyone</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon-32x32.png><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous><link rel=stylesheet href=/css/style.min.76dcb25f7e73f2a1f28c4630f0310a8615183dfb1dad298cee7be940ac5f0ec1.css></head><body class="page page-default-single"><div id=main-menu-mobile class=main-menu-mobile><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="menu-item-bip-119 materials dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki style=color:#000>Specification</a></div><div class=dropdown-item><a href=/deployment/ style=color:#000>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/ style=color:#000>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/ style=color:#000>Workshops</a></div></div></li><li class="menu-item-applications dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/ style=color:#000>Use Cases</a></div><div class=dropdown-item><a href=/analysis/ style=color:#000>Ecosystem Impact</a></div></div></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><div class=wrapper><div class=header><div class=container><div class=logo><a href=https://utxos.org><img alt=utxos.org src=/images/logo.svg></a></div><div class=logo-mobile><a href=https://utxos.org><img alt=utxos.org src=/images/logo-mobile.svg></a></div><div id=main-menu class=main-menu><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki>Specification</a></div><div class=dropdown-item><a href=/deployment/>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/>Workshops</a></div></div></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/>Use Cases</a></div><div class=dropdown-item><a href=/analysis/>Ecosystem Impact</a></div></div></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button aria-label="Mobile Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button></div></div><div class="container pb-6 pt-6 pt-md-10 pb-md-10"><div class="row justify-content-start"><div class="offset-1 col-10 col-md-10"><div class="service service-single"><h1 class=title>Non Interactive Channels</h1><h2 class=byline>by <a href=https://twitter.com/JeremyRubin>Jeremy Rubin</a></h2><div class=content><p><img src=/images/uses/nic.svg alt></p><p>Normally, when opening a payment channel, you require participation from both
+parties to the channel. This is because the Lightning Network uses pre-signed
+multi-sig type transactions to ensure that a channel can always be exited by
+either party, before entering.</p><p>With OP_CHECKTEMPLATEVERIFY, it&rsquo;s possible for a single party to construct a
+channel which either party can exit from without requiring signatures from
+both parties.</p><p>These payment channels can operate in one direction, paying to the channel
+&ldquo;listener&rdquo; without need for their private key to be online.</p><p>As an example, suppose Carol had a desire to non interactively create a channel
+where Alice has 0.1 BTC and Bob has 0.9 BTC.</p><p>Carol creates Transaction A paying out 1 BTC to witness program:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>OP_IF &lt;StandardTemplateHash(Tx B)&gt; OP_CTV
+OP_ELSE 2 &lt;PK Bob&gt; &lt;PK Alice&gt; 2 CHECKMULTISIG
+OP_ENDIF
+</code></pre></div><p>This corresponds to the Main Channel UTXO in the diagram.</p><p>In order to redeem funds from this channel cooperatively, Alice and Bob simply use a witness:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>0 &lt;signature Close State Bob&gt; &lt;signature Close State Alice&gt; 0
+</code></pre></div><p>which can be exchanged in counterparts at any time.</p><p>Transaction B can be used in the uncooperative case. Transaction B looks like:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>Inputs: Main Channel UTXO
+Outputs: 1 BTC to Uncooperative Close Initiated UTXO
+</code></pre></div><p>Uncooperative Close Initiatied UTXO has the following script:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>OP_IF &lt;StandardTemplateHash(Tx C)&gt; OP_CTV
+OP_ELSE 2 &lt;PK Bob&gt; &lt;PK Alice&gt; 2 CHECKMULTISIG
+OP_ENDIF
+</code></pre></div><p>In order to channel spend funds from this channel, Alice and Bob simply craft a
+witness for the Uncooperative Close Inititiated UTXO:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>0 &lt;signature Revokable HTLC State Bob&gt; &lt;signature Revokable HTLC State Alice&gt; 0
+</code></pre></div><p>which can be exchanged in counterparts (i.e., with signatures from either Alice
+or Bob) at any time. Optionally, Alice and Bob may also create this witness
+signed on the Main Channel UTXO to save fees in the cooperative-but-offline
+close case.</p><p>A Revokable HTLC State transaction could look like this, but is compatible with
+other protocols:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>Inputs: Uncooperative Close Initiated UTXO
+Witness Data: (see above)
+Outputs: 1 BTC to HTLC Script
+</code></pre></div><p>Where a potential HTLC Script (for Alice to be able to close, and Bob to contest) from <a href=https://github.com/lightningnetwork/lightning-rfc/blob/master/03-transactions.md#offered-htlc-outputs>BOLT#3</a>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># To remote node with revocation key
+OP_DUP OP_HASH160 &lt;RIPEMD160(SHA256(revocationpubkey))&gt; OP_EQUAL
+OP_IF
+    OP_CHECKSIG
+OP_ELSE
+    &lt;remote_htlcpubkey&gt; OP_SWAP OP_SIZE 32 OP_EQUAL
+    OP_NOTIF
+        # To local node via HTLC-timeout transaction (timelocked).
+        OP_DROP 2 OP_SWAP &lt;local_htlcpubkey&gt; 2 OP_CHECKMULTISIG
+    OP_ELSE
+        # To remote node with preimage.
+        OP_HASH160 &lt;RIPEMD160(payment_hash)&gt; OP_EQUALVERIFY
+        OP_CHECKSIG
+    OP_ENDIF
+OP_ENDIF
+</code></pre></div><p>Transaction C sets up a default closure path for the channel. This is used in
+the case where either Alice or Bob never come online. Transaction C looks like
+this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>Inputs: Uncooperative Close Initiated UTXO
+Witness Data: 1
+Sequence: + 2 weeks
+Outputs: 0.1 BTC to Alice, 0.9 BTC to Bob
+</code></pre></div><h3 id=minor-security-note>Minor Security Note</h3><p>Note that because the full uncooperative close path is public, it may be
+possible for a mallicious actor Eve to partition both Alice and Bob from the
+network and close the channel via transaction C if Eve can learn the details
+of the CTV transaction.</p><p>To protect against this outcome, multisigs can be added, e.g.:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>OP_IF &lt;StandardTemplateHash(Tx B)&gt; OP_CTV
+OP_ELSE 2 &lt;PK Bob&gt; &lt;PK Alice&gt; 2 CHECKMULTISIG
+OP_ENDIF
+</code></pre></div><p>to</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>OP_IF &lt;StandardTemplateHash(Tx B)&gt; OP_CTV OP_DROP 1
+OP_ELSE 2 
+OP_ENDIF
+&lt;PK Bob&gt; &lt;PK Alice&gt; 2 CHECKMULTISIG
+</code></pre></div><p>This ensure&rsquo;s either Alice or Bob authorized the next step in the protocol if
+the channel specification is fully public, or a salt can be added to the CTV
+outputs (e.g., <code>&lt;random data> OP_DROP</code>) if the amounts are known to the public
+but not the entire scripts.</p><p>Even without either of these mitigations, the channel specification is secure
+in the same threat model (t-delay broadcast to chain) as a regular lightning
+channel.</p></div></div></div></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//utxos-org.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><div class=footer><div class=container><div class=row><div class=col-12><div class=footer-inner><h3 class=footer-title>utxos.org -- Bitcoin for Everyone</h3><ul></ul></div></div></div></div></div><script type=text/javascript src=/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152627278-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-152627278-1')</script><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i&display=swap" rel=stylesheet><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js integrity=sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js integrity=sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM crossorigin=anonymous></script></body></html>
