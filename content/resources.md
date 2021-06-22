@@ -14,6 +14,13 @@ If something is missing, leave a comment or open a pull request on
 - [Implementation](https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify)
 - [Example RPCs](https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify-feb1-workshop)
 
+# Sapio
+
+Sapio is a programming language for CTV contracts.
+
+- [Book](https://learn.sapio-lang.org)
+- [Repo](https://github.com/sapio-lang/sapio)
+
 # Forums:
 - IRC Channel: ##ctv-bip-review (logged, feel free to join)
 - Telegram Discussion Group: https://t.me/op_ctv_chat
@@ -37,6 +44,7 @@ Transcript](https://github.com/kanzure/diyhpluswiki/blob/05d21c79611e240c87387a8
     - [Slides]( https://telaviv2019.scalingbitcoin.org/files/bip-op-securethebag.pdf)
     - [Transcript]( https://diyhpl.us/wiki/transcripts/scalingbitcoin/tel-aviv-2019/bip-securethebag/)
 - [MIT Bitcoin Expo 2020](https://www.pscp.tv/w/1PlKQmdRNVDKE)
+- [Bitcoin 2021 Miami](https://www.youtube.com/watch?v=w3FL0kEO_R4)
 
 # Podcasts:
 
