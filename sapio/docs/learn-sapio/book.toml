@@ -1,0 +1,17 @@
+[book]
+authors = ["Jeremy Rubin"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Designing Bitcoin Contracts with Sapio"
+
+[rust]
+edition=2018
+
+[output.html]
+mathjax-support = true
+git-repository-url = "https://github.com/sapio-lang/sapio"
+
+[output.html.playground]
+editable = true
+line-numbers = true
