@@ -1,0 +1,3 @@
+[submodule "static/sapio"]
+	path = static/sapio
+	url = https://github.com/sapio-lang/sapio

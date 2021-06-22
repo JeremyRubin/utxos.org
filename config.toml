@@ -89,6 +89,11 @@ pygmentsStyle = "monokai"
         name = "Ecosystem Impact"
         url = "/analysis/"
         weight = 4
+      [[menu.main]]
+        parent="apps"
+        name = "Sapio"
+        url = "https://learn.sapio-lang.org"
+        weight = 5
   [[menu.main]]
     name="More Resources"
     url ="/resources/"
