@@ -51,3 +51,7 @@ additional transaction, and 2N from the perspective of the network. However,
 given the lack of signatures required for such transactions, the actual overhead
 is less.
 
+
+Below is an example implementation of a tree payment in [sapio](https://learn.sapio-lang.org).
+
+{{% code file="/static/sapio/sapio-contrib/src/contracts/treepay.rs" language="rust" %}}
