@@ -3,16 +3,19 @@
         <th> Developer  </th>
         <th> Support Indicated</th>
         <th> Statement </th>
+        <th> Affiliations</th>
     </tr>
-{{ range $.Site.Data.devs }}
-<tr>
-    <td>{{.Name}}</td>
-    <td>{{.Supports}}</td>
-    <td> {{ with (index . "Hashrate Share") }}{{ . }}{{ end }} </td>
-    {{ if .Link}}
-    <td> <a href="{{.Link}}">X</a> </td>
-    {{end}}
+    {{ range $.Site.Data.devs }}
+    <tr>
+        <td>{{.Name}}</td>
+        <td>{{.Supports}}</td>
+        <td>
+            {{ if .Link}}
+            <a href="{{.Link}}">X</a> 
+            {{end}}
+        </td>
+        <td>{{.Affiliations}}</td>
 
-</tr>
-{{end}}
+    </tr>
+    {{end}}
 </table>

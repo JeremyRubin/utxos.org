@@ -12,14 +12,35 @@ Open an [issue](https://github.com/jeremyrubin/utxos.org/issues/new) or a [pull
 request](https://github.com/JeremyRubin/utxos.org/pulls) on GitHub to modify or
 create an entry for your organization.
 
-Mining percentages were snapshotted as of August 1st, 2021.
 
-### Mining Pools
-{{< miners >}}
+### Developers & Individuals
+> Developers & Individuals include the programmers behind Bitcoin Core,
+> wallets, or other related technologies as well as generally knowledgeable
+> individual's opinions.
+
+{{< devsignals >}}
 
 ### Businesses
+> Businesses represent a corporate interest in Bitcoin. Individuals at
+> companies may have preferences differing from their corporation, or in
+> alignment -- it is encouraged to list both the business and any individual
+> contributor's opinion here. For the purpose of this site, most open source
+> projects are not considered "businesses" and they should prefer to sign as
+> individual contributors.
+
 {{< bizsignals >}}
 
-### Developers
-{{< devsignals >}}
+### Mining Pools
+
+> note: Most miners mine via mining pools, which aggregate hash power to reduce
+> variance in mining returns. While individual miners may also express a
+> preference for or against a fork, pools serve as a proxy for the sentiment
+> amongst their constituent miners, were they to misjudge they might lose
+> hashrate.
+
+**Mining percentages were snapshotted as of August 1st, 2021.**
+
+{{< miners >}}
+
+
 
