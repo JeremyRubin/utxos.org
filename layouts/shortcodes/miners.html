@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th> Pool </th>
+        <th> Support Indicated</th>
+        <th> Hashrate </th>
+        <th> Statement </th>
+    </tr>
+{{ range $.Site.Data.hashratesnapshot }}
+<tr>
+    <td>{{.Pool}}</td>
+    <td>{{.Supports}}</td>
+    <td> {{ with (index . "Hashrate Share") }}{{ . }}{{ end }} </td>
+    {{ if .Link}}
+    <td> <a href="{{.Link}}">X</a> </td>
+    {{end}}
+
+</tr>
+{{end}}
+</table>
+
