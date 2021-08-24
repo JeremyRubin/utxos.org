@@ -16,17 +16,18 @@ create an entry for your organization.
 ### Developers & Individuals
 > Developers & Individuals include the programmers behind Bitcoin Core,
 > wallets, or other related technologies as well as generally knowledgeable
-> individual's opinions.
+> individual's opinions. Although they may have affiliations, this is not a statement
+> on behalf of their organization (see below for Businesses).
 
 {{< devsignals >}}
 
-### Businesses
-> Businesses represent a corporate interest in Bitcoin. Individuals at
-> companies may have preferences differing from their corporation, or in
-> alignment -- it is encouraged to list both the business and any individual
-> contributor's opinion here. For the purpose of this site, most open source
-> projects are not considered "businesses" and they should prefer to sign as
-> individual contributors.
+### Businesses / Organizations
+> Businesses represent a corporate  or other organized interests in Bitcoin.
+> Individuals at companies may have preferences differing from their
+> corporation, or in alignment -- it is encouraged to list both the business
+> and any individual contributor's opinion here. For the purpose of this site,
+> most open source projects are not considered "businesses" and they should
+> prefer to sign as individual contributors.
 
 {{< bizsignals >}}
 
