@@ -2,10 +2,6 @@
   Supports: "Yes"
   Affiliations: "Co-Founder & Head of Products @ Vulpem Ventures"
   Link: https://twitter.com/tierotiero/status/1432784457556242432
-- Name: Jeremy Rubin
-  Supports: "Yes"
-  Affiliations: "Judica, bitcoin core contributor"
-  Link: null
 - Name: Josh Cincinnati
   Supports: "Yes"
   Affiliations: "Advisor to Sia Foundation and Board Member of the Mina Foundation"
@@ -21,4 +17,12 @@
 - Name: Buck Perley
   Supports: "Yes"
   Affiliations: Engineer at Unchained Capital
+  Link: null
+- Name: pyskell
+  Supports: "Yes"
+  Affiliations: "None"
+  Link: null
+- Name: Jeremy Rubin
+  Supports: "Yes"
+  Affiliations: "Judica, bitcoin core contributor"
   Link: null
