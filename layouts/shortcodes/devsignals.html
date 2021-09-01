@@ -1,11 +1,11 @@
 <table>
     <tr>
-        <th> Developer  </th>
+        <th> Individual  </th>
         <th> Support Indicated</th>
         <th> Statement </th>
         <th> Affiliations</th>
     </tr>
-    {{ range $.Site.Data.devs }}
+    {{ range sort $.Site.Data.devs "Name" }}
     <tr>
         <td>{{.Name}}</td>
         <td>{{.Supports}}</td>
