@@ -4,5 +4,8 @@
 - Name: Vulpem Ventures
   Supports: "Yes"
   Link: https://twitter.com/tierotiero/status/1432784457556242432
+- Name: Muun Wallet
+  Supports: "Yes"
+  Link: https://github.com/JeremyRubin/utxos.org/pull/4#issuecomment-913036610
 - Name: Lightning Labs
   Supports: "Yes"
