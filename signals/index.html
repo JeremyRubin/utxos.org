@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="ie=edge">
-<title>Deployment Options - utxos.org -- Bitcoin for Everyone</title>
+<title>BIP-119 Signalled Support - utxos.org -- Bitcoin for Everyone</title>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=icon href=/favicon-32x32.png>
 <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous>
@@ -157,63 +157,245 @@
 <div class="row justify-content-start">
 <div class="offset-1 col-10 col-md-10">
 <div class="service service-single">
-<h1 class=title>Deployment Options</h1>
-<div class=content><h1 id=deployment-schedule--technique>Deployment Schedule & Technique</h1>
-<p>There is no presently defined deployment schedule for BIP-119.</p>
-<p>There has been discussion on the <a href=https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html>mailing
-list</a> about soft
-fork activation techniques as an extension to existing methods, but it is still undecided how new
-upgrades should be proposed, rolled out, and activated or rejected.</p>
-<h1 id=op_checktemplateverify-deployment-options>OP_CHECKTEMPLATEVERIFY Deployment Options</h1>
-<p>There are a couple different implementations and deployment strategies for OP_CHECKTEMPLATEVERIFY:</p>
-<ul>
-<li><code>OP_NOP4</code> Softfork</li>
-<li>Taproot Tapscript Extension</li>
-<li>Templated Tapscript Extension</li>
-</ul>
-<p>This page serves to mark the differences between these versions.</p>
-<p>OP_CHECKTEMPLATEVERIFY is in some places (e.g., archives) referred to as OP_SECURETHEBAG or
-OP_CHECKOUTPUTSHASHVERIFY as working names for the technique while under development while under
-development.</p>
-<h2 id=bip-119-op_nop4-softfork>BIP 119 OP_NOP4 Softfork</h2>
-<p>This is currently the favored implementation and deployment of <code>OP_CHECKTEMPLATEVERIFY</code>.</p>
-<p>In this version, <code>OP_CHECKTEMPLATEVERIFY</code> is implemented as a soft-fork upgrade to <code>OP_NOP</code> much like
-<code>OP_CHECKLOCKTIMEVERIFY</code>. This would make <code>OP_CHECKTEMPLATEVERIFY</code> available for both SegWit and plain
-script outputs.</p>
-<p><i>Note: P2SH is not compatible with <code>OP_CHECKTEMPLATEVERIFY</code> inehrently because of the hash cycle caused
-by putting the redeemScript on the scriptSig, which changes the TXID.</i></p>
-<p>The implementation suggests to begin signaling for the soft-fork on versionbit 25 on January 1st,
-2020 for 1 year, but this can be replaced with actual values once formally proposed.</p>
-<h3 id=links>Links</h3>
-<ul>
-<li><a href=https://github.com/JeremyRubin/bips/blob/op-secure-the-bag-master/bip-secure-the-bag.mediawiki>BIP Draft</a></li>
-<li><a href=https://github.com/JeremyRubin/bitcoin/tree/securethebag_master>Implementation</a></li>
-</ul>
-<h2 id=taproot-tapscript-extension>Taproot Tapscript Extension</h2>
-<p>This version of <code>OP_CHECKTEMPLATEVERIFY</code> builds on Tapscript&rsquo;s proposed <code>OP_SUCCESS{X}</code> script upgrade
-mechanism. Therefore <code>OP_CHECKTEMPLATEVERIFY</code> is only available within Tapscript. There are use
-cases where bare scripts may be desirable.</p>
-<p>Deployment would only be possible after or with Taproot&rsquo;s deployment, which is presently uncertain.</p>
-<p>For these reasons, the <code>OP_NOP4</code> deployment strategy has been
-drafted.</p>
-<h3 id=links-1>Links</h3>
-<ul>
-<li><a href=https://github.com/JeremyRubin/bips/blob/op-secure-the-bag/bip-secure-the-bag.mediawiki>BIP Draft</a></li>
-<li><a href=https://github.com/JeremyRubin/bitcoin/tree/secure_the_bag>Implementation</a></li>
-</ul>
-<h2 id=templated-tapscript-extension>Templated Tapscript Extension</h2>
-<p>Because of the structure of Taproot, an <code>OP_CHECKTEMPLATEVERIFY</code> script has an
-additional 32 byte overhead compared to a bare <code>OP_NOP4</code> style upgrade. By
-templating the Tapscripts to support a special case <code>OP_CHECKTEMPLATEVERIFY</code>, this
-overhead can be eliminated.</p>
-<p>This technique is notable because it could be added to Taproot after the
-<code>OP_NOP4</code> upgrade, but cannot be added to Taproot as a soft-fork if it is not
-natively supported in Tapscript.</p>
-<h3 id=links-2>Links</h3>
-<p><a href=https://github.com/JeremyRubin/bitcoin/tree/taproot-with-builtin-templates>Implementation</a></p>
-<hr>
-<p>In addition, there is a withdrawn version, <code>OP_CHECKOUTPUTSHASHVERIFY</code>, which was vulnerable to
-malleability issues.</p>
+<h1 class=title>BIP-119 Signalled Support</h1>
+<div class=content><p>The following organizations, individuals, or pools have communicated preference
+for and intent to support a BIP-119 activation attempt using reasonable
+parameters. These &ldquo;soft signals&rdquo; are non-binding until an actual concrete proposal
+has been formed, but are useful for measuring community consensus.</p>
+<p>Open an <a href=https://github.com/jeremyrubin/utxos.org/issues/new>issue</a> or a <a href=https://github.com/JeremyRubin/utxos.org/pulls>pull
+request</a> on GitHub to modify or
+create an entry for your organization.</p>
+<h3 id=developers--individuals>Developers & Individuals</h3>
+<blockquote>
+<p>Developers & Individuals include the programmers behind Bitcoin Core,
+wallets, or other related technologies as well as generally knowledgeable
+individual&rsquo;s opinions. Although they may have affiliations, this is not a statement
+on behalf of their organization (see below for Businesses).</p>
+</blockquote>
+<table>
+<tr>
+<th> Individual </th>
+<th> Support Indicated</th>
+<th> Statement </th>
+<th> Affiliations</th>
+</tr>
+<tr>
+<td>Bruce Fenton</td>
+<td>Yes</td>
+<td>
+</td>
+<td>Managing Director Chainstone Labs</td>
+</tr>
+<tr>
+<td>Buck Perley</td>
+<td>Yes</td>
+<td>
+</td>
+<td>Engineer at Unchained Capital</td>
+</tr>
+<tr>
+<td>Jeremy Rubin</td>
+<td>Yes</td>
+<td>
+</td>
+<td>Judica, bitcoin core contributor</td>
+</tr>
+<tr>
+<td>Josh Cincinnati</td>
+<td>Yes</td>
+<td>
+<a href=https://twitter.com/acityinohio/status/1422737284642791433>X</a>
+</td>
+<td>Advisor to Sia Foundation and Board Member of the Mina Foundation</td>
+</tr>
+<tr>
+<td>Marco Argentieri</td>
+<td>Yes</td>
+<td>
+<a href=https://twitter.com/tierotiero/status/1432784457556242432>X</a>
+</td>
+<td>Co-Founder & Head of Products @ Vulpem Ventures</td>
+</tr>
+<tr>
+<td>Olaoluwa Osuntokun</td>
+<td>Yes</td>
+<td>
+</td>
+<td>CTO, Lightning Labs</td>
+</tr>
+<tr>
+<td>pyskell</td>
+<td>Yes</td>
+<td>
+</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Tsolmondorj Natsagdorj</td>
+<td>Yes</td>
+<td>
+<a href=https://twitter.com/mongolraider/status/1422684741904617477>X</a>
+</td>
+<td>Managing Partner FlashFund</td>
+</tr>
+</table>
+<h3 id=businesses--organizations>Businesses / Organizations</h3>
+<blockquote>
+<p>Businesses represent a corporate or other organized interests in Bitcoin.
+Individuals at companies may have preferences differing from their
+corporation, or in alignment &ndash; it is encouraged to list both the business
+and any individual contributor&rsquo;s opinion here. For the purpose of this site,
+most open source projects are not considered &ldquo;businesses&rdquo; and they should
+prefer to sign as individual contributors.</p>
+</blockquote>
+<table>
+<tr>
+<th> Business </th>
+<th> Support Indicated</th>
+<th> Statement </th>
+</tr>
+<tr>
+<td>Judica, Inc</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Vulpem Ventures</td>
+<td>Yes</td>
+<td> <a href=https://twitter.com/tierotiero/status/1432784457556242432>X</a> </td>
+</tr>
+<tr>
+<td>Muun Wallet</td>
+<td>Yes</td>
+<td> <a href=https://github.com/JeremyRubin/utxos.org/pull/4#issuecomment-913036610>X</a> </td>
+</tr>
+<tr>
+<td>Lightning Labs</td>
+<td>Yes</td>
+</tr>
+</table>
+<h3 id=mining-pools>Mining Pools</h3>
+<blockquote>
+<p>note: Most miners mine via mining pools, which aggregate hash power to reduce
+variance in mining returns. While individual miners may also express a
+preference for or against a fork, pools serve as a proxy for the sentiment
+amongst their constituent miners, were they to misjudge they might lose
+hashrate.</p>
+</blockquote>
+<p><strong>Mining percentages were snapshotted as of August 1st, 2021.</strong></p>
+<table>
+<tr>
+<th> Pool </th>
+<th> Support Indicated</th>
+<th> Hashrate </th>
+<th> Statement </th>
+</tr>
+<tr>
+<td>AntPool</td>
+<td>?</td>
+<td> 15.28% </td>
+</tr>
+<tr>
+<td>ViaBTC</td>
+<td>?</td>
+<td> 13.27% </td>
+</tr>
+<tr>
+<td>F2Pool</td>
+<td>Yes</td>
+<td> 12.79% </td>
+<td> <a href=https://twitter.com/satofishi/status/1398861505748107266>X</a> </td>
+</tr>
+<tr>
+<td>Poolin</td>
+<td>?</td>
+<td> 10.45% </td>
+</tr>
+<tr>
+<td>Binance Pool</td>
+<td>?</td>
+<td> 10.32% </td>
+</tr>
+<tr>
+<td>BTC.com</td>
+<td>?</td>
+<td> 10.06% </td>
+</tr>
+<tr>
+<td>Foundry USA</td>
+<td>?</td>
+<td> 7.32% </td>
+</tr>
+<tr>
+<td>unknown</td>
+<td>?</td>
+<td> 5.45% </td>
+</tr>
+<tr>
+<td>SlushPool</td>
+<td>?</td>
+<td> 5.03% </td>
+</tr>
+<tr>
+<td>Rawpool</td>
+<td>?</td>
+<td> 2.72% </td>
+</tr>
+<tr>
+<td>SBICrypto</td>
+<td>?</td>
+<td> 1.71% </td>
+</tr>
+<tr>
+<td>MARAPool</td>
+<td>?</td>
+<td> 1.59% </td>
+</tr>
+<tr>
+<td>EMCDPool</td>
+<td>?</td>
+<td> 1.18% </td>
+</tr>
+<tr>
+<td>Huobi.pool</td>
+<td>?</td>
+<td> 1.13% </td>
+</tr>
+<tr>
+<td>OKExPool</td>
+<td>?</td>
+<td> 0.55% </td>
+</tr>
+<tr>
+<td>OKKONG</td>
+<td>?</td>
+<td> 0.39% </td>
+</tr>
+<tr>
+<td>Sigmapool.com</td>
+<td>?</td>
+<td> 0.30% </td>
+</tr>
+<tr>
+<td>SpiderPool</td>
+<td>?</td>
+<td> 0.23% </td>
+</tr>
+<tr>
+<td>1THash</td>
+<td>?</td>
+<td> 0.16% </td>
+</tr>
+<tr>
+<td>BTC.TOP</td>
+<td>?</td>
+<td> 0.05% </td>
+</tr>
+<tr>
+<td>ArkPool</td>
+<td>?</td>
+<td> 0.02% </td>
+</tr>
+</table>
 </div>
 </div>
 </div>

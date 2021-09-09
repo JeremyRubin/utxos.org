@@ -1,30 +1,210 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Alternative Designs - utxos.org -- Bitcoin for Everyone</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon-32x32.png><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous><link rel=stylesheet href=/css/style.min.001cd82c5deb4a55f69f076992dd043b44db7bc374aefabccae88643876b11a8.css></head><body class="page page-default-single"><div id=main-menu-mobile class=main-menu-mobile><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="menu-item-bip-119 materials dropdown show"><a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki style=color:#000>Specification</a></div><div class=dropdown-item><a href=/deployment/ style=color:#000>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/ style=color:#000>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/ style=color:#000>Workshops</a></div></div></li><li class="menu-item-applications dropdown show"><a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/ style=color:#000>Use Cases</a></div><div class=dropdown-item><a href=/analysis/ style=color:#000>Ecosystem Impact</a></div><div class=dropdown-item><a href=https://learn.sapio-lang.org style=color:#000>Sapio</a></div></div></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><div class=wrapper><div class=header><div class=container><div class=logo><a href=https://utxos.org><img alt=utxos.org src=/images/logo.svg></a></div><div class=logo-mobile><a href=https://utxos.org><img alt=utxos.org src=/images/logo-mobile.svg></a></div><div id=main-menu class=main-menu><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki>Specification</a></div><div class=dropdown-item><a href=/deployment/>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/>Workshops</a></div></div></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/>Use Cases</a></div><div class=dropdown-item><a href=/analysis/>Ecosystem Impact</a></div><div class=dropdown-item><a href=https://learn.sapio-lang.org>Sapio</a></div></div></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button aria-label="Mobile Menu">
-<span class=hamburger-box><span class=hamburger-inner></span></span></button></div></div><div class="container pb-6 pt-6 pt-md-10 pb-md-10"><div class="row justify-content-start"><div class="offset-1 col-10 col-md-10"><div class="service service-single"><h1 class=title>Alternative Designs</h1><div class=content><p>BIP-0119 <code>OP_CHECKTEMPLATEVERIFY</code> has a multitude of benefits for the Bitcoin ecosystem. Are
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Alternative Designs - utxos.org -- Bitcoin for Everyone</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=/favicon-32x32.png>
+<link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous>
+<link rel=stylesheet href=/css/style.min.001cd82c5deb4a55f69f076992dd043b44db7bc374aefabccae88643876b11a8.css>
+</head>
+<body class="page page-default-single">
+<div id=main-menu-mobile class=main-menu-mobile>
+<ul>
+<li class=menu-item-home>
+<a href=/>
+<span>Home</span>
+</a>
+</li>
+<li class="menu-item-bip-119 materials dropdown show">
+<a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span>BIP-119 Materials</span>
+</a>
+<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
+<div class=dropdown-item>
+<a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki style=color:#000>Specification</a>
+</div>
+<div class=dropdown-item>
+<a href=/deployment/ style=color:#000>Deployment Options</a>
+</div>
+<div class=dropdown-item>
+<a href=/alternatives/ style=color:#000>Alternative Designs</a>
+</div>
+<div class=dropdown-item>
+<a href=/workshops/ style=color:#000>Workshops</a>
+</div>
+</div>
+</li>
+<li class="menu-item-applications dropdown show">
+<a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span>Applications</span>
+</a>
+<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
+<div class=dropdown-item>
+<a href=/uses/ style=color:#000>Use Cases</a>
+</div>
+<div class=dropdown-item>
+<a href=/analysis/ style=color:#000>Ecosystem Impact</a>
+</div>
+<div class=dropdown-item>
+<a href=https://learn.sapio-lang.org style=color:#000>Sapio</a>
+</div>
+</div>
+</li>
+<li class=menu-item-signals>
+<a href=/signals/>
+<span>Signals</span>
+</a>
+</li>
+<li class="menu-item-more resources">
+<a href=/resources/>
+<span>More Resources</span>
+</a>
+</li>
+<li class=menu-item-sponsors>
+<a href=/sponsors/>
+<span>Sponsors</span>
+</a>
+</li>
+<li class=menu-item-telegram>
+<a href=https://t.me/op_ctv_chat>
+<span>Telegram</span>
+</a>
+</li>
+</ul>
+</div>
+<div class=wrapper>
+<div class=header>
+<div class=container>
+<div class=logo>
+<a href=https://utxos.org><img alt=utxos.org src=/images/logo.svg></a>
+</div>
+<div class=logo-mobile>
+<a href=https://utxos.org><img alt=utxos.org src=/images/logo-mobile.svg></a>
+</div>
+<div id=main-menu class=main-menu>
+<ul>
+<li class=menu-item-home>
+<a href=/>
+<span>Home</span>
+</a>
+</li>
+<li class="dropdown show">
+<a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span>BIP-119 Materials</span>
+</a>
+<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
+<div class=dropdown-item>
+<a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki>Specification</a>
+</div>
+<div class=dropdown-item>
+<a href=/deployment/>Deployment Options</a>
+</div>
+<div class=dropdown-item>
+<a href=/alternatives/>Alternative Designs</a>
+</div>
+<div class=dropdown-item>
+<a href=/workshops/>Workshops</a>
+</div>
+</div>
+</li>
+<li class="dropdown show">
+<a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span>Applications</span>
+</a>
+<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
+<div class=dropdown-item>
+<a href=/uses/>Use Cases</a>
+</div>
+<div class=dropdown-item>
+<a href=/analysis/>Ecosystem Impact</a>
+</div>
+<div class=dropdown-item>
+<a href=https://learn.sapio-lang.org>Sapio</a>
+</div>
+</div>
+</li>
+<li class=menu-item-signals>
+<a href=/signals/>
+<span>Signals</span>
+</a>
+</li>
+<li class="menu-item-more resources">
+<a href=/resources/>
+<span>More Resources</span>
+</a>
+</li>
+<li class=menu-item-sponsors>
+<a href=/sponsors/>
+<span>Sponsors</span>
+</a>
+</li>
+<li class=menu-item-telegram>
+<a href=https://t.me/op_ctv_chat>
+<span>Telegram</span>
+</a>
+</li>
+</ul>
+</div>
+<button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button aria-label="Mobile Menu">
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+</div>
+</div>
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+<div class="row justify-content-start">
+<div class="offset-1 col-10 col-md-10">
+<div class="service service-single">
+<h1 class=title>Alternative Designs</h1>
+<div class=content><p>BIP-0119 <code>OP_CHECKTEMPLATEVERIFY</code> has a multitude of benefits for the Bitcoin ecosystem. Are
 there other paths to these improvements? In short, yes. This page has a survey
 of the other methods for enabling <code>OP_CHECKTEMPLATEVERIFY</code> like functionality and why
-such techniques are not suitable substitutes.</p><h2 id=op_checkoutputverify>OP_CHECKOUTPUTVERIFY</h2><p><a href=https://fc16.ifca.ai/bitcoin/papers/MES16.pdf>MES16</a> <em>presents an extension
+such techniques are not suitable substitutes.</p>
+<h2 id=op_checkoutputverify>OP_CHECKOUTPUTVERIFY</h2>
+<p><a href=https://fc16.ifca.ai/bitcoin/papers/MES16.pdf>MES16</a> <em>presents an extension
 to Bitcoin’s script language enabling covenants, a primitive that allows
-transactions to restrict howthe value they transfer is used in the future.</em></p><p><code>OP_COV</code> allows a user to specify a pattern and and output index. The pattern
+transactions to restrict howthe value they transfer is used in the future.</em></p>
+<p><code>OP_COV</code> allows a user to specify a pattern and and output index. The pattern
 is then evaluated against the output at that index to see if the output is a
-valid representative of the set described by the pattern.</p><p>This can be used to emulate something similar to <code>OP_CHECKTEMPLATEVERIFY</code> by
+valid representative of the set described by the pattern.</p>
+<p>This can be used to emulate something similar to <code>OP_CHECKTEMPLATEVERIFY</code> by
 specifying two covenants for outputs 0 and 1 to specify the expanding of a
-payment tree.</p><p>However, there are a few drawbacks:</p><ol><li><code>OP_COV</code> does not have a mechanism to restrict the number of inputs to a
-single input, meaning the half-spend problem exists</li><li>A user needs to specify 2 patterns, as opposed to 1 hash with
-<code>OP_CHECKTEMPLATEVERIFY</code></li><li><code>OP_COV</code> is not designed to ensure a stable TXID for the transactions
+payment tree.</p>
+<p>However, there are a few drawbacks:</p>
+<ol>
+<li><code>OP_COV</code> does not have a mechanism to restrict the number of inputs to a
+single input, meaning the half-spend problem exists</li>
+<li>A user needs to specify 2 patterns, as opposed to 1 hash with
+<code>OP_CHECKTEMPLATEVERIFY</code></li>
+<li><code>OP_COV</code> is not designed to ensure a stable TXID for the transactions
 (e.g., locktimes could be malleated) which makes <code>OP_COV</code> based congestion
-control unsuitable for lightning channel like contracts or CPFP payments.</li><li><code>OP_COV</code> covenant patterns are not &ldquo;computationally enumerable&rdquo;. That is,
+control unsuitable for lightning channel like contracts or CPFP payments.</li>
+<li><code>OP_COV</code> covenant patterns are not &ldquo;computationally enumerable&rdquo;. That is,
 it is not generally possible to enumerate all possible spends of an
 <code>OP_COV</code> covenant. Whereas with <code>OP_CHECKTEMPLATEVERIFY</code>, the limitations ensure
 that a spending party (by constructing the key) knows all possible
-executions.</li></ol><h2 id=op_pushtxdata>OP_PUSHTXDATA</h2><p>A <a href=https://github.com/jl2012/bips/blob/vault/bip-0ZZZ.mediawiki>Draft BIP</a> by
-Johnson Lau proposes <code>OP_PUSHTXDATA</code>.</p><p><code>OP_PUSHTXDATA</code> is a (almost) superset of <code>OP_CHECKTEMPLATEVERIFY</code> in the sense
-that it is possible to encode an <code>OP_CHECKTEMPLATEVERIFY</code> into an <code>OP_PUSHTXDATA</code>.</p><p>To do so, one simply uses <code>OP_PUSHTXDATA</code> to check that the nVersion,
-nLocktime, vouts, sequences, and vins match the expected values.</p><p>However, there are a few drawbacks:</p><ol><li>As specified, <code>OP_PUSHTXDATA</code> does not allow the user to get the scriptSig
+executions.</li>
+</ol>
+<h2 id=op_pushtxdata>OP_PUSHTXDATA</h2>
+<p>A <a href=https://github.com/jl2012/bips/blob/vault/bip-0ZZZ.mediawiki>Draft BIP</a> by
+Johnson Lau proposes <code>OP_PUSHTXDATA</code>.</p>
+<p><code>OP_PUSHTXDATA</code> is a (almost) superset of <code>OP_CHECKTEMPLATEVERIFY</code> in the sense
+that it is possible to encode an <code>OP_CHECKTEMPLATEVERIFY</code> into an <code>OP_PUSHTXDATA</code>.</p>
+<p>To do so, one simply uses <code>OP_PUSHTXDATA</code> to check that the nVersion,
+nLocktime, vouts, sequences, and vins match the expected values.</p>
+<p>However, there are a few drawbacks:</p>
+<ol>
+<li>As specified, <code>OP_PUSHTXDATA</code> does not allow the user to get the scriptSig
 of an input on the stack. This means that without amendment,
 <code>OP_PUSHTXDATA</code> cannot guarantee TXID stability and is unsuitable for
 constructing lightning channel like contracts from non-segwit outputs as the
-stack can be malleated (segwit guarantees scriptsigs are null).</li><li>The scripts for <code>OP_PUSHTXDATA</code> to emulate <code>OP_CHECKTEMPLATEVERIFY</code> are rather
-long in comparison as they require committing to many fields. For example:</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#ae81ff>1</span> <span style=color:#a6e22e>OP_PUSHTXDATA</span> <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>OP_EQUALVERIFY</span>
+stack can be malleated (segwit guarantees scriptsigs are null).</li>
+<li>The scripts for <code>OP_PUSHTXDATA</code> to emulate <code>OP_CHECKTEMPLATEVERIFY</code> are rather
+long in comparison as they require committing to many fields. For example:</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#ae81ff>1</span> <span style=color:#a6e22e>OP_PUSHTXDATA</span> <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>OP_EQUALVERIFY</span>
 <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>OP_PUSHTXDATA</span> <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>OP_EQUALVERIFY</span>
 <span style=color:#ae81ff>5</span> <span style=color:#a6e22e>OP_PUSHTXDATA</span> <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>OP_EQUALVERIFY</span>
 <span style=color:#ae81ff>6</span> <span style=color:#a6e22e>OP_PUSHTXDATA</span> <span style=color:#ae81ff>0</span> <span style=color:#a6e22e>OP_EQUALVERIFY</span>
@@ -33,59 +213,135 @@ long in comparison as they require committing to many fields. For example:</li><
                    <span style=color:#a6e22e>&lt;scriptPubkey</span> <span style=color:#a6e22e>vout</span> <span style=color:#66d9ef>0&gt; </span><span style=color:#a6e22e>OP_EQUALVERIFY</span>
 <span style=color:#ae81ff>1</span> <span style=color:#ae81ff>15</span> <span style=color:#a6e22e>OP_PUSHTXDATA</span> <span style=color:#a6e22e>&lt;value</span> <span style=color:#a6e22e>vout</span> <span style=color:#ae81ff>1</span><span style=color:#66d9ef>&gt; </span><span style=color:#a6e22e>OP_EQUALVERIFY</span>
                    <span style=color:#a6e22e>&lt;scriptPubkey</span> <span style=color:#a6e22e>vout</span> <span style=color:#ae81ff>1</span><span style=color:#66d9ef>&gt; </span><span style=color:#a6e22e>OP_EQUALVERIFY</span> 
-</code></pre></div><p>v.s.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#a6e22e>&lt;Template</span> <span style=color:#a6e22e>Hash&gt;</span> <span style=color:#a6e22e>OP_CHECKTEMPLATEVERIFY</span> 
+</code></pre></div><p>v.s.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#a6e22e>&lt;Template</span> <span style=color:#a6e22e>Hash&gt;</span> <span style=color:#a6e22e>OP_CHECKTEMPLATEVERIFY</span> 
 </code></pre></div><p><code>OP_PUSHTXDATA</code> could ameliorate this by adding an data type to push the Bag
-Hash from <code>OP_CHECKTEMPLATEVERIFY</code>.</p><ol><li>As a superset of functionality, <code>OP_PUSHTXDATA</code> enables a lot of new use cases
+Hash from <code>OP_CHECKTEMPLATEVERIFY</code>.</p>
+<ol>
+<li>As a superset of functionality, <code>OP_PUSHTXDATA</code> enables a lot of new use cases
 that we may or may not want to support. <code>OP_CHECKTEMPLATEVERIFY</code> is, by
-comparison, conservative in what it enables.</li><li><code>OP_CHECKTEMPLATEVERIFY</code> is an <code>OP_NOP</code> upgrade, which maintains compatibility
+comparison, conservative in what it enables.</li>
+<li><code>OP_CHECKTEMPLATEVERIFY</code> is an <code>OP_NOP</code> upgrade, which maintains compatibility
 with old scripts, whereas <code>OP_PUSHTXDATA</code> requires new execution semantics.
 <code>OP_PUSHTXDATA</code> could be made to work with soft-fork friendly VERIFY
-semantics, but it would be unwieldy.</li></ol><h2 id=op_cat--op_checksigfromstackverify>OP_CAT + OP_CHECKSIGFROMSTACKVERIFY</h2><p>By enabling <code>OP_CHECKSIGFROMSTACKVERIFY</code> and <code>OP_CAT</code> it <a href=https://blockstream.com/2016/11/02/en-covenants-in-elements-alpha/>would be
+semantics, but it would be unwieldy.</li>
+</ol>
+<h2 id=op_cat--op_checksigfromstackverify>OP_CAT + OP_CHECKSIGFROMSTACKVERIFY</h2>
+<p>By enabling <code>OP_CHECKSIGFROMSTACKVERIFY</code> and <code>OP_CAT</code> it <a href=https://blockstream.com/2016/11/02/en-covenants-in-elements-alpha/>would be
 possible</a> to
 enable covenants. Russel O&rsquo;Connor
 <a href=https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-May/016946.html>proposes</a>
-to do this instead of <code>OP_CHECKTEMPLATEVERIFY</code> or <code>ANYPREVOUT</code>.</p><p>Essentially what <code>OP_CHECKSIGFROMSTACKVERIFY</code> and <code>OP_CAT</code> lets us do is
+to do this instead of <code>OP_CHECKTEMPLATEVERIFY</code> or <code>ANYPREVOUT</code>.</p>
+<p>Essentially what <code>OP_CHECKSIGFROMSTACKVERIFY</code> and <code>OP_CAT</code> lets us do is
 emulate and OpCode via a script gadget which results in the signature message
 being on the stack, i.e., like <code>OP_PUSHTXDATA</code>, but all the data gets pushed
 as one serialized blob. It&rsquo;s then possible to check that this value matches a
 pre-supposed template (bits like the prevouts can be passed in through the
-witness data).</p><p>However, there are a few drawbacks:</p><ol><li>This form of covenants is possible, but highly complex to understand and
-implement without higher-order scripting primitives.</li><li>Further, with extensions like <code>OP_EC_KEY_TWEAK</code>, it would be possible to
+witness data).</p>
+<p>However, there are a few drawbacks:</p>
+<ol>
+<li>This form of covenants is possible, but highly complex to understand and
+implement without higher-order scripting primitives.</li>
+<li>Further, with extensions like <code>OP_EC_KEY_TWEAK</code>, it would be possible to
 enable recursive covenants. That means this strategy might limit future
 extensions to Bitcoin with unintended &ldquo;constructive interference&rdquo;
-capabilities.</li><li>If the functionality provided is roughly equivalent to <code>OP_PUSHTXDATA</code>, it
-would be easier to just to implement <code>OP_PUSHTXDATA</code></li><li>Validation is more expensive to use the <code>OP_CHECKSIGFROMSTACK</code> gadget
-compared to <code>OP_CHECKTEMPLATEVERIFY</code> or <code>OP_PUSHTXDATA</code>.</li><li>Desire to disable PubKey recovery for signatures would disable the recursive
+capabilities.</li>
+<li>If the functionality provided is roughly equivalent to <code>OP_PUSHTXDATA</code>, it
+would be easier to just to implement <code>OP_PUSHTXDATA</code></li>
+<li>Validation is more expensive to use the <code>OP_CHECKSIGFROMSTACK</code> gadget
+compared to <code>OP_CHECKTEMPLATEVERIFY</code> or <code>OP_PUSHTXDATA</code>.</li>
+<li>Desire to disable PubKey recovery for signatures would disable the recursive
 use of this type of covenant, which would make the technique not able to
-be used for <code>OP_CHECKTEMPLATEVERIFY</code> type use.</li></ol><h2 id=op_checktxoutscripthashverify>OP_CHECKTXOUTSCRIPTHASHVERIFY</h2><p><code>OP_CHECKTXOUTSCRIPTHASHVERIFY</code>, proposed on the <a href=https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-October/016448.html>mailing
+be used for <code>OP_CHECKTEMPLATEVERIFY</code> type use.</li>
+</ol>
+<h2 id=op_checktxoutscripthashverify>OP_CHECKTXOUTSCRIPTHASHVERIFY</h2>
+<p><code>OP_CHECKTXOUTSCRIPTHASHVERIFY</code>, proposed on the <a href=https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-October/016448.html>mailing
 list</a>
 is similar to <code>OP_CHECKTEMPLATEVERIFY</code>, but only a single output script is committed
 to and not the amount of Bitcoin to be paid to that output. The stated design
-goal is theft-resistant vaults.</p><p>As specified, <code>OP_CHECKTXOUTSCRIPTHASHVERIFY</code> is not even sufficient for its
-own purported use case:</p><ol><li>Inability to limit the amount of fee paid, ensuring the amount of value
-forwarded</li><li>Inability to limit the number of outputs created</li></ol><p>And is insufficient for <code>OP_CHECKTEMPLATEVERIFY</code> semantics for a myriad of reasons
-more.</p><h2 id=sighash_noinput--anyprevout>SIGHASH_NOINPUT / ANYPREVOUT</h2><h3 id=method-1>Method 1</h3><p>With <code>SIGHASH_NOINPUT</code>, it should be theoretically possible for a bare script
-(non-segwit) to be specified as follows to emulate <code>OP_CHECKTEMPLATEVERIFY</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#a6e22e>scriptSig:</span> <span style=color:#a6e22e>&lt;random</span> <span style=color:#a6e22e>sig</span> <span style=color:#a6e22e>||</span> <span style=color:#a6e22e>SIGHASH_NOINPUT&gt;</span>
+goal is theft-resistant vaults.</p>
+<p>As specified, <code>OP_CHECKTXOUTSCRIPTHASHVERIFY</code> is not even sufficient for its
+own purported use case:</p>
+<ol>
+<li>Inability to limit the amount of fee paid, ensuring the amount of value
+forwarded</li>
+<li>Inability to limit the number of outputs created</li>
+</ol>
+<p>And is insufficient for <code>OP_CHECKTEMPLATEVERIFY</code> semantics for a myriad of reasons
+more.</p>
+<h2 id=sighash_noinput--anyprevout>SIGHASH_NOINPUT / ANYPREVOUT</h2>
+<h3 id=method-1>Method 1</h3>
+<p>With <code>SIGHASH_NOINPUT</code>, it should be theoretically possible for a bare script
+(non-segwit) to be specified as follows to emulate <code>OP_CHECKTEMPLATEVERIFY</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#a6e22e>scriptSig:</span> <span style=color:#a6e22e>&lt;random</span> <span style=color:#a6e22e>sig</span> <span style=color:#a6e22e>||</span> <span style=color:#a6e22e>SIGHASH_NOINPUT&gt;</span>
 <span style=color:#a6e22e>scriptPubkey:</span> <span style=color:#a6e22e>&lt;pkR&gt;</span> <span style=color:#a6e22e>OP_CODESEPARATOR</span> <span style=color:#a6e22e>OP_CHECKSIGVERIFY</span> 
 </code></pre></div><p>It would then be possible to compute the <code>pkR</code> as being the recovered pubkey
 from the transaction without signing the inputs, effectively committing to the
-information in the same manner as <code>OP_CHECKTEMPLATEVERIFY</code>.</p><p>In a segwit type transaction, this is not possible (without additional
+information in the same manner as <code>OP_CHECKTEMPLATEVERIFY</code>.</p>
+<p>In a segwit type transaction, this is not possible (without additional
 modifications) because the scriptPubkey always commits to the entire pubkey,
-preventing pubkey recovery techniques.</p><p><code>SIGHASH_NOINPUT</code> is furthermore insufficient to emulate <code>OP_CHECKTEMPLATEVERIFY</code>
+preventing pubkey recovery techniques.</p>
+<p><code>SIGHASH_NOINPUT</code> is furthermore insufficient to emulate <code>OP_CHECKTEMPLATEVERIFY</code>
 as the TXID can be malleated by modifying the scriptSig(s) in the transaction,
 which makes it unsuitable for use in Lightning Channel construction or CPFP
-transactions.</p><h3 id=method-2>Method 2</h3><p>Using <code>SIGHASH_ANYPREVOUTANYSCRIPT</code>, it would be possible to have a segwit script:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#a6e22e>scriptPubkey:</span> <span style=color:#a6e22e>&lt;sig</span> <span style=color:#a6e22e>||</span> <span style=color:#a6e22e>SIGHASH_ANYPREVOUTANYSCRIPT&gt;</span> <span style=color:#a6e22e>&lt;pk&gt;</span> <span style=color:#a6e22e>CHECKSIG</span> 
-</code></pre></div><p>This way neither the <code>pk</code> nor the txid are a part of the signature hash.</p><p>This method is close to how <code>OP_CHECKTEMPLATEVERIFY</code> should work. If the key
+transactions.</p>
+<h3 id=method-2>Method 2</h3>
+<p>Using <code>SIGHASH_ANYPREVOUTANYSCRIPT</code>, it would be possible to have a segwit script:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-forth data-lang=forth><span style=color:#a6e22e>scriptPubkey:</span> <span style=color:#a6e22e>&lt;sig</span> <span style=color:#a6e22e>||</span> <span style=color:#a6e22e>SIGHASH_ANYPREVOUTANYSCRIPT&gt;</span> <span style=color:#a6e22e>&lt;pk&gt;</span> <span style=color:#a6e22e>CHECKSIG</span> 
+</code></pre></div><p>This way neither the <code>pk</code> nor the txid are a part of the signature hash.</p>
+<p>This method is close to how <code>OP_CHECKTEMPLATEVERIFY</code> should work. If the key
 is a well known specific one, and deterministic nonces are used for the
 signature, then it also preserves some of the ability to prune interior nodes
-data for storage as they can be recomputed.</p><p>However, this method has drawbacks in terms of verification time as the
+data for storage as they can be recomputed.</p>
+<p>However, this method has drawbacks in terms of verification time as the
 signatures must either be verified or recomputed, and without sophisticated
-pruning layers, use more network and storage bandwidth.</p><p>This method also fundamentally does not have the extensibility that
+pruning layers, use more network and storage bandwidth.</p>
+<p>This method also fundamentally does not have the extensibility that
 <code>OP_CHECKTEMPLATEVERIFY</code> permits with new template version hash programs that
-could be made available in future soft-forks.</p><p>Furthermore, <code>SIGHASH_ANYPREVOUTANYSCRIPT</code> has the potential for enabling
-certain types of recursive covenants.</p><p>Lastly, <code>SIGHASH_ANYPREVOUTANYSCRIPT</code> can be used with <code>SIGHASH</code> flags other
+could be made available in future soft-forks.</p>
+<p>Furthermore, <code>SIGHASH_ANYPREVOUTANYSCRIPT</code> has the potential for enabling
+certain types of recursive covenants.</p>
+<p>Lastly, <code>SIGHASH_ANYPREVOUTANYSCRIPT</code> can be used with <code>SIGHASH</code> flags other
 than <code>SIGHASH_ALL</code> signing the whole transaction. This can lead to surprising
 behaviors, such as with <code>SIGHASH_SINGLE</code> (which would only enforce a covenant on
-one of the coins in an output, not all).</p><h3 id=acknowledgements>Acknowledgements</h3><p>Thanks to Olaolu Osuntokun and Bob McElrath whose talks helped to inform this
+one of the coins in an output, not all).</p>
+<h3 id=acknowledgements>Acknowledgements</h3>
+<p>Thanks to Olaolu Osuntokun and Bob McElrath whose talks helped to inform this
 survey, and to Jonas Nick who made me aware of Method 2 for
-<code>SIGHASH_ANYPREVOUTANYSCRIPT</code>.</p><ul><li><a href=https://diyhpl.us/wiki/transcripts/bitcoin-core-dev-tech/2019-06-06-noinput-etc/>https://diyhpl.us/wiki/transcripts/bitcoin-core-dev-tech/2019-06-06-noinput-etc/</a></li><li><a href=https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/>https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/</a></li></ul></div></div></div></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//utxos-org.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><div class=footer><div class=container><div class=row><div class=col-12><div class=footer-inner><h3 class=footer-title>utxos.org -- Bitcoin for Everyone</h3><ul></ul></div></div></div></div></div><script type=text/javascript src=/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152627278-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-152627278-1')</script><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i&display=swap" rel=stylesheet><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js integrity=sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js integrity=sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM crossorigin=anonymous></script></body></html>
+<code>SIGHASH_ANYPREVOUTANYSCRIPT</code>.</p>
+<ul>
+<li><a href=https://diyhpl.us/wiki/transcripts/bitcoin-core-dev-tech/2019-06-06-noinput-etc/>https://diyhpl.us/wiki/transcripts/bitcoin-core-dev-tech/2019-06-06-noinput-etc/</a></li>
+<li><a href=https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/>https://diyhpl.us/wiki/transcripts/2019-02-09-mcelrath-on-chain-defense-in-depth/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//utxos-org.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+<div class=footer>
+<div class=container>
+<div class=row>
+<div class=col-12>
+<div class=footer-inner>
+<h3 class=footer-title>utxos.org -- Bitcoin for Everyone</h3>
+<ul>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type=text/javascript src=/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152627278-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-152627278-1')</script>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i&display=swap" rel=stylesheet>
+<script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js integrity=sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 crossorigin=anonymous></script>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js integrity=sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM crossorigin=anonymous></script>
+</body>
+</html>
