@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <th> Individual  </th>
+        <th> Support Indicated</th>
+        <th> Statement </th>
+        <th> Affiliations</th>
+    </tr>
+    {{ range sort $.Site.Data.devs "Name" }}
+    <tr>
+        <td>{{.Name}}</td>
+        <td>{{.Supports}}</td>
+        <td>
+            {{ if .Link}}
+            <a href="{{.Link}}">X</a> 
+            {{end}}
+        </td>
+        <td>{{.Affiliations}}</td>
+
+    </tr>
+    {{end}}
+</table>

@@ -95,6 +95,10 @@ pygmentsStyle = "monokai"
         url = "https://learn.sapio-lang.org"
         weight = 5
   [[menu.main]]
+    name="Signals"
+    url ="/signals/"
+    weight=4
+  [[menu.main]]
     name="More Resources"
     url ="/resources/"
     weight=5

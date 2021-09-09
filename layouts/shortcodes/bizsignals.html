@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th> Business  </th>
+        <th> Support Indicated</th>
+        <th> Statement </th>
+    </tr>
+{{ range $.Site.Data.bizs }}
+<tr>
+    <td>{{.Name}}</td>
+    <td>{{.Supports}}</td>
+    {{ if .Link}}
+    <td> <a href="{{.Link}}">X</a> </td>
+    {{end}}
+
+</tr>
+{{end}}
+</table>
