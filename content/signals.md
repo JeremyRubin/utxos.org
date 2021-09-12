@@ -10,8 +10,9 @@ has been formed, but are useful for measuring community consensus.
 
 Open an [issue](https://github.com/jeremyrubin/utxos.org/issues/new) or a [pull
 request](https://github.com/JeremyRubin/utxos.org/pulls) on GitHub to modify or
-create an entry for your organization.
-
+create or modify an entry for you or your organization. All listings have been
+individually confirmed by Jeremy Rubin where a statement is either missing
+or ambiguous.
 
 ### Developers & Individuals
 > Developers & Individuals include the programmers behind Bitcoin Core,
