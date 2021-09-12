@@ -45,3 +45,6 @@
 - Name: Robin Linus
   Supports: "Yes"
   Link: https://github.com/bitcoin/bitcoin/pull/21702#issuecomment-832378018
+- Name: Chris Kapilla
+  Supports: "Yes"
+  Link: https://github.com/JeremyRubin/utxos.org/issues/7
