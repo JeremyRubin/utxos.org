@@ -40,7 +40,7 @@ or ambiguous.
 > amongst their constituent miners, were they to misjudge they might lose
 > hashrate.
 
-**Mining percentages were snapshotted as of August 1st, 2021.**
+**Mining percentages were estimated as of October 7th, 2021 from recent data.**
 
 {{< miners >}}
 
