@@ -7,12 +7,12 @@
   Supports: "Yes"
   Affiliations: "Advisor to Sia Foundation and Board Member of the Mina Foundation"
   Link: https://twitter.com/acityinohio/status/1422737284642791433
-  Highlight: false
+  Highlight: true
 - Name: Bruce Fenton
   Supports: "Yes"
   Affiliations: "Managing Director Chainstone Labs"
   Link: null
-  Highlight: false
+  Highlight: true
 - Name: Tsolmondorj Natsagdorj
   Supports: "Yes"
   Affiliations: "Managing Partner FlashFund"
@@ -32,12 +32,12 @@
   Supports: "Yes"
   Affiliations: "Judica, bitcoin core contributor"
   Link: https://twitter.com/JeremyRubin/status/1436381009386225667
-  Highlight: false
+  Highlight: true
 - Name: Olaoluwa Osuntokun
   Supports: "Yes"
   Link: null
   Affiliations: "CTO, Lightning Labs"
-  Highlight: false
+  Highlight: true
 - Name: Dennis Porto
   Supports: "Yes"
   Link: https://github.com/JeremyRubin/utxos.org/issues/5
@@ -45,7 +45,7 @@
   Highlight: false
 - Name: Matthias Debernardini
   Supports: "Yes"
-  Link: https://twitter.com/matthiasdebern/status/1436007746772557827?s=20
+  Link: https://twitter.com/colemaktypo/status/1436007746772557827?s=20
   Affiliations:  null
   Highlight: false
 - Name: Morgan Rockwell
@@ -69,7 +69,7 @@
 - Name: Ben Carman
   Supports: "Yes"
   Link: https://twitter.com/benthecarman/status/1437234850105331712
-  Highlight: false
+  Highlight: true
 - Name: moonsettler
   Supports: "Yes"
   Link: https://twitter.com/4moonsettler/status/1437481413817868290
@@ -85,7 +85,7 @@
 - Name: Paul Sztorc
   Supports: "Yes"
   Link: https://twitter.com/Truthcoin/status/1452795523824504841
-  Highlight: false
+  Highlight: true
 - Name: rocket_fuel
   Supports: "Yes"
   Link: https://twitter.com/rocket_fuel_/status/1452796676826087426
@@ -94,7 +94,7 @@
 - Name: Hasu
   Supports: "Yes"
   Link: https://twitter.com/hasufl/status/1452796937120493574
-  Highlight: false
+  Highlight: true
 - Name: Jon Syu
   Supports: "Yes"
   Link: https://twitter.com/jonsyu/status/1452797787649679362
@@ -118,7 +118,7 @@
 - Name: Shinobi (brian_trollz)
   Supports: "Yes"
   Link: https://twitter.com/brian_trollz/status/1452805728692019200
-  Highlight: false
+  Highlight: true
 - Name: deepnorm
   Supports: "Yes"
   Link: https://twitter.com/_deepnorm/status/1452806330159349768
@@ -136,7 +136,7 @@
 - Name: John Light
   Supports: "Yes"
   Link: https://twitter.com/lightcoin/status/1452838106768547849
-  Highlight: false
+  Highlight: true
 - Name: John Holmquist
   Supports: "Yes"
   Link: https://twitter.com/Jon_HQ/status/1452838504145195009
@@ -214,3 +214,8 @@
   Supports: "Yes"
   Affiliations: VP Engineering at Unchained Capital
   Highlight: false
+- Name: fluffypony
+  Link: https://twitter.com/fluffypony/status/1453344125407875075
+  Supports: "Yes"
+  Affiliations: Co-founder, Yat Labs, former lead maintainer Monero
+  Highlight: true
