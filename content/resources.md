@@ -23,7 +23,7 @@ Sapio is a programming language for CTV contracts.
 
 # Forums:
 - IRC Channel: ##ctv-bip-review (logged, feel free to join)
-- Telegram Discussion Group: https://t.me/op_ctv_chat
+- Telegram Discussion Group: https://t.me/op_ctv
 
 # Workshops & Conferences
 ## San Francisco BIP-119 Workshop
