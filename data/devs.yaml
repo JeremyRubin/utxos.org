@@ -220,3 +220,8 @@
   Supports: "Yes"
   Affiliations: Co-founder, Yat Labs, former lead maintainer Monero
   Highlight: true
+- Name: Charlie Lee
+  Supports: "Yes"
+  Affiliations: Creator of Litecoin
+  Highlight: false
+  Link: https://twitter.com/SatoshiLite/status/1267964984027316225
