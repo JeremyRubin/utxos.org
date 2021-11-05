@@ -233,7 +233,7 @@ is less.</p>
 
             <span style=color:#66d9ef>for</span> c <span style=color:#66d9ef>in</span> self.participants.chunks(self.participants.len()<span style=color:#f92672>/</span>self.radix) {
                 <span style=color:#66d9ef>let</span> <span style=color:#66d9ef>mut</span> amt <span style=color:#f92672>=</span>  bitcoin::util::amount::Amount::from_sat(<span style=color:#ae81ff>0</span>);
-                <span style=color:#66d9ef>for</span> Payment{amount, ..}  <span style=color:#66d9ef>in</span> c {
+                <span style=color:#66d9ef>for</span> Payment{amount, <span style=color:#f92672>..</span>}  <span style=color:#66d9ef>in</span> c {
                     amt <span style=color:#f92672>+=</span> amount.clone().try_into()<span style=color:#f92672>?</span>;
                 }
                 builder <span style=color:#f92672>=</span> builder.add_output(amt, <span style=color:#f92672>&amp;</span>TreePay {participants: <span style=color:#a6e22e>c</span>.to_vec(), radix: <span style=color:#a6e22e>self</span>.radix}, None)<span style=color:#f92672>?</span>;
