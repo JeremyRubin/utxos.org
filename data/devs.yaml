@@ -238,4 +238,9 @@
 - Name: Oriol Pont
   Supports: "Yes"
   Link: https://twitter.com/oriolpont/status/1453417502365597702
-  Hightlight: false
+  Highlight: false
+- Name: Keagan McClelland
+  Supports: "Yes"
+  Link: https://github.com/bitcoin/bitcoin/pull/21702#issuecomment-963667962
+  Highlight: false
+  
