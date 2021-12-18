@@ -218,7 +218,7 @@
   Link: https://twitter.com/arbedout/status/1453119331093651461
   Supports: "Yes"
   Affiliations: VP Engineering at Unchained Capital
-  Highlight: false
+  Highlight: true
 - Name: fluffypony
   Link: https://twitter.com/fluffypony/status/1453344125407875075
   Supports: "Yes"
@@ -227,13 +227,13 @@
 - Name: Charlie Lee
   Supports: "Yes"
   Affiliations: Creator of Litecoin
-  Highlight: false
+  Highlight: true
   Link: https://twitter.com/SatoshiLite/status/1267964984027316225
 - Name: Tomer Strolight
   Supports: "Yes"
   Affiliations: Editor-in-chief, swan.com
   Link: https://twitter.com/TomerStrolight/status/1453484097649717257
-  Highlight: false
+  Highlight: true
 - Name: Bryan W. Nonni
   Supports: "Yes"
   Affiliations: Software Engineer, Cryptocurrency & Blockchain Tech Lead, Innovation Lab at NCR Corporation
@@ -246,26 +246,26 @@
 - Name: Keagan McClelland
   Supports: "Yes"
   Link: https://github.com/bitcoin/bitcoin/pull/21702#issuecomment-963667962
-  Highlight: false
+  Highlight: true
 - Name: Alex Bergeron
   Supports: "Yes"
   Link: https://twitter.com/bergealex4/status/1461041357611417605
-  Highlight: false
+  Highlight: true
 - Name: elsirion
   Supports: "Yes"
   Affiliations: MiniMint developer
   Link: https://twitter.com/EricSirion/status/1470892336792092673
-  Highlight: false
+  Highlight: true
 - Name: Jacob Swambo
   Supports: "Yes"
   Affiliations: As Himself
   Link: https://arxiv.org/abs/2005.11776
-  Highlight: false
+  Highlight: true
 - Name: Bryan Bishop
   Supports: "Yes"
   Affiliations: As Himself
   Link: https://arxiv.org/abs/2005.11776
-  Highlight: false
+  Highlight: true
 - Name: a5an0
   Supports: "Yes"
   Affiliations: As Himself
@@ -275,7 +275,7 @@
   Supports: "Yes"
   Affiliations: Randomly-generated Internet People
   Link: https://github.com/JeremyRubin/utxos.org/issues/19#issue-1083717798
-  Highlight: false
+  Highlight: true
 - Name: P
   Supports: "Yes"
   Affiliations: "Director of Programming, The Bitcoin Conference and Co-Founder of Plebnet"
