@@ -27,3 +27,6 @@
 - Name: TradeLayer
   Supports: "Yes"
   Link: https://tradelayer.substack.com/p/tradelayer-founder-statement-on-bip?justPublished=true
+- Name: Synonym
+  Supports: "No"
+  Link: https://github.com/JeremyRubin/utxos.org/issues/28
