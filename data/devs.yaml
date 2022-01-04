@@ -457,3 +457,18 @@
   Supports: "Yes"
   Affiliations: '@GuerillaV2 on Twitter'
   Highlight: false
+- Name: Will Reeves
+  Supports: "Yes"
+  Affiliations: CEO of Fold
+  Highlight: false
+  Link: https://twitter.com/wlrvs/status/1478078596098887686
+- Name: Casey Rodarmor
+  Supports: "Yes"
+  Affiliations: None
+  Link: https://twitter.com/rodarmor/status/1477498513059500032
+  Highlight: true
+- Name: HashrateBTC
+  Supports: "Yes"
+  Affiliations: None
+  Link: https://twitter.com/Hashratebtc/status/1477843199439872001
+  Highlight: false
