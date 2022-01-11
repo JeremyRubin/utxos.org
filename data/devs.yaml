@@ -289,7 +289,7 @@
 - Name: P
   Supports: "Yes"
   Affiliations: "Director of Programming, The Bitcoin Conference and Co-Founder of Plebnet"
-  Highlight: false
+  Highlight: true
   Link: https://twitter.com/phjlljp/status/1472064493744185344?s=20
 - Name: fiatjaf
   Supports: "Yes"
@@ -299,7 +299,7 @@
 - Name: Ziya Sadr
   Supports: "Yes"
   Affiliations: "Bitcoin Educator: Podcast, Youtube, Blogs"
-  Highlight: false
+  Highlight: true
   Link: https://twitter.com/Ziya_Sadr/status/1473072635349241863
 - Name: Matt Bell (mappum)
   Supports: "Yes"
@@ -310,7 +310,7 @@
   Supports: "Yes"
   Affiliations: Head of Firmwide Research at Galaxy Digital
   Link: https://twitter.com/intangiblecoins/status/1473377058520768513
-  Highlight: false
+  Highlight: true
 - Name: 0x0ff
   Supports: "Yes"
   Affiliations: bitcoinpy.dev
@@ -330,11 +330,11 @@
   Supports: "No"
   Affiliations: CEO of Synonym
   Link: https://github.com/JeremyRubin/utxos.org/issues/28
-  Highlight: false
+  Highlight: true
 - Name: Gene Hoffman
   Affiliations: COO of Chia.net
   Link: https://twitter.com/hoffmang/status/1476630027055730712
-  Highlight: false
+  Highlight: true
 - Name: Jameson Lopp
   Supports: "Yes"
   Affiliations: Casa
@@ -349,7 +349,7 @@
   Supports: "Yes"
   Link: https://twitter.com/ercwl/status/1476808046374445062
   Affiliations: As Himself
-  Highlight: false
+  Highlight: true
 - Name: Arceris
   Supports: "Yes"
   Link: https://twitter.com/Arceris_btc/status/1476796613167308811
@@ -377,6 +377,7 @@
 - Name: Brad Mills
   Supports: "Yes"
   Affiliations: None
+  Highlight: true
   Link: https://twitter.com/bradmillscan/status/1477496046917935107
 - Name:  David Bennett
   Supports: "Yes"
@@ -395,7 +396,7 @@
   Supports: "Yes"
   Affiliations: author of Bittorrent, founder Chia Labs
   Link: https://twitter.com/bramcohen/status/1224823869933899776
-  Highlight: false
+  Highlight: true
 - Name: Sam Callahan
   Supports: "Yes"
   Affiliations: As himself
@@ -408,7 +409,7 @@
 - Name: Mason Borda
   Affiliations: CEO of Tokensoft
   Link: https://twitter.com/masonic_tweets/status/1477679480722259975
-  Highlight: false
+  Highlight: true
 - Name: Emmy
   Affiliations: None
   Link: https://twitter.com/emmy_evm/status/1477694205145149440
@@ -448,11 +449,11 @@
 - Name: Ryan Shea
   Affiliations: Cofounder Stacks and Citizenbase
   Link: https://twitter.com/ryaneshea/status/1477700063082254338
-  Highlight: false
+  Highlight: true
 - Name: JohnOn{Chain,Git}
   Affiliations: None
   Link: https://twitter.com/JohnOnChain/status/1477701451698823178
-  Highlight: false
+  Highlight: true
 - Name: Gigi
   Supports: "Yes"
   Affiliations: '@GuerillaV2 on Twitter'
@@ -460,7 +461,7 @@
 - Name: Will Reeves
   Supports: "Yes"
   Affiliations: CEO of Fold
-  Highlight: false
+  Highlight: true
   Link: https://twitter.com/wlrvs/status/1478078596098887686
 - Name: Casey Rodarmor
   Supports: "Yes"
