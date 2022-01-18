@@ -478,3 +478,8 @@
   Affiliations: None
   Link: https://github.com/JeremyRubin/utxos.org/issues/39
   Highlight: false
+- Name: Slashbin
+  Supports: "Yes"
+  Affiliations: Mining pool operator
+  Link: https://twitter.com/slashbin_FR/status/1481578068040990721
+  Highlight: false
