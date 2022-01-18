@@ -403,54 +403,67 @@
   Link: https://twitter.com/samcallah/status/1477688765556482054
   Highlight: false
 - Name: Nick Neuman
+  Supports: "Yes"
   Affiliations: As himself
   Link: https://twitter.com/Nneuman/status/1477688208603459584
   Highlight: false
 - Name: Mason Borda
+  Supports: "Yes"
   Affiliations: CEO of Tokensoft
   Link: https://twitter.com/masonic_tweets/status/1477679480722259975
   Highlight: true
 - Name: Emmy
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/emmy_evm/status/1477694205145149440
   Highlight: false
 - Name: "Lounès Ksouri"
+  Supports: "Yes"
   Affiliations: Software Developer at Umbrel
   Link: https://twitter.com/lounes_kmt/status/1477698147707199497
   Highlight: false
 - Name: Matt Luongo
+  Supports: "Yes"
   Affiliations: Founder of Thesis
   Link: https://twitter.com/mhluongo/status/1477633131553468416
   Highlight: false
 - Name: Lucifer Hodlstar
+  Supports: "Yes"
   Affiliations: CEO of Hell, formerly 2nd in Command at Heaven
   Link: https://twitter.com/LuciferHODLSTAR/status/1477699621417852930
   Highlight: false
 - Name: Krvopije
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/krvopije/status/1477707932569681921
   Highlight: false
 - Name: Victor Afa
+  Supports: "Yes"
   Affiliations: CTO of LNMarkets
   Link: https://twitter.com/afalol/status/1477707096841936904
   Highlight: false
 - Name: NighttimeBit
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/NighttimeBit/status/1477705235191762947
   Highlight: false
 - Name: Kody
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/lndevs/status/1477705188014268418
   Highlight: false
 - Name: PriceDancing
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/PriceDancing/status/1477702102054891524
   Highlight: false
 - Name: Ryan Shea
+  Supports: "Yes"
   Affiliations: Cofounder Stacks and Citizenbase
   Link: https://twitter.com/ryaneshea/status/1477700063082254338
   Highlight: true
 - Name: JohnOn{Chain,Git}
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/JohnOnChain/status/1477701451698823178
   Highlight: true
@@ -483,3 +496,12 @@
   Affiliations: Mining pool operator
   Link: https://twitter.com/slashbin_FR/status/1481578068040990721
   Highlight: false
+- Name: "Adrián Qecez"
+  Supports: "Yes"
+  Link: https://twitter.com/qecez/status/1483458487493537793
+  Highlight: false
+- Name: Pablo F
+  Supports: "Yes"
+  Highlight: false
+  Link: https://twitter.com/pablof7z/status/1483459494252265483
+
