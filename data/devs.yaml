@@ -335,6 +335,7 @@
   Affiliations: COO of Chia.net
   Link: https://twitter.com/hoffmang/status/1476630027055730712
   Highlight: true
+  Supports: "Yes"
 - Name: Jameson Lopp
   Supports: "Yes"
   Affiliations: Casa
@@ -510,3 +511,13 @@
   Highlight: false
   Link: https://twitter.com/cryptoquick/status/1484218875692519425
   Affiliations: CTO, Grayblock Power
+- Name: Vincent Sus
+  Supports: "Yes"
+  Highlight: false
+  Link: https://twitter.com/vicent_sus/status/1484239670976393222
+  Affiliations: Founder @PrivacyFnd
+- Name: Nate Kitzke
+  Supports: "Yes"
+  Hightlight: false
+  Link: https://twitter.com/nk1tz/status/1484299975400079361
+  Affiliations: VP Engineering of Bull Bitcoin
