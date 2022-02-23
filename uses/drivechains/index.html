@@ -160,6 +160,7 @@
 <h1 class=title>Drivechains</h1>
 <h2 class=byline>by <a href=https://github.com/corollari>corollari</a></h2>
 <div class=content><p><img src=/images/uses/drivechains.png alt></p>
+<h1 id=partial-retraction----please-see-below>Partial Retraction &ndash; Please See Below</h1>
 <p>Drivechain&rsquo;s peg-out mechanism could be implemented at the transaction level through scripts that force the funds being withdrawn from the sidechain to go through a chain of N transactions, each one of these being in a different block. More specifically, this would be implemented by creating N scripts that would contain an integer constant and would only be spendable to another copy of the same script with the constant increased or decreased by one, with the exception of the script where the constant reaches the value N, in which case the UTXO would be spendable only to a specific address provided in the beginning of the process. Furthermore, these scripts would prevent the possibility of several of them being chained in the same block through the use of <code>OP_CSV</code>.</p>
 <p>Thus the protocol would look like this:</p>
 <ol>
@@ -178,6 +179,10 @@ IF output.address == DCScript(address_arg, i+1) || output.address == DCScript(ad
   SUCCEED
 FAIL
 </code></pre></div><p>Note that, due to the restrictions inherent to OP_CTV, the set of possible addresses available to use as <code>our_address</code> must be finite and picked in the initial setup phase. Furthermore, as each possible state requires some computation, the length of the paths that a transaction can take to redemption is limited in depth and the size of any withdrawal must be within a set.</p>
+<h1 id=editors-note-partial-retraction>Editor&rsquo;s Note: Partial Retraction</h1>
+<p>The design as suggested above doesn&rsquo;t really work because the ability to recurse on the increments of the numbers doesn&rsquo;t fully work.</p>
+<p><a href=https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019976.html>ZmnSCPxj</a> has pointed out how CTV, plus some other opcodes, compose to deliver Drivechain functionality, so I&rsquo;ve left this page up.</p>
+<p>Editor: Jeremy Rubin.</p>
 </div>
 </div>
 </div>
