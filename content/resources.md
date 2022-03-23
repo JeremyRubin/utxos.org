@@ -11,7 +11,8 @@ If something is missing, leave a comment or open a pull request on
 
 # BIP:
 - [Specification](https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki)
-- [Implementation](https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify)
+- [Pull Request](https://github.com/bitcoin/bitcoin/pull/21702)
+- [Branch](https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify-rebase-4-15-21)
 - [Example RPCs](https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify-feb1-workshop)
 
 # Sapio

@@ -34,12 +34,12 @@ pygmentsStyle = "monokai"
     alt = "utxos.org"
 
   [params.homepage_meta_tags]
-    meta_description = "An extension to Bitcoin for unbounded payment capacity"
+    meta_description = "An extension to Bitcoin for smart(er) contracts"
     meta_og_title = "utxos.org"
     meta_og_type = "website"
     meta_og_url = "https://utxos.org"
     meta_og_image = "https://utxos.org/static/images/og/main.png"
-    meta_og_description = "utxos.org brings you the latest information about bitcoin payment scalability solutions."
+    meta_og_description = "utxos.org brings you the latest information about bip-119"
     meta_twitter_card = "summary"
     meta_twitter_site = "@JeremyRubin"
     meta_twitter_creator = "@JeremyRubin"
@@ -59,6 +59,11 @@ pygmentsStyle = "monokai"
         name = "Specification"
         url = "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki"
         weight = 2
+      [[menu.main]]
+        parent="bip"
+        name = "Core Pull Request"
+        url="https://github.com/bitcoin/bitcoin/pull/21702"
+        weight = 3
       [[menu.main]]
         parent="bip"
         name = "Deployment Options"
