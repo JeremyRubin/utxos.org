@@ -1,3 +1,13 @@
+- Name: Alef Andrade
+  Supports: "Yes"
+  Affiliations: "Software Engineer at Gray Finance"
+  Link: https://twitter.com/leffw_/status/1492931285702041605 
+  Highlight: false
+- Name: Rearden Code
+  Supports: "Yes"
+  Affiliations: "None"
+  Link: https://twitter.com/reardencode/status/1479453852059402240 
+  Highlight: true
 - Name: Dan Cline
   Supports: "Yes"
   Affiliations: "None"
@@ -284,7 +294,7 @@
 - Name: P
   Supports: "Yes"
   Affiliations: "Director of Programming, The Bitcoin Conference and Co-Founder of Plebnet"
-  Highlight: false
+  Highlight: true
   Link: https://twitter.com/phjlljp/status/1472064493744185344?s=20
 - Name: fiatjaf
   Supports: "Yes"
@@ -294,7 +304,7 @@
 - Name: Ziya Sadr
   Supports: "Yes"
   Affiliations: "Bitcoin Educator: Podcast, Youtube, Blogs"
-  Highlight: false
+  Highlight: true
   Link: https://twitter.com/Ziya_Sadr/status/1473072635349241863
 - Name: Matt Bell (mappum)
   Supports: "Yes"
@@ -305,7 +315,7 @@
   Supports: "Yes"
   Affiliations: Head of Firmwide Research at Galaxy Digital
   Link: https://twitter.com/intangiblecoins/status/1473377058520768513
-  Highlight: false
+  Highlight: true
 - Name: 0x0ff
   Supports: "Yes"
   Affiliations: bitcoinpy.dev
@@ -325,11 +335,12 @@
   Supports: "No"
   Affiliations: CEO of Synonym
   Link: https://github.com/JeremyRubin/utxos.org/issues/28
-  Highlight: false
+  Highlight: true
 - Name: Gene Hoffman
   Affiliations: COO of Chia.net
   Link: https://twitter.com/hoffmang/status/1476630027055730712
-  Highlight: false
+  Highlight: true
+  Supports: "Yes"
 - Name: Jameson Lopp
   Supports: "Yes"
   Affiliations: Casa
@@ -344,7 +355,7 @@
   Supports: "Yes"
   Link: https://twitter.com/ercwl/status/1476808046374445062
   Affiliations: As Himself
-  Highlight: false
+  Highlight: true
 - Name: Arceris
   Supports: "Yes"
   Link: https://twitter.com/Arceris_btc/status/1476796613167308811
@@ -372,6 +383,7 @@
 - Name: Brad Mills
   Supports: "Yes"
   Affiliations: None
+  Highlight: true
   Link: https://twitter.com/bradmillscan/status/1477496046917935107
 - Name:  David Bennett
   Supports: "Yes"
@@ -390,61 +402,127 @@
   Supports: "Yes"
   Affiliations: author of Bittorrent, founder Chia Labs
   Link: https://twitter.com/bramcohen/status/1224823869933899776
-  Highlight: false
+  Highlight: true
 - Name: Sam Callahan
   Supports: "Yes"
   Affiliations: As himself
   Link: https://twitter.com/samcallah/status/1477688765556482054
   Highlight: false
 - Name: Nick Neuman
+  Supports: "Yes"
   Affiliations: As himself
   Link: https://twitter.com/Nneuman/status/1477688208603459584
   Highlight: false
 - Name: Mason Borda
+  Supports: "Yes"
   Affiliations: CEO of Tokensoft
   Link: https://twitter.com/masonic_tweets/status/1477679480722259975
-  Highlight: false
+  Highlight: true
 - Name: Emmy
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/emmy_evm/status/1477694205145149440
   Highlight: false
 - Name: "Lounès Ksouri"
+  Supports: "Yes"
   Affiliations: Software Developer at Umbrel
   Link: https://twitter.com/lounes_kmt/status/1477698147707199497
   Highlight: false
 - Name: Matt Luongo
+  Supports: "Yes"
   Affiliations: Founder of Thesis
   Link: https://twitter.com/mhluongo/status/1477633131553468416
   Highlight: false
 - Name: Lucifer Hodlstar
+  Supports: "Yes"
   Affiliations: CEO of Hell, formerly 2nd in Command at Heaven
   Link: https://twitter.com/LuciferHODLSTAR/status/1477699621417852930
   Highlight: false
 - Name: Krvopije
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/krvopije/status/1477707932569681921
   Highlight: false
 - Name: Victor Afa
+  Supports: "Yes"
   Affiliations: CTO of LNMarkets
   Link: https://twitter.com/afalol/status/1477707096841936904
   Highlight: false
 - Name: NighttimeBit
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/NighttimeBit/status/1477705235191762947
   Highlight: false
 - Name: Kody
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/lndevs/status/1477705188014268418
   Highlight: false
 - Name: PriceDancing
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/PriceDancing/status/1477702102054891524
   Highlight: false
 - Name: Ryan Shea
+  Supports: "Yes"
   Affiliations: Cofounder Stacks and Citizenbase
   Link: https://twitter.com/ryaneshea/status/1477700063082254338
-  Highlight: false
+  Highlight: true
 - Name: JohnOn{Chain,Git}
+  Supports: "Yes"
   Affiliations: None
   Link: https://twitter.com/JohnOnChain/status/1477701451698823178
+  Highlight: true
+- Name: Gigi
+  Supports: "Yes"
+  Affiliations: '@GuerillaV2 on Twitter'
   Highlight: false
+- Name: Will Reeves
+  Supports: "Yes"
+  Affiliations: CEO of Fold
+  Highlight: true
+  Link: https://twitter.com/wlrvs/status/1478078596098887686
+- Name: Casey Rodarmor
+  Supports: "Yes"
+  Affiliations: None
+  Link: https://twitter.com/rodarmor/status/1477498513059500032
+  Highlight: true
+- Name: HashrateBTC
+  Supports: "Yes"
+  Affiliations: None
+  Link: https://twitter.com/Hashratebtc/status/1477843199439872001
+  Highlight: false
+- Name: Dr. M Robotix
+  Supports: "No"
+  Affiliations: None
+  Link: https://github.com/JeremyRubin/utxos.org/issues/39
+  Highlight: false
+- Name: Slashbin
+  Supports: "Yes"
+  Affiliations: Mining pool operator
+  Link: https://twitter.com/slashbin_FR/status/1481578068040990721
+  Highlight: false
+- Name: "Adrián Qecez"
+  Supports: "Yes"
+  Link: https://twitter.com/qecez/status/1483458487493537793
+  Highlight: false
+- Name: Pablo F
+  Supports: "Yes"
+  Highlight: false
+  Link: https://twitter.com/pablof7z/status/1483459494252265483
+  Affiliations: "Head of R&D Swan.com"
+- Name: Hunter Trujillo
+  Supports: "Yes"
+  Highlight: false
+  Link: https://twitter.com/cryptoquick/status/1484218875692519425
+  Affiliations: CTO, Grayblock Power
+- Name: Vincent Sus
+  Supports: "Yes"
+  Highlight: false
+  Link: https://twitter.com/vicent_sus/status/1484239670976393222
+  Affiliations: Founder @PrivacyFnd
+- Name: Nate Kitzke
+  Supports: "Yes"
+  Hightlight: false
+  Link: https://twitter.com/nk1tz/status/1484299975400079361
+  Affiliations: VP Engineering of Bull Bitcoin

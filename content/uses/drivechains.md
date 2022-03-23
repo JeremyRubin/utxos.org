@@ -5,6 +5,8 @@ author: <a href="https://github.com/corollari">corollari</a>
 ---
 ![](/images/uses/drivechains.png)
 
+# Partial Retraction -- Please See Below
+
 Drivechain's peg-out mechanism could be implemented at the transaction level through scripts that force the funds being withdrawn from the sidechain to go through a chain of N transactions, each one of these being in a different block. More specifically, this would be implemented by creating N scripts that would contain an integer constant and would only be spendable to another copy of the same script with the constant increased or decreased by one, with the exception of the script where the constant reaches the value N, in which case the UTXO would be spendable only to a specific address provided in the beginning of the process. Furthermore, these scripts would prevent the possibility of several of them being chained in the same block through the use of `OP_CSV`.
 
 Thus the protocol would look like this:
@@ -26,3 +28,12 @@ FAIL
 ```
 
 Note that, due to the restrictions inherent to OP_CTV, the set of possible addresses available to use as `our_address` must be finite and picked in the initial setup phase. Furthermore, as each possible state requires some computation, the length of the paths that a transaction can take to redemption is limited in depth and the size of any withdrawal must be within a set.
+
+
+# Editor's Note: Partial Retraction
+
+The design as suggested above doesn't really work because the ability to recurse on the increments of the numbers doesn't fully work.
+
+[ZmnSCPxj](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019976.html) has pointed out how CTV, plus some other opcodes, compose to deliver Drivechain functionality, so I've left this page up.
+
+Editor: Jeremy Rubin.
