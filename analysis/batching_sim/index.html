@@ -1,265 +1,57 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<title>Batching Simulation - utxos.org -- Bitcoin for Everyone</title>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<link rel=icon href=/favicon-32x32.png>
-<link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous>
-<link rel=stylesheet href=/css/style.min.001cd82c5deb4a55f69f076992dd043b44db7bc374aefabccae88643876b11a8.css>
-</head>
-<body class="page page-default-single">
-<div id=main-menu-mobile class=main-menu-mobile>
-<ul>
-<li class=menu-item-home>
-<a href=/>
-<span>Home</span>
-</a>
-</li>
-<li class="menu-item-bip-119 materials dropdown show">
-<a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
-<span>BIP-119 Materials</span>
-</a>
-<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
-<div class=dropdown-item>
-<a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki style=color:#000>Specification</a>
-</div>
-<div class=dropdown-item>
-<a href=/deployment/ style=color:#000>Deployment Options</a>
-</div>
-<div class=dropdown-item>
-<a href=/alternatives/ style=color:#000>Alternative Designs</a>
-</div>
-<div class=dropdown-item>
-<a href=/workshops/ style=color:#000>Workshops</a>
-</div>
-</div>
-</li>
-<li class="menu-item-applications dropdown show">
-<a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
-<span>Applications</span>
-</a>
-<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
-<div class=dropdown-item>
-<a href=/uses/ style=color:#000>Use Cases</a>
-</div>
-<div class=dropdown-item>
-<a href=/analysis/ style=color:#000>Ecosystem Impact</a>
-</div>
-<div class=dropdown-item>
-<a href=https://learn.sapio-lang.org style=color:#000>Sapio</a>
-</div>
-</div>
-</li>
-<li class=menu-item-signals>
-<a href=/signals/>
-<span>Signals</span>
-</a>
-</li>
-<li class="menu-item-more resources">
-<a href=/resources/>
-<span>More Resources</span>
-</a>
-</li>
-<li class=menu-item-sponsors>
-<a href=/sponsors/>
-<span>Sponsors</span>
-</a>
-</li>
-<li class=menu-item-telegram>
-<a href=https://t.me/op_ctv_chat>
-<span>Telegram</span>
-</a>
-</li>
-</ul>
-</div>
-<div class=wrapper>
-<div class=header>
-<div class=container>
-<div class=logo>
-<a href=https://utxos.org><img alt=utxos.org src=/images/logo.svg></a>
-</div>
-<div class=logo-mobile>
-<a href=https://utxos.org><img alt=utxos.org src=/images/logo-mobile.svg></a>
-</div>
-<div id=main-menu class=main-menu>
-<ul>
-<li class=menu-item-home>
-<a href=/>
-<span>Home</span>
-</a>
-</li>
-<li class="dropdown show">
-<a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
-<span>BIP-119 Materials</span>
-</a>
-<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
-<div class=dropdown-item>
-<a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki>Specification</a>
-</div>
-<div class=dropdown-item>
-<a href=/deployment/>Deployment Options</a>
-</div>
-<div class=dropdown-item>
-<a href=/alternatives/>Alternative Designs</a>
-</div>
-<div class=dropdown-item>
-<a href=/workshops/>Workshops</a>
-</div>
-</div>
-</li>
-<li class="dropdown show">
-<a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false>
-<span>Applications</span>
-</a>
-<div class=dropdown-menu aria-labelledby=dropdownMenuLink>
-<div class=dropdown-item>
-<a href=/uses/>Use Cases</a>
-</div>
-<div class=dropdown-item>
-<a href=/analysis/>Ecosystem Impact</a>
-</div>
-<div class=dropdown-item>
-<a href=https://learn.sapio-lang.org>Sapio</a>
-</div>
-</div>
-</li>
-<li class=menu-item-signals>
-<a href=/signals/>
-<span>Signals</span>
-</a>
-</li>
-<li class="menu-item-more resources">
-<a href=/resources/>
-<span>More Resources</span>
-</a>
-</li>
-<li class=menu-item-sponsors>
-<a href=/sponsors/>
-<span>Sponsors</span>
-</a>
-</li>
-<li class=menu-item-telegram>
-<a href=https://t.me/op_ctv_chat>
-<span>Telegram</span>
-</a>
-</li>
-</ul>
-</div>
-<button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button aria-label="Mobile Menu">
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-</div>
-</div>
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-<div class="row justify-content-start">
-<div class="offset-1 col-10 col-md-10">
-<div class="service service-single">
-<h1 class=title>Batching Simulation</h1>
-<h2 class=byline>by <a href=https://twitter.com/JeremyRubin>Jeremy Rubin</a></h2>
-<div class=content><p>Check Template Verify is a new opcode for Bitcoin which allows transaction
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Batching Simulation - utxos.org -- Bitcoin for Everyone</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon-32x32.png><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous><link rel=stylesheet href=/css/style.min.001cd82c5deb4a55f69f076992dd043b44db7bc374aefabccae88643876b11a8.css></head><body class="page page-default-single"><div id=main-menu-mobile class=main-menu-mobile><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="menu-item-bip-119 materials dropdown show"><a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki style=color:#000>Specification</a></div><div class=dropdown-item><a href=https://github.com/bitcoin/bitcoin/pull/21702 style=color:#000>Core Pull Request</a></div><div class=dropdown-item><a href=/deployment/ style=color:#000>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/ style=color:#000>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/ style=color:#000>Workshops</a></div></div></li><li class="menu-item-applications dropdown show"><a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/ style=color:#000>Use Cases</a></div><div class=dropdown-item><a href=/analysis/ style=color:#000>Ecosystem Impact</a></div><div class=dropdown-item><a href=https://learn.sapio-lang.org style=color:#000>Sapio</a></div></div></li><li class=menu-item-signals><a href=/signals/><span>Signals</span></a></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><div class=wrapper><div class=header><div class=container><div class=logo><a href=https://utxos.org><img alt=utxos.org src=/images/logo.svg></a></div><div class=logo-mobile><a href=https://utxos.org><img alt=utxos.org src=/images/logo-mobile.svg></a></div><div id=main-menu class=main-menu><ul><li class=menu-item-home><a href=/><span>Home</span></a></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>BIP-119 Materials</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki>Specification</a></div><div class=dropdown-item><a href=https://github.com/bitcoin/bitcoin/pull/21702>Core Pull Request</a></div><div class=dropdown-item><a href=/deployment/>Deployment Options</a></div><div class=dropdown-item><a href=/alternatives/>Alternative Designs</a></div><div class=dropdown-item><a href=/workshops/>Workshops</a></div></div></li><li class="dropdown show"><a class="btn dropdown-toggle" href=# role=button id=dropdownMenuLink data-toggle=dropdown aria-haspopup=true aria-expanded=false><span>Applications</span></a><div class=dropdown-menu aria-labelledby=dropdownMenuLink><div class=dropdown-item><a href=/uses/>Use Cases</a></div><div class=dropdown-item><a href=/analysis/>Ecosystem Impact</a></div><div class=dropdown-item><a href=https://learn.sapio-lang.org>Sapio</a></div></div></li><li class=menu-item-signals><a href=/signals/><span>Signals</span></a></li><li class="menu-item-more resources"><a href=/resources/><span>More Resources</span></a></li><li class=menu-item-sponsors><a href=/sponsors/><span>Sponsors</span></a></li><li class=menu-item-telegram><a href=https://t.me/op_ctv_chat><span>Telegram</span></a></li></ul></div><button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button aria-label="Mobile Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button></div></div><div class="container pb-6 pt-6 pt-md-10 pb-md-10"><div class="row justify-content-start"><div class="offset-1 col-10 col-md-10"><div class="service service-single"><h1 class=title>Batching Simulation</h1><h2 class=byline>by <a href=https://twitter.com/JeremyRubin>Jeremy Rubin</a></h2><div class=content><p>Check Template Verify is a new opcode for Bitcoin which allows transaction
 issuers to split up their transaction into send and receive components. See
 <a href=https://utxos.org>https://utxos.org</a> for more information. This is potentially a big benefit
-because end users can realize faster confirmations on pending transactions.</p>
-<p>There is a concern that CTV would result in higher overall chain utilization
+because end users can realize faster confirmations on pending transactions.</p><p>There is a concern that CTV would result in higher overall chain utilization
 (because of overhead) than existing batching solutions. Ignoring the benefits
 that CTV can have for earlier confirmations, it would be bad to introduce a
-change to Bitcoin that causes users to be wasteful of chain space.</p>
-<p>This simulation proposes and analyzes a model where CTV is a good user of chainspace.</p>
-<p>The point of this simulation is to show that CTV is not <em>worse</em> than status quo
+change to Bitcoin that causes users to be wasteful of chain space.</p><p>This simulation proposes and analyzes a model where CTV is a good user of chainspace.</p><p>The point of this simulation is to show that CTV is not <em>worse</em> than status quo
 with respect to scalability. I hacked this together in a couple of hours so feel
 free to suggest tweaks (via PR or issue) to make it more realistic & there may
-correct errors of course.</p>
-<h2 id=setup>Setup</h2>
-<p>I am modeling a situation where every block:</p>
-<ul>
-<li>a business sees a number of payment requests per second</li>
-<li>the rest of the world does another number of payments per second</li>
-<li>Each payment and payment request has a priority</li>
-<li>Priorities are drawn randomly from a distribution</li>
-</ul>
-<p>Because priority is relative, just the shape of the distribution of priority
+correct errors of course.</p><h2 id=setup>Setup</h2><p>I am modeling a situation where every block:</p><ul><li>a business sees a number of payment requests per second</li><li>the rest of the world does another number of payments per second</li><li>Each payment and payment request has a priority</li><li>Priorities are drawn randomly from a distribution</li></ul><p>Because priority is relative, just the shape of the distribution of priority
 matters. The default distribution is lognormal, but others are included to check
-that the result holds across other distributions.</p>
-<p>The distribution of priority is the big hypothetical point &ndash; what distributions
+that the result holds across other distributions.</p><p>The distribution of priority is the big hypothetical point &ndash; what distributions
 are the actual priorities of outbound payments from businesses? Are they
 constant &ndash; then this model is invalid. But if they fall on a distribution, then
-carry on reading&mldr;</p>
-<h2 id=specific-assumptions>Specific Assumptions</h2>
-<p>If more than one payment request comes in within a single block period, it may
+carry on reading&mldr;</p><h2 id=specific-assumptions>Specific Assumptions</h2><p>If more than one payment request comes in within a single block period, it may
 make sense to issue them in the same transaction <em>if they are around the same
-priority</em>.</p>
-<p>If they come in at different priorities, it may make sense to split up
+priority</em>.</p><p>If they come in at different priorities, it may make sense to split up
 transactions into batches based on their priority. If I have a batch that
 contains payment A and priority A.p, and B and B.p, then the entire batch should
 be at priority max(A.p, B.p). If A.p and B.p are too far apart, then batching
 them is inefficient as one has to overpay to achieve the same feerate for the
-transaction.</p>
-<p>Thus, we assume:</p>
-<ol>
-<li>Transactions come in different priorities</li>
-<li>A batch must pay a rate appropriate for the highest priority payment in the
-batch</li>
-</ol>
-<h2 id=strategies>Strategies</h2>
-<p>Consider 4 batching implementations:</p>
-<h3 id=strategy-nobatch_med>Strategy &ldquo;NOBATCH_MED&rdquo;:</h3>
-<p>In this strategy we just issue transactions per payment, no
+transaction.</p><p>Thus, we assume:</p><ol><li>Transactions come in different priorities</li><li>A batch must pay a rate appropriate for the highest priority payment in the
+batch</li></ol><h2 id=strategies>Strategies</h2><p>Consider 4 batching implementations:</p><h3 id=strategy-nobatch_med>Strategy &ldquo;NOBATCH_MED&rdquo;:</h3><p>In this strategy we just issue transactions per payment, no
 batching or anything else fancy. We pay the median fee of the
-last block.</p>
-<h3 id=strategy-batch_max>Strategy &ldquo;BATCH_MAX&rdquo;:</h3>
-<p>In this strategy we batch transactions all together and then
-we pay the min of the median or max feerate in batch</p>
-<h3 id=strategy-batch_group_max>Strategy &ldquo;BATCH_GROUP_MAX&rdquo;:</h3>
-<p>In this strategy we batch transactions of similar feerate
+last block.</p><h3 id=strategy-batch_max>Strategy &ldquo;BATCH_MAX&rdquo;:</h3><p>In this strategy we batch transactions all together and then
+we pay the min of the median or max feerate in batch</p><h3 id=strategy-batch_group_max>Strategy &ldquo;BATCH_GROUP_MAX&rdquo;:</h3><p>In this strategy we batch transactions of similar feerate
 together and then we pay the min of the median or max feerate
-in each batch</p>
-<h3 id=strategy-batch_group_max_ctv>Strategy &ldquo;BATCH_GROUP_MAX_CTV&rdquo;:</h3>
-<p>In this strategy we batch transactions of similar feerate
+in each batch</p><h3 id=strategy-batch_group_max_ctv>Strategy &ldquo;BATCH_GROUP_MAX_CTV&rdquo;:</h3><p>In this strategy we batch transactions of similar feerate
 together and then we pay the min of the median or max feerate
 in each batch
 But instead of making independent batches, we put them through
-one layer of a high fee paying CTV root.</p>
-<h3 id=strategy-batch_group_max_ctv_min_followup>Strategy &ldquo;BATCH_GROUP_MAX_CTV_MIN_FOLLOWUP&rdquo;:</h3>
-<p>In this strategy we batch transactions of similar feerate
+one layer of a high fee paying CTV root.</p><h3 id=strategy-batch_group_max_ctv_min_followup>Strategy &ldquo;BATCH_GROUP_MAX_CTV_MIN_FOLLOWUP&rdquo;:</h3><p>In this strategy we batch transactions of similar feerate
 together and then we pay the min of the min feerate over the
 last ten blocks or max feerate in each batch
 But instead of making independent batches, we put them through
-one layer of a high fee paying CTV root with n_bins outputs.</p>
-<p>We cut through bins with only one element</p>
-<p>Pay 10-block low (but mineable) fee for each bin</p>
-<h3 id=strategy-batch_group_max_double_ctv_min_followup>Strategy &ldquo;BATCH_GROUP_MAX_DOUBLE_CTV_MIN_FOLLOWUP&rdquo;:</h3>
-<p>In this strategy we batch transactions of similar feerate
+one layer of a high fee paying CTV root with n_bins outputs.</p><p>We cut through bins with only one element</p><p>Pay 10-block low (but mineable) fee for each bin</p><h3 id=strategy-batch_group_max_double_ctv_min_followup>Strategy &ldquo;BATCH_GROUP_MAX_DOUBLE_CTV_MIN_FOLLOWUP&rdquo;:</h3><p>In this strategy we batch transactions of similar feerate
 together and then we pay the min of the min feerate over the
 last ten blocks or max feerate in each batch
 But instead of making independent batches, we put them through
 two layers of CTV: a high fee paying CTV root with one output,
-and then a low paying CTV root with n_bins outputs.</p>
-<p>We cut through bins with only one element
+and then a low paying CTV root with n_bins outputs.</p><p>We cut through bins with only one element
 Pay 10-block low (but mineable) fee for each bin and second
-root</p>
-<h3 id=strategy-batch_group_max_double_ctv_cpfp_followup>Strategy &ldquo;BATCH_GROUP_MAX_DOUBLE_CTV_CPFP_FOLLOWUP&rdquo;:</h3>
-<p>In this strategy we batch transactions of similar feerate
+root</p><h3 id=strategy-batch_group_max_double_ctv_cpfp_followup>Strategy &ldquo;BATCH_GROUP_MAX_DOUBLE_CTV_CPFP_FOLLOWUP&rdquo;:</h3><p>In this strategy we batch transactions of similar feerate
 together and then we pay 0 (leaving it up to CPFP)
 But instead of making independent batches, we put them through
 two layers of CTV: a high fee paying CTV root with one output,
-and then a 0 paying CTV root with n_bins outputs.</p>
-<p>We cut through bins with only one element</p>
-<p>This puts people into priority bins, but allows CPFP to commit
-to the fees later avoiding over-offering of fees.</p>
-<p>Pay 10-block low (but mineable) fee for each bin and second
-root</p>
-<p>Note that the simulations are not doing anything smart for binning, just calling
-numpy.histogram. There&rsquo;s probably an optimal solution.</p>
-<p>The BATCH_GROUP_MAX_CTV fan-out is also the &ldquo;obvious&rdquo; one &ndash; pay a CTV for each bin in the txn
+and then a 0 paying CTV root with n_bins outputs.</p><p>We cut through bins with only one element</p><p>This puts people into priority bins, but allows CPFP to commit
+to the fees later avoiding over-offering of fees.</p><p>Pay 10-block low (but mineable) fee for each bin and second
+root</p><p>Note that the simulations are not doing anything smart for binning, just calling
+numpy.histogram. There&rsquo;s probably an optimal solution.</p><p>The BATCH_GROUP_MAX_CTV fan-out is also the &ldquo;obvious&rdquo; one &ndash; pay a CTV for each bin in the txn
 root, and then each CTV expands to the entire bin, skipping the CTV is there&rsquo;s
 only one bin. The other CTV strategies present a couple optimizations which can
-further improve the efficiency.</p>
-<h1 id=claims>Claims</h1>
-<p>My claims are as follows:</p>
-<p>A. If it is lower fee to use priority binned batching than single batching, then
+further improve the efficiency.</p><h1 id=claims>Claims</h1><p>My claims are as follows:</p><p>A. If it is lower fee to use priority binned batching than single batching, then
 users will use priority binned batching for economic fee reducing reasons.
 B. If CTV priority binned batching is more blockspace efficient that priority
 binned batching, and hypothesis A. holds, this will overall make the chain usage
@@ -268,28 +60,17 @@ C. If CTV Priority Binned batching is more fee efficient than binned batching or
 normal binned batching, it will be preferred.
 D. If B., then C..
 E. If A. and B., then CheckTemplateVerify does not decrease the availability of
-chain space, even marginally so.</p>
-<h1 id=results>Results</h1>
-<p>I recommend you run main.py yourself to see for yourself (and zoom around), as
+chain space, even marginally so.</p><h1 id=results>Results</h1><p>I recommend you run main.py yourself to see for yourself (and zoom around), as
 well as play around with different parameters. The code is reasonably
-documented.</p>
-<p><img src=ExampleRunUnzoomed.png alt></p>
-<p>And zoomed in on the interesting bits:</p>
-<p><img src=ExampleRunZoomed.png alt></p>
-<p>This confirms all of the claims presented previously, and shows that CTV can be
-a better user of chain space than existing methods.</p>
-<p>This is an important point! We&rsquo;ve demonstrated that CTV is better in terms of
+documented.</p><p><img src=ExampleRunUnzoomed.png alt></p><p>And zoomed in on the interesting bits:</p><p><img src=ExampleRunZoomed.png alt></p><p>This confirms all of the claims presented previously, and shows that CTV can be
+a better user of chain space than existing methods.</p><p>This is an important point! We&rsquo;ve demonstrated that CTV is better in terms of
 chain space but we haven&rsquo;t discussed the &ldquo;first order&rdquo; benefits of CTV for
 decongesting the mempool. See <a href=https://utxos.org/analysis/bip_simulation/>https://utxos.org/analysis/bip_simulation/</a>.
 This means not only will CTV help us confirm more payments more quickly, but
-we&rsquo;ll also use less space. A pure win-win.</p>
-<h1 id=limitations>Limitations</h1>
-<p>A better simulation would allow re-bundling the offered-but-not-taken fees into
-a new RBF batch, which would benefit Priority Batching but not CTV batching.</p>
-<p>The BATCH_GROUP_MAX_DOUBLE_CTV_CPFP_FOLLOWUP strategy also does not actually
+we&rsquo;ll also use less space. A pure win-win.</p><h1 id=limitations>Limitations</h1><p>A better simulation would allow re-bundling the offered-but-not-taken fees into
+a new RBF batch, which would benefit Priority Batching but not CTV batching.</p><p>The BATCH_GROUP_MAX_DOUBLE_CTV_CPFP_FOLLOWUP strategy also does not actually
 use CPFP, a better simulation would measure how much fee savings can be realized
-with CPFP.</p>
-<p>If the assumptions around priority distributions do not hold, then CTV still has
+with CPFP.</p><p>If the assumptions around priority distributions do not hold, then CTV still has
 benefits worth pursuing, but we should more carefully think about the space
 usage impact on Bitcoin. With the strategies for batching presented, the overall
 chain usage is a constant amount more, so the impact is at least non-asymptotic.
@@ -301,36 +82,8 @@ a radix of 10, 5% more for a radix of 20, 1% for a radix of 100. The
 transactions roughly corresponds to the amount of space used as well. Overall,
 this means that businesses can balance out the worth of per-user decongesting
 effects (which are optimal around radix 4) with fee savings on a dynamic basis,
-and able to dial down the overhead to very little.</p>
-</div>
-</div>
-</div>
-</div>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//utxos-org.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-</div>
-<div class=footer>
-<div class=container>
-<div class=row>
-<div class=col-12>
-<div class=footer-inner>
-<h3 class=footer-title>utxos.org -- Bitcoin for Everyone</h3>
-<ul>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script type=text/javascript src=/js/scripts.min.98ee06cc35517b5800b382aecb0fc59893e95b9c11dd21842d0d57e4f68043e3.js></script>
+and able to dial down the overhead to very little.</p></div></div></div></div><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//utxos-org.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><div class=footer><div class=container><div class=row><div class=col-12><div class=footer-inner><h3 class=footer-title>utxos.org -- Bitcoin for Everyone</h3><ul></ul></div></div></div></div></div><script type=text/javascript src=/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152627278-1"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-152627278-1')</script>
-<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i&display=swap" rel=stylesheet>
-<script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-152627278-1")</script><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i&display=swap" rel=stylesheet><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js integrity=sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 crossorigin=anonymous></script>
-<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js integrity=sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM crossorigin=anonymous></script>
-</body>
-</html>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js integrity=sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM crossorigin=anonymous></script></body></html>
