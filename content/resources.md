@@ -26,7 +26,7 @@ Sapio is a programming language for CTV contracts.
 ## Minsc
 A CTV compatible [compiler](https://min.sc) with an example [playground](https://min.sc/nextc/)
 ## Simple CTV Vault 
-A [simple client]r([https://github.com/jamesob/simple-ctv-vault) in python for
+A [simple client](https://github.com/jamesob/simple-ctv-vault) in python for
 basic vaults.
 
 ## Python Vaults
