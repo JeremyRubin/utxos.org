@@ -15,12 +15,23 @@ If something is missing, leave a comment or open a pull request on
 - [Branch](https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify-rebase-4-15-21)
 - [Example RPCs](https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify-feb1-workshop)
 
-# Sapio
+# Tools
+## Sapio
 
 Sapio is a programming language for CTV contracts.
 
 - [Book](https://learn.sapio-lang.org)
 - [Repo](https://github.com/sapio-lang/sapio)
+
+## Minsc
+A CTV compatible [compiler](https://min.sc) with an example [playground](https://min.sc/nextc/)
+## Simple CTV Vault 
+A [simple client]r([https://github.com/jamesob/simple-ctv-vault) in python for
+basic vaults.
+
+## Python Vaults
+A [sophisticated recursive vault](https://github.com/kanzure/python-vaults) as
+a python program, using CTV or pre-signing.
 
 # Forums:
 - IRC Channel: ##ctv-bip-review (logged, feel free to join)
