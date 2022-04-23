@@ -114,4 +114,4 @@ pygmentsStyle = "monokai"
     weight=6
   [[menu.main]]
     name="Telegram"
-    url ="https://t.me/op_ctv_chat"
+    url ="https://t.me/op_ctv"
