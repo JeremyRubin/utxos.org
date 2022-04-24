@@ -98,6 +98,11 @@
   Supports: "Yes"
   Link: https://twitter.com/johndavies24/status/1451219236953591809
   Highlight: false
+- Name: Luke Dashjr
+  Supports: "Yes"
+  Affiliations: 'Bitcoin Core developer, BIP editor and Knots maintainer'
+  Link: https://nitter.net/LukeDashjr/status/1517631055326584834
+  Highlight: true
 - Name: Paul Sztorc
   Supports: "Yes"
   Link: https://twitter.com/Truthcoin/status/1452795523824504841
