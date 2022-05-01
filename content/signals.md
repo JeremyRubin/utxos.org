@@ -16,6 +16,11 @@ create or modify an entry for you or your organization. All listings have been
 individually confirmed by Jeremy Rubin where a statement is either missing
 or ambiguous.
 
+The retraction column indicates if support or dissent has changed, as well as
+the date of the change, and should be indicated with a new entry. The "For 2022
+ST" column indicates general support for the proposal made
+[here](https://rubin.io/bitcoin/2022/04/17/next-steps-bip119/).
+
 ### Developers & Individuals
 > Developers & Individuals include the programmers behind Bitcoin Core,
 > wallets, or other related technologies as well as generally knowledgeable
