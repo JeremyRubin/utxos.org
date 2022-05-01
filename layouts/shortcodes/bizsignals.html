@@ -1,17 +1,27 @@
+{{ $supports := (where $.Site.Data.bizs "Supports" "==" "Yes") }}
+{{ $nacks := (where $.Site.Data.bizs "Supports" "==" "No") }}
 <table>
-    <tr>
-        <th> Business  </th>
-        <th> Support Indicated</th>
-        <th> Statement </th>
-    </tr>
-{{ range $.Site.Data.bizs }}
-<tr>
-    <td>{{.Name}}</td>
-    <td>{{.Supports}}</td>
-    {{ if .Link}}
-    <td> <a href="{{.Link}}">🔗</a> </td>
-    {{end}}
+    <thead>
+        <tr>
+            <th> Business  </th>
+            <th> Support Indicated</th>
+            <th> Retracted </th>
+            <th> For 2022 ST </th>
+            <th> Statement </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range $.Site.Data.bizs }}
+        <tr>
+            <td>{{.Name}}</td>
+            <td>{{.Supports}}</td>
+            <td>{{.Retracted}}</td>
+            <td>{{.Supports22ST}}</td>
+            {{ if .Link}}
+            <td> <a href="{{.Link}}">🔗</a> </td>
+            {{end}}
 
-</tr>
-{{end}}
+        </tr>
+        {{end}}
+    </tbody>
 </table>

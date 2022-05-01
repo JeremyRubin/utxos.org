@@ -208,7 +208,15 @@
   Highlight: false
 - Name: Robert Spigler
   Supports: "Yes"
+  Retracted: 2022-04-22
+  Supports22ST: "No"
   Link: https://twitter.com/RobertSpigler/status/1453071438257131522
+  Affiliations: Co-founder of YetiCold
+  Highlight: false
+- Name: Robert Spigler
+  Supports: "No"
+  Supports22ST: "No"
+  Link: https://github.com/JeremyRubin/utxos.org/issues/46 
   Affiliations: Co-founder of YetiCold
   Highlight: false
 - Name: Bentricia Benson

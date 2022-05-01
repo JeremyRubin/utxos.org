@@ -3,46 +3,65 @@ Highlighted supporters are either bitcoin core contributors or individuals
 fluffypony selected discretionarily (as a "not neutral, respected, or an
 expert" third-party helper) to help readers of this page get a sense at a glance
 of some of the more well known individuals that are supportive of the proposal.
-<table>
-    <tr>
-        <th> Individual  </th>
-        <th> Support Indicated</th>
-        <th> Statement </th>
-        <th> Affiliations</th>
-    </tr>
-    {{ range where (sort $.Site.Data.devs "Name") "Highlight" true}}
-    <tr>
-        <td>{{.Name}}</td>
-        <td>{{.Supports}}</td>
-        <td>
-            {{ if .Link}}
-            <a href="{{.Link}}">🔗</a> 
-            {{end}}
-        </td>
-        <td>{{.Affiliations}}</td>
 
-    </tr>
-    {{end}}
+{{ $supports := (where $.Site.Data.devs "Supports" "==" "Yes") }}
+{{ $nacks := (where $.Site.Data.devs "Supports" "==" "No") }}
+<table>
+    <thead>
+        <tr>
+            <th> Individual  </th>
+            <th> Support Indicated</th>
+            <th> For 2022 ST </th>
+            <th> Retracted </th>
+            <th> Statement </th>
+            <th> Affiliations</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range where (sort $.Site.Data.devs "Name") "Highlight" true}}
+        <tr>
+            <td>{{.Name}}</td>
+            <td>{{.Supports}}</td>
+            <td>{{.Retracted}}</td>
+            <td>{{.Supports22ST}}</td>
+            <td>
+                {{ if .Link}}
+                <a href="{{.Link}}">🔗</a> 
+                {{end}}
+            </td>
+            <td>{{.Affiliations}}</td>
+
+        </tr>
+        {{end}}
+    </tbody>
 </table>
 <h3>More Supporters</h3>
 <table>
-    <tr>
-        <th> Individual  </th>
-        <th> Support Indicated</th>
-        <th> Statement </th>
-        <th> Affiliations</th>
-    </tr>
-    {{ range where (sort $.Site.Data.devs "Name") "Highlight" false}}
-    <tr>
-        <td>{{.Name}}</td>
-        <td>{{.Supports}}</td>
-        <td>
-            {{ if .Link}}
-            <a href="{{.Link}}">🔗</a> 
-            {{end}}
-        </td>
-        <td>{{.Affiliations}}</td>
+    <thead>
+        <tr>
+            <th> Individual  </th>
+            <th> Support Indicated</th>
+            <th> For 2022 ST </th>
+            <th> Retracted </th>
+            <th> Statement </th>
+            <th> Affiliations</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range where (sort $.Site.Data.devs "Name") "Highlight" false}}
+        <tr>
+            <td>{{.Name}}</td>
+            <td>{{.Supports}}</td>
+            <td>{{.Retracted}}</td>
+            <td>{{.Supports22ST}}</td>
+            <td>
+                {{ if .Link}}
+                <a href="{{.Link}}">🔗</a> 
+                {{end}}
+            </td>
+            <td>{{.Affiliations}}</td>
+    </tbody>
 
-    </tr>
-    {{end}}
+        </tr>
+        {{end}}
 </table>

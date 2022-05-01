@@ -1,20 +1,30 @@
+{{ $supports := (where $.Site.Data.hashratesnapshot "Supports" "==" "Yes") }}
+{{ $nacks := (where $.Site.Data.hashratesnapshot "Supports" "==" "No") }}
 <table>
-    <tr>
-        <th> Pool </th>
-        <th> Support Indicated</th>
-        <th> Hashrate </th>
-        <th> Statement </th>
-    </tr>
-{{ range $.Site.Data.hashratesnapshot }}
-<tr>
-    <td>{{.Pool}}</td>
-    <td>{{.Supports}}</td>
-    <td> {{ with (index . "Hashrate Share") }}{{ . }}{{ end }} </td>
-    {{ if .Link}}
-    <td> <a href="{{.Link}}">🔗</a> </td>
-    {{end}}
+    <thead>
+        <tr>
+            <th> Pool </th>
+            <th> Support Indicated</th>
+            <th> For 2022 ST </th>
+            <th> Retracted </th>
+            <th> Hashrate </th>
+            <th> Statement </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range $.Site.Data.hashratesnapshot }}
+        <tr>
+            <td>{{.Pool}}</td>
+            <td>{{.Supports}}</td>
+            <td>{{.Retracted}}</td>
+            <td>{{.Supports22ST}}</td>
+            <td> {{ with (index . "Hashrate Share") }}{{ . }}{{ end }} % </td>
+            {{ if .Link}}
+            <td> <a href="{{.Link}}">🔗</a> </td>
+            {{end}}
 
-</tr>
-{{end}}
+        </tr>
+        {{end}}
+    </tbody>
 </table>
 
