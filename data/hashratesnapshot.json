@@ -2,9 +2,20 @@
     {
         "Supports": "Yes",
         "Pool": "F2Pool",
+        "Retracted": "05-02-2022",
+        "Supports22ST": "No"
         "Hashrate Share": "17.2%",
         "Link" : "https://twitter.com/satofishi/status/1398861505748107266"
     },
+    {
+        "Supports": "No",
+        "Pool": "F2Pool",
+        "Supports22ST": "No"
+        "Hashrate Share": "17.2%",
+        "Link" : "https://twitter.com/satofishi/status/1521206031698870272"
+    },
+    {
+    }
     {
         "Pool": "Luxor Tech",
         "Hashrate Share": "1.5%",
