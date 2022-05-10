@@ -549,4 +549,9 @@
   Supports22ST: "No"
   Highlight: false
   Link: https://github.com/JeremyRubin/utxos.org/issues/43
-  
+- Name: Vicarious Drama
+  Supports: "Yes"
+  Supports22ST: "No"
+  Link: https://github.com/JeremyRubin/utxos.org/issues/50 
+  Affiliations: Nodeyez
+  Highlight: false
