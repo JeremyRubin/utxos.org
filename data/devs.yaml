@@ -528,27 +528,25 @@
   Supports: "Yes"
   Highlight: false
   Link: https://twitter.com/vicent_sus/status/1484239670976393222
-  Affiliations: Founder @PrivacyFnd
-- Name: Nate Kitzke
+  Affiliations: "Founder @PrivacyFnd"
+- Name: "Nate Kitzke"
   Supports: "Yes"
-  Hightlight: false
-  Link: https://twitter.com/nk1tz/status/1484299975400079361
-  Affiliations: VP Engineering of Bull Bitcoin
-- Name: Hampus Sjöberg
+  Highlight: false
+  Link: "https://twitter.com/nk1tz/status/1484299975400079361"
+  Affiliations: "VP Engineering of Bull Bitcoin"
+- Name: "Hampus Sjöberg"
   Supports: "Yes"
-  Hightlight: false
+  Highlight: false
   Link: https://twitter.com/hampus_s/status/1517419339703631872
-  Affiliations: Creator of Blixt Wallet, Fork Explorer and NameDesc
+  Affiliations: "Creator of Blixt Wallet, Fork Explorer and NameDesc"
 - Name: andhan360
   Supports: "No"
   Supports22ST: "No"
-  Hightlight: false
+  Highlight: false
   Link: https://github.com/JeremyRubin/utxos.org/issues/44
-  Affiliations: 
 - Name: Richard Hoganri
   Supports: "No"
   Supports22ST: "No"
-  Hightlight: false
+  Highlight: false
   Link: https://github.com/JeremyRubin/utxos.org/issues/43
-  Affiliations: 
   
