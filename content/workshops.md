@@ -2,10 +2,29 @@
 title: BIP-119 Workshops
 ---
 
-## VR Workshop
+## IRC Meetings
 
-As a result of COVID-19, it's been a large challenge to host events. We may be
-planning a VR workshop to discuss BIP-119 deployment -- stay tuned!
+There was a series of IRC Meetings held in 2022 covering CTV. The agendas and notes are linked below.
+
+- Meeting 1 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019737.html
+- Meeting 1 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019744.html
+- Meeting 2 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019807.html
+- Meeting 2 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019855.html
+- Meeting 3 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019856.html
+- Meeting 3 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019874.html
+- Meeting 4 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019971.html https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019973.html
+- Meeting 4 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019974.html
+- Meeting 5 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020081.html
+- Meeting 5 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020086.html
+- Meeting 6 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020157.html
+- Meeting 6 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020169.html
+- Meeting 7 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020231.html https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020233.html
+- Meeting 7 Notes: (none made)
+- Meeting 8 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020406.html
+- Meeting 8 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020430.html
+- Meeting 9 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020491.html
+- Meeting 9 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020501.html
+
 
 ## SF Workshop
 On February 1st, 2020 we held a workshop in downtown San Francisco to aid in reviewing and
