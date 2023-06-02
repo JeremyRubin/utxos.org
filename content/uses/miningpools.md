@@ -5,6 +5,8 @@ author: <a href="https://twitter.com/JeremyRubin">Jeremy Rubin</a>
 ---
 ![](/images/uses/bagpool.svg)
 
+_for more detail on decentralized mining pools in a more recent article [read here](https://rubin.io/bitcoin/2021/12/12/advent-15/)_
+
 
 In a typical mining pool, miners works together to create a shared block reward. The shared reward
 is distributed among participants based on difficulty shares, that is, partial work proofs that
@@ -28,8 +30,10 @@ bear less risk.
 This type of mining pool has no trusted operator and requires no coordination. This eliminates
 various types of mining pool attacks, such as block witholding.
 
+
 The below code shows a simple simulation of experienced variances among a set of miners with a fixed
 sharing policy versus a set of miners without any sharing.
+
 
 ```python
 import numpy as np
