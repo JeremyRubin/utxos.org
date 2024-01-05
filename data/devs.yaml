@@ -595,3 +595,8 @@
   Affiliations: "None"
   Link: https://github.com/JeremyRubin/utxos.org/issues/49
   Highlight: false
+- Name: Vortex
+  Supports: "Yes"
+  Affiliations: "Founder bitcoindev.org and @cryptocastnet"
+  Link: https://twitter.com/theonevortex/status/1739733676823654576
+  Highlight: true
