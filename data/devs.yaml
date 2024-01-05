@@ -564,4 +564,34 @@
   Supports: "Yes"
   Link: https://twitter.com/sethforprivacy/status/1736104179070849108
   Affiliations: "Head of Strategy + Marketing @ Foundation Devices"
+  Highlight: true
+- Name: Nitesh Balusu
+  Supports: "Yes"
+  Affiliations: "None"
+  Link: https://twitter.com/nitesh_btc/status/1742577174215831947
+  Highlight: false
+- Name: George
+  Supports: "Yes"
+  Affiliations: "None"
+  Link: https://twitter.com/George203BTC/status/1724583791014855055
+  Highlight: false
+- Name: zender
+  Supports: "Yes"
+  Affiliations: "None"
+  Link: https://twitter.com/zndtoshi/status/1688457700504453120
+  Highlight: false
+- Name: arbadacarbaYK
+  Supports: "No"
+  Affiliations: "None"
+  Link: https://github.com/JeremyRubin/utxos.org/issues/52
+  Highlight: false
+- Name: joberding
+  Supports: "Yes"
+  Affiliations: "None"
+  Link: https://github.com/JeremyRubin/utxos.org/issues/51
+  Highlight: false
+- Name: Seccour
+  Supports: "No"
+  Affiliations: "None"
+  Link: https://github.com/JeremyRubin/utxos.org/issues/49
   Highlight: false
