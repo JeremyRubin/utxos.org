@@ -15,7 +15,7 @@ Spacechains        | yes   | yes   | yes    | ?    | ?     | ~ctv  | ?    | ?   
 Congestion Control | no    | yes   | yes    | no   | yes   | ~ctv  | yes  | yes  | yes
 
 
-Glossary:
+
 
 - tap*: yes if combined with something that allows turning a script into a Taproot, plus often
   also `OP_CAT`
