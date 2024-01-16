@@ -6,7 +6,7 @@ date: 2019-09-28T17:48:34-07:00
 use case           | apo   | ctv   | txhash | tluv | intro | vault | catt | matt | tplk
 -|-|-|-|-|-|-|-|-|-
 Lightning Symmetry | yes   | csfs* | csfs*  | ?    | yes   | no    | yes  | yes  | yes
-Vaults             | no    | yes   | tap*   | yes  | tap*  | yes   | yes  | yes  | tap*
+Vaults             | yes*  | yes*  | tap*   | yes  | tap*  | yes   | yes  | yes  | tap*
 Payment Pools      | yes   | yes   | tap*   | yes  | tap*  | ~ctv  | yes  | yes  | tap*
 Ark                | no    | yes   | yes    | no   | yes   | ~ctv  | yes  | yes  | yes
 Fraud Proofs       | no    | no    | no     | no   | no    | no    | yes  | yes  | no
@@ -15,8 +15,8 @@ Spacechains        | yes   | yes   | yes    | ?    | ?     | ~ctv  | ?    | ?   
 Congestion Control | no    | yes   | yes    | no   | yes   | ~ctv  | yes  | yes  | yes
 
 
-
-
+- yes*: CTV/APO enable better vaults than are currently possible, but not
+  nearly as good as OP_VAULT ones.
 - tap*: yes if combined with something that allows turning a script into a Taproot, plus often
   also `OP_CAT`
 - csfs*: yes if combined with `OP_CHECKSIGFROMSTACK`
