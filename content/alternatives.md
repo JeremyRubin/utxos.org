@@ -9,7 +9,7 @@ Lightning Symmetry | yes   | csfs* | csfs*  | ?    | yes   | no    | yes  | yes 
 Vaults             | no    | yes   | tap*   | yes  | tap*  | yes   | yes  | yes  | tap*
 Payment Pools      | no    | yes   | tap*   | yes  | tap*  | ~ctv  | yes  | yes  | tap*
 Ark                | no    | yes   | yes    | no   | yes   | ~ctv  | yes  | yes  | yes
-Fraud Proofs       | no    | no    | no     | no   | no    | no    | no   | yes  | no
+Fraud Proofs       | no    | no    | no     | no   | no    | no    | yes  | yes  | no
 Statechains        | yes   | csfs* | csfs*  | ?    | yes   | no    | yes  | yes  | yes
 Spacechains        | yes   | yes   | yes    | ?    | ?     | ~ctv  | ?    | ?    | yes
 Congestion Control | no    | yes   | yes    | no   | yes   | ~ctv  | yes  | yes  | yes
