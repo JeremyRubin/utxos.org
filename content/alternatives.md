@@ -3,6 +3,25 @@ title: "Alternative Designs"
 date: 2019-09-28T17:48:34-07:00
 ---
 
+use case           | apo   | ctv   | txhash | tluv | intro | vault | catt | matt | tplk
+-|-|-|-|-|-|-|-|-|-
+Lightning Symmetry | yes   | csfs* | csfs*  | ?    | yes   | no    | yes  | yes  | yes
+Vaults             | no    | yes   | tap*   | yes  | tap*  | yes   | yes  | yes  | tap*
+Payment Pools      | no    | yes   | tap*   | yes  | tap*  | ~ctv  | yes  | yes  | tap*
+Ark                | no    | yes   | yes    | no   | yes   | ~ctv  | yes  | yes  | yes
+Fraud Proofs       | no    | no    | no     | no   | no    | no    | no   | yes  | no
+Statechains        | yes   | csfs* | csfs*  | ?    | yes   | no    | yes  | yes  | yes
+Spacechains        | yes   | yes   | yes    | ?    | ?     | ~ctv  | ?    | ?    | yes
+Congestion Control | no    | yes   | yes    | no   | yes   | ~ctv  | yes  | yes  | yes
+
+
+Glossary:
+
+- tap*: yes if combined with something that allows turning a script into a Taproot, plus often
+  also `OP_CAT`
+- csfs*: yes if combined with `OP_CHECKSIGFROMSTACK`
+- ~ctv: yes but only because the `OP_VAULT` proposal also includes `OP_CTV`
+
 BIP-0119 `OP_CHECKTEMPLATEVERIFY` has a multitude of benefits for the Bitcoin ecosystem. Are
 there other paths to these improvements? In short, yes. This page has a survey
 of the other methods for enabling `OP_CHECKTEMPLATEVERIFY` like functionality and why
