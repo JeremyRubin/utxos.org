@@ -56,6 +56,11 @@ basic vaults.
 A [sophisticated recursive vault](https://github.com/kanzure/python-vaults) as
 a python program, using CTV or pre-signing.
 
+## CTV Playground
+
+An [online playground](https://ctv.ursus.camp) that demonstrates the creation (and spending)
+of simple CTV locks, congestion control trees and vaults.
+
 # Forums:
 - IRC Channel: ##ctv-bip-review (logged, feel free to join)
 - Telegram Discussion Group: https://t.me/op_ctv
