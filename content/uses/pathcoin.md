@@ -6,4 +6,4 @@ author: "Waxwing"
 
 Transfer ownership of UTXO off-chain
 
-Prrof of Concept: [GitHub Repository](https://github.com/AdamISZ/pathcoin-poc)
+Proof of Concept: [GitHub Repository](https://github.com/AdamISZ/pathcoin-poc)
