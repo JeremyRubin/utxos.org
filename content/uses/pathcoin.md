@@ -1,7 +1,7 @@
 ---
 title: "Pathcoin"
-date: 2024-06-10T19:47+00:00Z
 author: "Waxwing"
+date: '2024-06-10'
 ---
 
 Transfer ownership of UTXO off-chain
