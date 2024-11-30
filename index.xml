@@ -1,30 +1,381 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BIP-119 on utxos.org -- Bitcoin for Everyone</title><link>https://utxos.org/</link><description>Recent content in BIP-119 on utxos.org -- Bitcoin for Everyone</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 10 Jun 2024 21:40:04 +0000</lastBuildDate><atom:link href="https://utxos.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Scaling</title><link>https://utxos.org/uses/scaling/</link><pubDate>Thu, 10 Oct 2019 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/scaling/</guid><description>When there is a high demand for blockspace it becomes very expensive to make transactions. By using OP_CHECKTEMPLATEVERIFY, a large volume payment processor may aggregate all their payments into a single O(1) transaction for purposes of confirmation. Then, some time later, the payments can be expanded out of that UTXO when the demand for blockspace is decreased.
-Without OP_CHECKTEMPLATEVERIFY, this is still possible to do with Schnorr signatures (even with ECDSA given multiparty schemes).</description></item><item><title>Soft Fork Bets</title><link>https://utxos.org/uses/taproot-bet/</link><pubDate>Mon, 08 Mar 2021 00:00:00 -0700</pubDate><guid>https://utxos.org/uses/taproot-bet/</guid><description>Can we design a contract which allows someone to automatically place a series of bets on if Taproot was active (by spreading the bet over a longer window, you can hedge the total risk if you aren’t sure the exact period it would activate; it also makes the contract more interesting… The diagram above gives a high level overview of the logic we want to implement&amp;hellip;
-Continue Reading on Bitmex Blog&amp;hellip;</description></item><item><title>Ark V2</title><link>https://utxos.org/uses/arkv2/</link><pubDate>Mon, 10 Jun 2024 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/arkv2/</guid><description>Ark v2 enables Ark Service Providers (ASPs) to reclaim their liquidity without having to wait for the expiration period (4 weeks) to elapse. It almost sounds too good to be true, ha?
-Continue Reading on Medium.</description></item><item><title>Bitcoin Clique</title><link>https://utxos.org/uses/clique/</link><pubDate>Mon, 10 Jun 2024 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/clique/</guid><description>Blockchains suffer from scalability limitations, both in terms of latency and throughput. Various approaches to alleviate this have been proposed, most prominent of which are payment and state channels, sidechains, commit-chains, rollups, and sharding. This work puts forth a novel commit-chain protocol, Bitcoin Clique. It is the first trustless commit-chain that is compatible with all major blockchains, including (an upcoming version of) Bitcoin.
-Clique enables a pool of users to pay each other off-chain, i.</description></item><item><title>CTV dramatically improves DLCs</title><link>https://utxos.org/uses/dlc-perf/</link><pubDate>Mon, 24 Jan 2022 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/dlc-perf/</guid><description>The post discusses how OP_CHECKTEMPLATEVERIFY (CTV) significantly improves the performance of Discreet Log Contracts (DLCs) on Bitcoin. It details the current state of DLC protocols, the computational complexities involved, and how CTV can optimize these processes. By using CTV and Taproot, DLCs can reduce computational costs and data exchanges, simplify threshold oracle setups, and eliminate certain multiplications. These improvements make DLC transactions faster and more efficient, even on resource-constrained devices, though with some trade-offs in witness size and transaction distinguishability.</description></item><item><title>Decentralized options</title><link>https://utxos.org/uses/options/</link><pubDate>Sun, 11 Oct 2020 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/options/</guid><description>Trading of bitcoin derivatives is a huge market nowadays. However, all of it occurs on centralized exchanges with large legal &amp;amp; technical risks that require trust in their operators, thus betraying the philosophy of Bitcoin. The protocol presented here enables the creation and redemption of trustless options on the Bitcoin network.
-Main protocol Option creation will follow this protocol:
-Use an atomic swap to sync these two operations: User pays fee to underwriter Underwriter sends tokenized USD [1] to an address that is encumbered by the script: After X+K blocks: Send to underwriter After X blocks: If spending tx sends Y BTC to underwriter, send to user When the option reaches maturity the user can exercise it by sending a transaction that: Sends BTC to underwriter Spends the UTXO created on step 1 and sends it to the user&amp;rsquo;s wallet If the user doesn&amp;rsquo;t exercise it on time the underwriter can just spend it to itself Reduction of capital requirement As it is, this protocol requires locking 100% of the collateral for as long as the option stays in effect, but it would also be possible to reduce the capital requirement quite substantially by changing the protocol to make the underwriter lock only 30-50% initially and, at option expiration, make it provide the rest of the payment in case the user decides to exercise the option.</description></item><item><title>Drivechains</title><link>https://utxos.org/uses/drivechains/</link><pubDate>Sun, 11 Oct 2020 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/drivechains/</guid><description>Partial Retraction &amp;ndash; Please See Below Drivechain&amp;rsquo;s peg-out mechanism could be implemented at the transaction level through scripts that force the funds being withdrawn from the sidechain to go through a chain of N transactions, each one of these being in a different block. More specifically, this would be implemented by creating N scripts that would contain an integer constant and would only be spendable to another copy of the same script with the constant increased or decreased by one, with the exception of the script where the constant reaches the value N, in which case the UTXO would be spendable only to a specific address provided in the beginning of the process.</description></item><item><title>Resources</title><link>https://utxos.org/resources/</link><pubDate>Thu, 28 May 2020 17:48:34 -0700</pubDate><guid>https://utxos.org/resources/</guid><description>This page serves as a general index of resources.
-If something is missing, leave a comment or open a pull request on Github.
-BIP: Specification Pull Request Branch Example RPCs IRC Meetings There was a series of IRC Meetings held in 2022 covering CTV. The agendas and notes are linked below.
-Meeting 1 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019737.html Meeting 1 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019744.html Meeting 2 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019807.html Meeting 2 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019855.html Meeting 3 Agenda: https://lists.</description></item><item><title>Batching Simulation</title><link>https://utxos.org/analysis/batching_sim/</link><pubDate>Thu, 28 May 2020 15:48:24 -0700</pubDate><guid>https://utxos.org/analysis/batching_sim/</guid><description>Check Template Verify is a new opcode for Bitcoin which allows transaction issuers to split up their transaction into send and receive components. See https://utxos.org for more information. This is potentially a big benefit because end users can realize faster confirmations on pending transactions.
-There is a concern that CTV would result in higher overall chain utilization (because of overhead) than existing batching solutions. Ignoring the benefits that CTV can have for earlier confirmations, it would be bad to introduce a change to Bitcoin that causes users to be wasteful of chain space.</description></item><item><title>Tax Considerations</title><link>https://utxos.org/analysis/taxes/</link><pubDate>Wed, 18 Dec 2019 10:41:53 -0800</pubDate><guid>https://utxos.org/analysis/taxes/</guid><description>In this article, we&amp;rsquo;ll discuss basic tax law around payments, establish an analogy between OP_CHECKTEMPLATEVERIFY and traditional certified cheques, and then discuss the relevant tax consequences.
-In the &amp;ldquo;legacy&amp;rdquo; financial world, a cheque1 is commonly used to move funds from financial institutions in lieu of inconvenient physical cash transfers. To date, Bitcoin has not needed the concept of a cheque because Bitcoin transactions are direct transfers with no intermediary, i.e., as cash is to a cheque.</description></item><item><title>Batch Channels</title><link>https://utxos.org/uses/batch-channels/</link><pubDate>Fri, 18 Oct 2019 10:46:27 -0700</pubDate><guid>https://utxos.org/uses/batch-channels/</guid><description>Using OP_CHECKTEMPLATEVERIFY for Channel Factories is similar to the use for Congestion Control, except the leaf nodes should be set up as a channels instead of plain payments. The channel can be between the sender and recipient or a target of recipient&amp;rsquo;s choice. Using an OP_CHECKTEMPLATEVERIFY, the recipient may even give the sender an address which makes a set of channels unbeknownst to them.
-These channels are already time insensitive for setup, as all punishments can be relative timelocked to the actual instantiation.</description></item><item><title>Non Interactive Channels</title><link>https://utxos.org/uses/non-interactive-channels/</link><pubDate>Fri, 18 Oct 2019 10:46:13 -0700</pubDate><guid>https://utxos.org/uses/non-interactive-channels/</guid><description>Normally, when opening a payment channel, you require participation from both parties to the channel. This is because the Lightning Network uses pre-signed multi-sig type transactions to ensure that a channel can always be exited by either party, before entering.
-With OP_CHECKTEMPLATEVERIFY, it&amp;rsquo;s possible for a single party to construct a channel which either party can exit from without requiring signatures from both parties.
-These payment channels can operate in one direction, paying to the channel &amp;ldquo;listener&amp;rdquo; without need for their private key to be online.</description></item><item><title>Trustless Coordination-Free Mining Pools</title><link>https://utxos.org/uses/miningpools/</link><pubDate>Fri, 18 Oct 2019 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/miningpools/</guid><description>for more detail on decentralized mining pools in a more recent article read here
-In a typical mining pool, miners works together to create a shared block reward. The shared reward is distributed among participants based on difficulty shares, that is, partial work proofs that &amp;ldquo;prove&amp;rdquo; a miner was working on an appropriate block.
-An appropriate block pays the reward to the pool operator, who then distributes (less a fee) the rewards to the other miners.</description></item><item><title>Vaults</title><link>https://utxos.org/uses/vaults/</link><pubDate>Fri, 18 Oct 2019 10:45:51 -0700</pubDate><guid>https://utxos.org/uses/vaults/</guid><description>When greater security is required for cold storage solutions, there can be default Tapscript paths that move funds from one target to another target.
-For example, a cold wallet can be set up where one customer support desk can, without further authorization, move a portion of the funds (using multiple pre-set amounts) into a lukewarm wallet operated by an isolated support desk. The support desk can then issue some funds to a hot wallet, and send the remainder back to cold storage with a similar withdrawal mechanism in place.</description></item><item><title>Safer Hashed Time Locked Contracts (HTLCS) Limits</title><link>https://utxos.org/uses/htlcs/</link><pubDate>Fri, 18 Oct 2019 10:30:40 -0700</pubDate><guid>https://utxos.org/uses/htlcs/</guid><description>In the Lightning Network protocol, Hashed Time Locked Contracts (HTLCS) are used in the construction of channels. A new HTLC is required per route that the channel is serving in.
-In BOLT #2, this maximum number of HTLCs in a channel is hard limited to 483 as the maximum safe size to prevent the transaction from being too large to be valid. Adding more HTLCs would interfere with being able to broadcast and confirm a transaction.</description></item><item><title>Congestion Simulation</title><link>https://utxos.org/analysis/bip_simulation/</link><pubDate>Fri, 11 Oct 2019 15:48:24 -0700</pubDate><guid>https://utxos.org/analysis/bip_simulation/</guid><description>An earlier version of this document used the poission distribution of the average block interval rahter than the exponential, which led to innacurate results. A discussion of this error can be found here. The error in the code has been corrected in the following article, but the diagrams still need to be re-generated.
-The below simulation results show that OP_CHECKTEMPLATEVERIFY is an effective too to reduce network strain in Bitcoin. This is based on the same simulation used in the BIP.</description></item><item><title>Bitcoin Optech Newsletter #48</title><link>https://utxos.org/analysis/optech/</link><pubDate>Thu, 10 Oct 2019 17:31:05 -0700</pubDate><guid>https://utxos.org/analysis/optech/</guid><description>This article was orignally featured in Bitcoin Optech Newsletter #48, and has been excerpted, abbridged, and updated slightly for accuracy with the most recent iteration of the BIP for this page. The original OpTech content may be found here. OpTech&amp;rsquo;s content is offered under the MIT License.
-The proposed opcode OP_CHECKTEMPLATEVERIFY allows an address to commit to one or more branches that require the transaction spending them to include a certain set of outputs, a technique that contract protocol researchers call a covenant.</description></item><item><title>Alternative Designs</title><link>https://utxos.org/alternatives/</link><pubDate>Sat, 28 Sep 2019 17:48:34 -0700</pubDate><guid>https://utxos.org/alternatives/</guid><description>use case apo ctv txhash tluv intro vault catt matt tplk Lightning Symmetry yes csfs* csfs* ? yes no yes yes yes Vaults yes* yes* tap* yes tap* yes yes yes tap* Payment Pools yes yes tap* yes tap* ~ctv yes yes tap* Ark no yes yes no yes ~ctv yes yes yes Fraud Proofs no no no no no no yes yes no Statechains yes csfs* csfs* ? yes no yes yes yes Spacechains yes yes yes ?</description></item><item><title>Deployment Options</title><link>https://utxos.org/deployment/</link><pubDate>Fri, 27 Sep 2019 21:56:54 -0700</pubDate><guid>https://utxos.org/deployment/</guid><description>Deployment Schedule &amp;amp; Technique There is no presently defined deployment schedule for BIP-119.
-There has been discussion on the mailing list about soft fork activation techniques as an extension to existing methods, but it is still undecided how new upgrades should be proposed, rolled out, and activated or rejected.
-OP_CHECKTEMPLATEVERIFY Deployment Options There are a couple different implementations and deployment strategies for OP_CHECKTEMPLATEVERIFY:
-OP_NOP4 Softfork Taproot Tapscript Extension Templated Tapscript Extension This page serves to mark the differences between these versions.</description></item><item><title>Sponsors</title><link>https://utxos.org/sponsors/</link><pubDate>Mon, 26 Jun 2017 18:27:58 +0100</pubDate><guid>https://utxos.org/sponsors/</guid><description>With thanks to the below institutions and individuals. Without their financial contributions and gifts of support, this work would not be possible.
-If you are interested in becoming a supporter, please contact me at j@rubin.io or send Bitcoin to 3LPmfWnmQcPK1T9mSVGtoMmcQXbRAuUfus (signed here).
-Binance X Fellowship Digital Contract Design Cipher Technologies Jim Calvin Corey Haddad Scaling Bitcoin Grant</description></item><item><title>Sponsorship Address</title><link>https://utxos.org/sponsors_addr/</link><pubDate>Mon, 26 Jun 2017 18:27:58 +0100</pubDate><guid>https://utxos.org/sponsors_addr/</guid><description>Message 3LPmfWnmQcPK1T9mSVGtoMmcQXbRAuUfus is a bitcoin address belonging to Judica, Inc for inbound gifts from utxos.org.
-Signature BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkFdEUXp g9DGIq9pR5jmDYN e0jN8rKRbWu1Rfv YCQE1MvbsOXfFh3 z350TgyesDJpoRP te7nfpa7FcHjaSp i3aWtlPxqgpfa5Q iO8Fr3oZkqW60Gq jsw3cUtOPhAmsVt oeBQJCnGFeLnbxi 3wBlkUNrLzUCvnN H43C0YNEBotYIL4 bIthDOXGs08Gfdg PWDldPwEUcr0Zd6 6lyuVcRueNv8yJ3 utImxtYNuepajYX eSJRIbLm0oEQkKy L2kwbmodHBz6isI NBxRs00QuJdKzqD x5aAOAIvWanhqCn 7MAVqpFjAUTwcJU ssKPpq9de. END KEYBASE SALTPACK SIGNED MESSAGE.</description></item><item><title>BIP-119 Signalled Support</title><link>https://utxos.org/signals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://utxos.org/signals/</guid><description>The following organizations, individuals, or pools have communicated preference for and intent to support a BIP-119 activation attempt using reasonable parameters. These &amp;ldquo;soft signals&amp;rdquo; are non-binding until an actual concrete proposal has been formed, but are useful for measuring community consensus. When a concrete proposal (e.g., parameters, binaries, etc) is launched, signatories on this list should not be considered to be supportive of that particular effort unless noted otherwise.
-Open an issue or a pull request on GitHub to modify or create or modify an entry for you or your organization.</description></item><item><title>BIP-119 Workshops</title><link>https://utxos.org/workshops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://utxos.org/workshops/</guid><description>IRC Meetings There was a series of IRC Meetings held in 2022 covering CTV. The agendas and notes are linked below.
-Meeting 1 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019737.html Meeting 1 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019744.html Meeting 2 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019807.html Meeting 2 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019855.html Meeting 3 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019856.html Meeting 3 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019874.html Meeting 4 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019971.html https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019973.html Meeting 4 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019974.html Meeting 5 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020081.html Meeting 5 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020086.html Meeting 6 Agenda: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020157.html Meeting 6 Notes: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020169.html Meeting 7 Agenda: https://lists.</description></item><item><title>Pathcoin</title><link>https://utxos.org/uses/pathcoin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://utxos.org/uses/pathcoin/</guid><description>Transfer ownership of UTXO off-chain
-Proof of Concept: GitHub Repository</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BIP-119 on utxos.org -- Bitcoin for Everyone</title><link>https://utxos.org/</link><description>Recent content in BIP-119 on utxos.org -- Bitcoin for Everyone</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 30 Nov 2024 18:56:33 -0500</lastBuildDate><atom:link href="https://utxos.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Scaling</title><link>https://utxos.org/uses/scaling/</link><pubDate>Thu, 10 Oct 2019 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/scaling/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/scalepay.svg" alt="">&lt;/p>
+&lt;p>When there is a high demand for blockspace it becomes very expensive to make
+transactions. By using OP_CHECKTEMPLATEVERIFY, a large volume payment processor may
+aggregate all their payments into a single O(1) transaction for purposes of
+confirmation. Then, some time later, the payments can be expanded out of that
+UTXO when the demand for blockspace is decreased.&lt;/p>
+&lt;p>Without OP_CHECKTEMPLATEVERIFY, this is still possible to do with Schnorr signatures
+(even with ECDSA given multiparty schemes). However, it is not possible to do
+non-interactively, which fundamentally limits the viability of the approach as
+interacting to collect signatures from all recipients may be difficult or slow.&lt;/p></description></item><item><title>Soft Fork Bets</title><link>https://utxos.org/uses/taproot-bet/</link><pubDate>Mon, 08 Mar 2021 00:00:00 -0700</pubDate><guid>https://utxos.org/uses/taproot-bet/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/taproot-bet.jpg" alt="">&lt;/p>
+&lt;p>Can we design a contract which allows someone to automatically place a series of bets on if Taproot was active (by spreading the bet over a longer window, you can hedge the total risk if you aren’t sure the exact period it would activate; it also makes the contract more interesting… The diagram above gives a high level overview of the logic we want to implement&amp;hellip;&lt;/p>
+&lt;p>&lt;a href="https://blog.bitmex.com/taproot-you-betcha/">Continue Reading on Bitmex Blog&amp;hellip;&lt;/a>&lt;/p></description></item><item><title>Ark V2</title><link>https://utxos.org/uses/arkv2/</link><pubDate>Mon, 10 Jun 2024 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/arkv2/</guid><description>&lt;blockquote>
+&lt;p>Ark v2 enables Ark Service Providers (ASPs) to reclaim their liquidity
+without having to wait for the expiration period (4 weeks) to elapse. It
+almost sounds too good to be true, ha?&lt;/p>
+&lt;/blockquote>
+&lt;p>Continue Reading on &lt;a href="https://brqgoo.medium.com/introducing-ark-v2-2e7ab378e87b">Medium&lt;/a>.&lt;/p></description></item><item><title>Bitcoin Clique</title><link>https://utxos.org/uses/clique/</link><pubDate>Mon, 10 Jun 2024 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/clique/</guid><description>&lt;p>Blockchains suffer from scalability limitations, both in terms of latency and
+throughput. Various approaches to alleviate this have been proposed, most
+prominent of which are payment and state channels, sidechains, commit-chains,
+rollups, and sharding. This work puts forth a novel commit-chain protocol,
+Bitcoin Clique. It is the first trustless commit-chain that is compatible with
+all major blockchains, including (an upcoming version of) Bitcoin.&lt;/p>
+&lt;p>Clique enables a pool of users to pay each other off-chain, i.e., without
+interacting with the blockchain, thus sidestepping its bottlenecks. A user can
+directly send its coins to any other user in the Clique: In contrast to payment
+channels, its funds are not tied to a specific counterparty, avoiding the need
+for multi-hop payments. An untrusted operator facilitates payments by
+verifiably recording them.&lt;/p></description></item><item><title>Pathcoin</title><link>https://utxos.org/uses/pathcoin/</link><pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate><guid>https://utxos.org/uses/pathcoin/</guid><description>&lt;p>Transfer ownership of UTXO off-chain&lt;/p>
+&lt;p>Proof of Concept: &lt;a href="https://github.com/AdamISZ/pathcoin-poc">GitHub Repository&lt;/a>&lt;/p></description></item><item><title>CTV dramatically improves DLCs</title><link>https://utxos.org/uses/dlc-perf/</link><pubDate>Mon, 24 Jan 2022 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/dlc-perf/</guid><description>&lt;p>The post discusses how OP_CHECKTEMPLATEVERIFY (CTV) significantly improves the
+performance of Discreet Log Contracts (DLCs) on Bitcoin. It details the current
+state of DLC protocols, the computational complexities involved, and how CTV
+can optimize these processes. By using CTV and Taproot, DLCs can reduce
+computational costs and data exchanges, simplify threshold oracle setups, and
+eliminate certain multiplications. These improvements make DLC transactions
+faster and more efficient, even on resource-constrained devices, though with
+some trade-offs in witness size and transaction distinguishability.&lt;/p></description></item><item><title>BIP-119 Signalled Support</title><link>https://utxos.org/signals/</link><pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate><guid>https://utxos.org/signals/</guid><description>&lt;p>The following organizations, individuals, or pools have communicated preference
+for and intent to support a BIP-119 activation attempt using reasonable
+parameters. These &amp;ldquo;soft signals&amp;rdquo; are non-binding until an actual concrete proposal
+has been formed, but are useful for measuring community consensus. When a concrete proposal
+(e.g., parameters, binaries, etc) is launched, signatories on this list &lt;strong>should not&lt;/strong> be considered
+to be supportive of that particular effort unless noted otherwise.&lt;/p>
+&lt;p>Open an &lt;a href="https://github.com/jeremyrubin/utxos.org/issues/new">issue&lt;/a> or a &lt;a href="https://github.com/JeremyRubin/utxos.org/pulls">pull
+request&lt;/a> on GitHub to modify or
+create or modify an entry for you or your organization. All listings have been
+individually confirmed by Jeremy Rubin where a statement is either missing
+or ambiguous.&lt;/p></description></item><item><title>Decentralized options</title><link>https://utxos.org/uses/options/</link><pubDate>Sun, 11 Oct 2020 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/options/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/options.png" alt="">&lt;/p>
+&lt;p>Trading of bitcoin derivatives is a huge market nowadays. However, all of it occurs on centralized exchanges with large legal &amp;amp; technical risks that require trust in their operators, thus betraying the philosophy of Bitcoin. The protocol presented here enables the creation and redemption of trustless options on the Bitcoin network.&lt;/p>
+&lt;h2 id="main-protocol">Main protocol&lt;/h2>
+&lt;p>Option creation will follow this protocol:&lt;/p>
+&lt;ol>
+&lt;li>Use an atomic swap to sync these two operations:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>User pays fee to underwriter&lt;/li>
+&lt;li>Underwriter sends tokenized USD [1] to an address that is encumbered by the script:
+&lt;ul>
+&lt;li>After X+K blocks:
+&lt;ul>
+&lt;li>Send to underwriter&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>After X blocks:
+&lt;ul>
+&lt;li>If spending tx sends Y BTC to underwriter, send to user&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>When the option reaches maturity the user can exercise it by sending a transaction that:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Sends BTC to underwriter&lt;/li>
+&lt;li>Spends the UTXO created on step 1 and sends it to the user&amp;rsquo;s wallet&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>If the user doesn&amp;rsquo;t exercise it on time the underwriter can just spend it to itself&lt;/li>
+&lt;/ol>
+&lt;h2 id="reduction-of-capital-requirement">Reduction of capital requirement&lt;/h2>
+&lt;p>As it is, this protocol requires locking 100% of the collateral for as long as the option stays in effect, but it would also be possible to reduce the capital requirement quite substantially by changing the protocol to make the underwriter lock only 30-50% initially and, at option expiration, make it provide the rest of the payment in case the user decides to exercise the option. More concretely, this new protocol would look like:&lt;/p></description></item><item><title>Drivechains</title><link>https://utxos.org/uses/drivechains/</link><pubDate>Sun, 11 Oct 2020 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/drivechains/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/drivechains.png" alt="">&lt;/p>
+&lt;h1 id="partial-retraction----please-see-below">Partial Retraction &amp;ndash; Please See Below&lt;/h1>
+&lt;p>Drivechain&amp;rsquo;s peg-out mechanism could be implemented at the transaction level through scripts that force the funds being withdrawn from the sidechain to go through a chain of N transactions, each one of these being in a different block. More specifically, this would be implemented by creating N scripts that would contain an integer constant and would only be spendable to another copy of the same script with the constant increased or decreased by one, with the exception of the script where the constant reaches the value N, in which case the UTXO would be spendable only to a specific address provided in the beginning of the process. Furthermore, these scripts would prevent the possibility of several of them being chained in the same block through the use of &lt;code>OP_CSV&lt;/code>.&lt;/p></description></item><item><title>Resources</title><link>https://utxos.org/resources/</link><pubDate>Thu, 28 May 2020 17:48:34 -0700</pubDate><guid>https://utxos.org/resources/</guid><description>&lt;p>This page serves as a general index of resources.&lt;/p>
+&lt;p>If something is missing, leave a comment or open a pull request on
+&lt;a href="https://github.com/JeremyRubin/utxos.org">Github&lt;/a>.&lt;/p>
+&lt;h1 id="bip">BIP:&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki">Specification&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/bitcoin/bitcoin/pull/21702">Pull Request&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify-rebase-4-15-21">Branch&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/JeremyRubin/bitcoin/tree/checktemplateverify-feb1-workshop">Example RPCs&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="irc-meetings">IRC Meetings&lt;/h1>
+&lt;p>There was a series of IRC Meetings held in 2022 covering CTV. The agendas and notes are linked below.&lt;/p>
+&lt;ul>
+&lt;li>Meeting 1 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019737.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019737.html&lt;/a>&lt;/li>
+&lt;li>Meeting 1 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019744.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019744.html&lt;/a>&lt;/li>
+&lt;li>Meeting 2 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019807.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019807.html&lt;/a>&lt;/li>
+&lt;li>Meeting 2 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019855.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019855.html&lt;/a>&lt;/li>
+&lt;li>Meeting 3 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019856.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019856.html&lt;/a>&lt;/li>
+&lt;li>Meeting 3 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019874.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019874.html&lt;/a>&lt;/li>
+&lt;li>Meeting 4 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019971.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019971.html&lt;/a> &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019973.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019973.html&lt;/a>&lt;/li>
+&lt;li>Meeting 4 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019974.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019974.html&lt;/a>&lt;/li>
+&lt;li>Meeting 5 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020081.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020081.html&lt;/a>&lt;/li>
+&lt;li>Meeting 5 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020086.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020086.html&lt;/a>&lt;/li>
+&lt;li>Meeting 6 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020157.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020157.html&lt;/a>&lt;/li>
+&lt;li>Meeting 6 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020169.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020169.html&lt;/a>&lt;/li>
+&lt;li>Meeting 7 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020231.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020231.html&lt;/a> &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020233.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020233.html&lt;/a>&lt;/li>
+&lt;li>Meeting 7 Notes: (none made)&lt;/li>
+&lt;li>Meeting 8 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020406.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020406.html&lt;/a>&lt;/li>
+&lt;li>Meeting 8 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020430.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020430.html&lt;/a>&lt;/li>
+&lt;li>Meeting 9 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020491.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020491.html&lt;/a>&lt;/li>
+&lt;li>Meeting 9 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020501.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020501.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="tools">Tools&lt;/h1>
+&lt;h2 id="sapio">Sapio&lt;/h2>
+&lt;p>Sapio is a programming language for CTV contracts.&lt;/p></description></item><item><title>Batching Simulation</title><link>https://utxos.org/analysis/batching_sim/</link><pubDate>Thu, 28 May 2020 15:48:24 -0700</pubDate><guid>https://utxos.org/analysis/batching_sim/</guid><description>&lt;p>Check Template Verify is a new opcode for Bitcoin which allows transaction
+issuers to split up their transaction into send and receive components. See
+&lt;a href="https://utxos.org">https://utxos.org&lt;/a> for more information. This is potentially a big benefit
+because end users can realize faster confirmations on pending transactions.&lt;/p>
+&lt;p>There is a concern that CTV would result in higher overall chain utilization
+(because of overhead) than existing batching solutions. Ignoring the benefits
+that CTV can have for earlier confirmations, it would be bad to introduce a
+change to Bitcoin that causes users to be wasteful of chain space.&lt;/p></description></item><item><title>Tax Considerations</title><link>https://utxos.org/analysis/taxes/</link><pubDate>Wed, 18 Dec 2019 10:41:53 -0800</pubDate><guid>https://utxos.org/analysis/taxes/</guid><description>&lt;p>In this article, we&amp;rsquo;ll discuss basic tax law around payments, establish an analogy between
+OP_CHECKTEMPLATEVERIFY and traditional certified cheques, and then discuss the relevant tax
+consequences.&lt;/p>
+&lt;p>In the &amp;ldquo;legacy&amp;rdquo; financial world, a cheque&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is commonly used to move funds from
+financial institutions in lieu of inconvenient physical cash transfers. To date, Bitcoin has not
+needed the concept of a cheque because Bitcoin transactions are direct transfers with no
+intermediary, i.e., as cash is to a cheque.&lt;/p></description></item><item><title>Batch Channels</title><link>https://utxos.org/uses/batch-channels/</link><pubDate>Fri, 18 Oct 2019 10:46:27 -0700</pubDate><guid>https://utxos.org/uses/batch-channels/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/balllightning.svg" alt="">&lt;/p>
+&lt;p>Using OP_CHECKTEMPLATEVERIFY for Channel Factories is similar to the use for Congestion
+Control, except the leaf nodes should be set up as a channels instead of plain
+payments. The channel can be between the sender and recipient or a target of
+recipient&amp;rsquo;s choice. Using an OP_CHECKTEMPLATEVERIFY, the recipient may even
+give the sender an address which makes a set of channels unbeknownst to them.&lt;/p>
+&lt;p>These channels are already time insensitive for setup, as all punishments can be
+relative timelocked to the actual instantiation. This enables set-up of channels
+non-interactively in the case of a single funder.&lt;/p></description></item><item><title>Non Interactive Channels</title><link>https://utxos.org/uses/non-interactive-channels/</link><pubDate>Fri, 18 Oct 2019 10:46:13 -0700</pubDate><guid>https://utxos.org/uses/non-interactive-channels/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/nic.svg" alt="">&lt;/p>
+&lt;p>Normally, when opening a payment channel, you require participation from both
+parties to the channel. This is because the Lightning Network uses pre-signed
+multi-sig type transactions to ensure that a channel can always be exited by
+either party, before entering.&lt;/p>
+&lt;p>With OP_CHECKTEMPLATEVERIFY, it&amp;rsquo;s possible for a single party to construct a
+channel which either party can exit from without requiring signatures from
+both parties.&lt;/p>
+&lt;p>These payment channels can operate in one direction, paying to the channel
+&amp;ldquo;listener&amp;rdquo; without need for their private key to be online.&lt;/p></description></item><item><title>Trustless Coordination-Free Mining Pools</title><link>https://utxos.org/uses/miningpools/</link><pubDate>Fri, 18 Oct 2019 10:45:58 -0700</pubDate><guid>https://utxos.org/uses/miningpools/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/bagpool.svg" alt="">&lt;/p>
+&lt;p>&lt;em>for more detail on decentralized mining pools in a more recent article &lt;a href="https://rubin.io/bitcoin/2021/12/12/advent-15/">read here&lt;/a>&lt;/em>&lt;/p>
+&lt;p>In a typical mining pool, miners works together to create a shared block reward. The shared reward
+is distributed among participants based on difficulty shares, that is, partial work proofs that
+&amp;ldquo;prove&amp;rdquo; a miner was working on an appropriate block.&lt;/p>
+&lt;p>An appropriate block pays the reward to the pool operator, who then distributes (less a fee) the
+rewards to the other miners.&lt;/p></description></item><item><title>Vaults</title><link>https://utxos.org/uses/vaults/</link><pubDate>Fri, 18 Oct 2019 10:45:51 -0700</pubDate><guid>https://utxos.org/uses/vaults/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/vaults.svg" alt="">
+When greater security is required for cold storage solutions, there can be
+default Tapscript paths that move funds from one target to another target.&lt;/p>
+&lt;p>For example, a cold wallet can be set up where one customer support desk can,
+without further authorization, move a portion of the funds (using multiple
+pre-set amounts) into a lukewarm wallet operated by an isolated support desk.
+The support desk can then issue some funds to a hot wallet, and send the
+remainder back to cold storage with a similar withdrawal mechanism in place.&lt;/p></description></item><item><title>Safer Hashed Time Locked Contracts (HTLCS) Limits</title><link>https://utxos.org/uses/htlcs/</link><pubDate>Fri, 18 Oct 2019 10:30:40 -0700</pubDate><guid>https://utxos.org/uses/htlcs/</guid><description>&lt;p>&lt;img src="https://utxos.org/images/uses/htlcs.png" alt="">&lt;/p>
+&lt;p>In the Lightning Network protocol, Hashed Time Locked Contracts (HTLCS) are used
+in the construction of channels. A new HTLC is required per route that the
+channel is serving in.&lt;/p>
+&lt;p>In &lt;a href="https://github.com/lightningnetwork/lightning-rfc/blob/master/02-peer-protocol.md">BOLT #2&lt;/a>,
+this maximum number of HTLCs in a channel is hard limited to 483 as the maximum
+safe size to prevent the transaction from being too large to be valid. Adding
+more HTLCs would interfere with being able to broadcast and confirm a
+transaction.&lt;/p></description></item><item><title>Congestion Simulation</title><link>https://utxos.org/analysis/bip_simulation/</link><pubDate>Fri, 11 Oct 2019 15:48:24 -0700</pubDate><guid>https://utxos.org/analysis/bip_simulation/</guid><description>&lt;p>&lt;em>An earlier version of this document used the poission distribution of the average block interval rahter than the exponential, which led to innacurate results. A discussion of this error can be found &lt;a href="https://twitter.com/JeremyRubin/status/121361540300123750">here&lt;/a>. The error in the code has been corrected in the following article, but the diagrams still need to be re-generated.&lt;/em>&lt;/p>
+&lt;p>The below simulation results show that OP_CHECKTEMPLATEVERIFY is an effective too to
+reduce network strain in Bitcoin. This is based on the same simulation used in the BIP.&lt;/p></description></item><item><title>Bitcoin Optech Newsletter #48</title><link>https://utxos.org/analysis/optech/</link><pubDate>Thu, 10 Oct 2019 17:31:05 -0700</pubDate><guid>https://utxos.org/analysis/optech/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This article was orignally featured in Bitcoin Optech Newsletter #48, and has been
+excerpted, abbridged, and updated slightly for accuracy with the most recent iteration of
+the BIP for this page. The original OpTech content may be found
+&lt;a href="https://bitcoinops.org/en/newsletters/2019/05/29/">here&lt;/a>. OpTech&amp;rsquo;s content is
+offered under the &lt;a href="https://opensource.org/licenses/MIT">MIT License&lt;/a>.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>The &lt;a href="https://github.com/JeremyRubin/bips/blob/op-secure-the-bag-master/bip-secure-the-bag.mediawiki">proposed&lt;/a> opcode &lt;code>OP_CHECKTEMPLATEVERIFY&lt;/code> allows an address to commit to one or more branches that require the
+transaction spending them to include a certain set of outputs, a
+technique that contract protocol researchers call a &lt;em>covenant&lt;/em>.
+The primary described benefit of this proposed opcode is allowing a
+small transaction to be confirmed now (when fees might be high) and have that transaction
+trustlessly guarantee that a set of people will receive their actual
+payments later when fees might be lower. This can make it much more
+economical for organizations that already implement techniques such as
+&lt;a href="https://github.com/bitcoinops/scaling-book/blob/master/x.payment_batching/payment_batching.md">payment batching&lt;/a> to handle sudden fee spikes.&lt;/p></description></item><item><title>Alternative Designs</title><link>https://utxos.org/alternatives/</link><pubDate>Sat, 28 Sep 2019 17:48:34 -0700</pubDate><guid>https://utxos.org/alternatives/</guid><description>&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>use case&lt;/th>
+ &lt;th>apo&lt;/th>
+ &lt;th>ctv&lt;/th>
+ &lt;th>txhash&lt;/th>
+ &lt;th>tluv&lt;/th>
+ &lt;th>intro&lt;/th>
+ &lt;th>vault&lt;/th>
+ &lt;th>catt&lt;/th>
+ &lt;th>matt&lt;/th>
+ &lt;th>tplk&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Lightning Symmetry&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>csfs*&lt;/td>
+ &lt;td>csfs*&lt;/td>
+ &lt;td>?&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Vaults&lt;/td>
+ &lt;td>yes*&lt;/td>
+ &lt;td>yes*&lt;/td>
+ &lt;td>tap*&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>tap*&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>tap*&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Payment Pools&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>tap*&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>tap*&lt;/td>
+ &lt;td>~ctv&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>tap*&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Ark&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>~ctv&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Fraud Proofs&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Statechains&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>csfs*&lt;/td>
+ &lt;td>csfs*&lt;/td>
+ &lt;td>?&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Spacechains&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>?&lt;/td>
+ &lt;td>?&lt;/td>
+ &lt;td>~ctv&lt;/td>
+ &lt;td>?&lt;/td>
+ &lt;td>?&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Congestion Control&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>no&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>~ctv&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;td>yes&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>yes*: CTV/APO enable better vaults than are currently possible, but not
+nearly as good as OP_VAULT ones.&lt;/li>
+&lt;li>tap*: yes if combined with something that allows turning a script into a Taproot, plus often
+also &lt;code>OP_CAT&lt;/code>&lt;/li>
+&lt;li>csfs*: yes if combined with &lt;code>OP_CHECKSIGFROMSTACK&lt;/code>&lt;/li>
+&lt;li>~ctv: yes but only because the &lt;code>OP_VAULT&lt;/code> proposal also includes &lt;code>OP_CTV&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>BIP-0119 &lt;code>OP_CHECKTEMPLATEVERIFY&lt;/code> has a multitude of benefits for the Bitcoin ecosystem. Are
+there other paths to these improvements? In short, yes. This page has a survey
+of the other methods for enabling &lt;code>OP_CHECKTEMPLATEVERIFY&lt;/code> like functionality and why
+such techniques are not suitable substitutes.&lt;/p></description></item><item><title>Deployment Options</title><link>https://utxos.org/deployment/</link><pubDate>Fri, 27 Sep 2019 21:56:54 -0700</pubDate><guid>https://utxos.org/deployment/</guid><description>&lt;h1 id="deployment-schedule--technique">Deployment Schedule &amp;amp; Technique&lt;/h1>
+&lt;p>There is no presently defined deployment schedule for BIP-119.&lt;/p>
+&lt;p>There has been discussion on the &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-January/017547.html">mailing
+list&lt;/a> about soft
+fork activation techniques as an extension to existing methods, but it is still undecided how new
+upgrades should be proposed, rolled out, and activated or rejected.&lt;/p>
+&lt;h1 id="op_checktemplateverify-deployment-options">OP_CHECKTEMPLATEVERIFY Deployment Options&lt;/h1>
+&lt;p>There are a couple different implementations and deployment strategies for OP_CHECKTEMPLATEVERIFY:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>OP_NOP4&lt;/code> Softfork&lt;/li>
+&lt;li>Taproot Tapscript Extension&lt;/li>
+&lt;li>Templated Tapscript Extension&lt;/li>
+&lt;/ul>
+&lt;p>This page serves to mark the differences between these versions.&lt;/p></description></item><item><title>Sponsors</title><link>https://utxos.org/sponsors/</link><pubDate>Mon, 26 Jun 2017 18:27:58 +0100</pubDate><guid>https://utxos.org/sponsors/</guid><description>&lt;p>With thanks to the below institutions and individuals. Without their financial contributions and gifts of support, this work would not be possible.&lt;/p>
+&lt;p>If you are interested in becoming a supporter, please contact me at &lt;a href="mailto:j@rubin.io?subject=Supporting%20OP_CHECKTEMPLATEVERIFY">j@rubin.io&lt;/a> or send Bitcoin to &lt;code>3LPmfWnmQcPK1T9mSVGtoMmcQXbRAuUfus&lt;/code> (signed &lt;a href="https://utxos.org/sponsors_addr/">here&lt;/a>).&lt;/p>
+&lt;h1 id="binance-x-fellowship">Binance X Fellowship&lt;/h1>
+&lt;p>&lt;a href="https://binancex.dev/fellowship_details.html?project=033_fellowship_op_securethebag%22">&lt;figure class="supporter-image">&lt;img src="https://utxos.org/images/sponsors/binance.jpeg">
+&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;h1 id="digital-contract-design">Digital Contract Design&lt;/h1>
+&lt;p>&lt;a href="https://contract.design/">&lt;figure class="supporter-image">&lt;img src="https://utxos.org/images/sponsors/dcd.png">
+&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;h1 id="cipher-technologies">Cipher Technologies&lt;/h1>
+&lt;p>&lt;a href="https://cipher.tech">&lt;figure class="supporter-image">&lt;img src="https://utxos.org/images/sponsors/cipher.svg">
+&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;h1 id="jim-calvin">Jim Calvin&lt;/h1>
+&lt;p>&lt;a href="https://twitter.com/Jim_Calvin">&lt;figure class="supporter-image">&lt;img src="https://utxos.org/images/sponsors/jim_calvin.jpg">
+&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;h1 id="corey-haddad">Corey Haddad&lt;/h1>
+&lt;p>&lt;a href="https://twitter.com/cubicearth">&lt;figure class="supporter-image">&lt;img src="https://utxos.org/images/sponsors/corey.jpeg">
+&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;h1 id="scaling-bitcoin-grant">Scaling Bitcoin Grant&lt;/h1>
+&lt;p>&lt;a href="https://scalingbitcoin.org/">&lt;figure class="supporter-image">&lt;img src="https://utxos.org/images/sponsors/scaling.svg">
+&lt;/figure>
+&lt;/a>&lt;/p></description></item><item><title>Sponsorship Address</title><link>https://utxos.org/sponsors_addr/</link><pubDate>Mon, 26 Jun 2017 18:27:58 +0100</pubDate><guid>https://utxos.org/sponsors_addr/</guid><description>&lt;h2 id="message">Message&lt;/h2>
+&lt;p>&lt;code>3LPmfWnmQcPK1T9mSVGtoMmcQXbRAuUfus&lt;/code> is a bitcoin address belonging to Judica, Inc for inbound gifts
+from utxos.org.&lt;/p>
+&lt;h2 id="signature">Signature&lt;/h2>
+&lt;pre>&lt;code>BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkFdEUXp g9DGIq9pR5jmDYN
+e0jN8rKRbWu1Rfv YCQE1MvbsOXfFh3 z350TgyesDJpoRP te7nfpa7FcHjaSp i3aWtlPxqgpfa5Q iO8Fr3oZkqW60Gq
+jsw3cUtOPhAmsVt oeBQJCnGFeLnbxi 3wBlkUNrLzUCvnN H43C0YNEBotYIL4 bIthDOXGs08Gfdg PWDldPwEUcr0Zd6
+6lyuVcRueNv8yJ3 utImxtYNuepajYX eSJRIbLm0oEQkKy L2kwbmodHBz6isI NBxRs00QuJdKzqD x5aAOAIvWanhqCn
+7MAVqpFjAUTwcJU ssKPpq9de. END KEYBASE SALTPACK SIGNED MESSAGE.
+&lt;/code>&lt;/pre></description></item><item><title>BIP-119 Workshops</title><link>https://utxos.org/workshops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://utxos.org/workshops/</guid><description>&lt;h2 id="irc-meetings">IRC Meetings&lt;/h2>
+&lt;p>There was a series of IRC Meetings held in 2022 covering CTV. The agendas and notes are linked below.&lt;/p>
+&lt;ul>
+&lt;li>Meeting 1 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019737.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019737.html&lt;/a>&lt;/li>
+&lt;li>Meeting 1 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019744.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019744.html&lt;/a>&lt;/li>
+&lt;li>Meeting 2 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019807.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-January/019807.html&lt;/a>&lt;/li>
+&lt;li>Meeting 2 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019855.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019855.html&lt;/a>&lt;/li>
+&lt;li>Meeting 3 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019856.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019856.html&lt;/a>&lt;/li>
+&lt;li>Meeting 3 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019874.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019874.html&lt;/a>&lt;/li>
+&lt;li>Meeting 4 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019971.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019971.html&lt;/a> &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019973.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019973.html&lt;/a>&lt;/li>
+&lt;li>Meeting 4 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019974.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-February/019974.html&lt;/a>&lt;/li>
+&lt;li>Meeting 5 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020081.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020081.html&lt;/a>&lt;/li>
+&lt;li>Meeting 5 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020086.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020086.html&lt;/a>&lt;/li>
+&lt;li>Meeting 6 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020157.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020157.html&lt;/a>&lt;/li>
+&lt;li>Meeting 6 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020169.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-March/020169.html&lt;/a>&lt;/li>
+&lt;li>Meeting 7 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020231.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020231.html&lt;/a> &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020233.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-April/020233.html&lt;/a>&lt;/li>
+&lt;li>Meeting 7 Notes: (none made)&lt;/li>
+&lt;li>Meeting 8 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020406.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020406.html&lt;/a>&lt;/li>
+&lt;li>Meeting 8 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020430.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020430.html&lt;/a>&lt;/li>
+&lt;li>Meeting 9 Agenda: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020491.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020491.html&lt;/a>&lt;/li>
+&lt;li>Meeting 9 Notes: &lt;a href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020501.html">https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2022-May/020501.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="sf-workshop">SF Workshop&lt;/h2>
+&lt;p>On February 1st, 2020 we held a workshop in downtown San Francisco to aid in reviewing and
+advancing OP_CHECKTEMPLATEVERIFY hosted at Digital Garage.&lt;/p></description></item></channel></rss>
