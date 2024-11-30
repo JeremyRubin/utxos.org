@@ -1,6 +1,6 @@
 ---
 title: "BIP-119 Signalled Support"
-date: '2021-08-00'
+date: '2021-08-01'
 ---
 
 The following organizations, individuals, or pools have communicated preference
