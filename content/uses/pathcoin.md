@@ -1,6 +1,6 @@
 ---
 title: "Pathcoin"
-date: 2024-06-10T19:47+00:00
+date: 2024-06-10T19:47+00:00Z
 author: "Waxwing"
 ---
 
