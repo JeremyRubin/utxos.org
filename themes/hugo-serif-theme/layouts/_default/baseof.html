@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- CSS-->
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsServer }}
   {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
   {{ else }}
@@ -42,7 +42,7 @@
   {{ block "footer_js" . }}
   {{ end }}
 
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsServer }}
   <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
   {{ else }}
   <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
